@@ -3,281 +3,411 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Cashtory 개인정보처리방침 및 Privacy Policy">
-  <title>Cashtory 개인정보처리방침 · Privacy Policy</title>
+  <meta name="description" content="Y&O Studio Cashtory 개인정보 처리방침">
+  <title>Cashtory 개인정보 처리방침</title>
   <style>
-    :root { color-scheme: light dark; --bg:#f6f4fc; --card:#fff; --text:#241f36; --muted:#6f6880; --brand:#6655e6; --line:#e4dff1; }
-    @media (prefers-color-scheme: dark) { :root { --bg:#151221; --card:#1f1a2e; --text:#f3efff; --muted:#bbb2cd; --brand:#a99df8; --line:#393249; } }
-    * { box-sizing:border-box; }
-    html { scroll-behavior:smooth; }
-    body { margin:0; background:var(--bg); color:var(--text); font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans KR","Noto Sans JP","Noto Sans Devanagari",Arial,sans-serif; line-height:1.72; }
-    main { width:min(900px,calc(100% - 32px)); margin:32px auto; padding:clamp(24px,5vw,56px); background:var(--card); border:1px solid var(--line); border-radius:20px; box-shadow:0 16px 48px rgba(39,26,86,.08); }
-    h1 { margin:0 0 8px; font-size:clamp(2rem,5vw,3rem); line-height:1.2; }
-    h2 { margin-top:42px; padding-top:6px; font-size:1.35rem; }
-    p,li { max-width:76ch; }
-    a { color:var(--brand); }
-    .meta { color:var(--muted); margin:0; }
-    .lang-nav { display:flex; flex-wrap:wrap; gap:10px; margin:24px 0 36px; padding-bottom:24px; border-bottom:1px solid var(--line); }
-    .lang-nav a { padding:8px 14px; border:1px solid var(--line); border-radius:999px; text-decoration:none; font-weight:650; }
-    .notice { padding:16px 18px; background:color-mix(in srgb,var(--brand) 9%,var(--card)); border-left:4px solid var(--brand); border-radius:10px; }
-    section + section.language { margin-top:72px; padding-top:56px; border-top:2px solid var(--line); }
-    footer { margin-top:56px; padding-top:24px; border-top:1px solid var(--line); color:var(--muted); font-size:.95rem; }
+    :root {
+      color-scheme: light dark;
+      --bg: #f6f4fc;
+      --card: #ffffff;
+      --text: #241f36;
+      --muted: #6f6880;
+      --brand: #6655e6;
+      --brand-soft: #f0edff;
+      --line: #e4dff1;
+      --warn-bg: #fff8e7;
+      --warn-line: #df9a16;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #151221;
+        --card: #1f1a2e;
+        --text: #f3efff;
+        --muted: #bbb2cd;
+        --brand: #b8adff;
+        --brand-soft: #2b2440;
+        --line: #393249;
+        --warn-bg: #342a16;
+        --warn-line: #f1b84b;
+      }
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans KR", Arial, sans-serif;
+      line-height: 1.72;
+      word-break: keep-all;
+    }
+    main {
+      width: min(980px, calc(100% - 28px));
+      margin: 28px auto;
+      padding: clamp(22px, 5vw, 56px);
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 20px;
+      box-shadow: 0 16px 48px rgba(39, 26, 86, .08);
+    }
+    h1 { margin: 0 0 10px; font-size: clamp(2rem, 5vw, 3rem); line-height: 1.22; }
+    h2 { margin: 52px 0 14px; padding-top: 8px; font-size: 1.45rem; line-height: 1.4; }
+    h3 { margin: 28px 0 10px; font-size: 1.1rem; }
+    p, li { max-width: 82ch; }
+    a { color: var(--brand); text-underline-offset: 3px; }
+    strong { font-weight: 750; }
+    .meta { color: var(--muted); margin: 0; }
+    .lead { font-size: 1.04rem; }
+    .notice, .warning {
+      margin: 20px 0;
+      padding: 16px 18px;
+      border-radius: 12px;
+    }
+    .notice { background: var(--brand-soft); border-left: 4px solid var(--brand); }
+    .warning { background: var(--warn-bg); border-left: 4px solid var(--warn-line); }
+    .toc {
+      margin: 30px 0 42px;
+      padding: 22px;
+      background: var(--brand-soft);
+      border-radius: 14px;
+    }
+    .toc h2 { margin: 0 0 12px; padding: 0; font-size: 1.15rem; }
+    .toc ol { margin: 0; padding-left: 1.35rem; columns: 2; column-gap: 34px; }
+    .toc li { break-inside: avoid; margin: 5px 0; }
+    .toc a { color: var(--text); text-decoration: none; }
+    .toc a:hover, .toc a:focus { color: var(--brand); text-decoration: underline; }
+    .table-wrap { overflow-x: auto; margin: 16px 0 24px; border: 1px solid var(--line); border-radius: 12px; }
+    table { width: 100%; min-width: 720px; border-collapse: collapse; font-size: .94rem; }
+    th, td { padding: 12px 13px; border-bottom: 1px solid var(--line); border-right: 1px solid var(--line); text-align: left; vertical-align: top; }
+    th { background: var(--brand-soft); font-weight: 750; }
+    th:last-child, td:last-child { border-right: 0; }
+    tr:last-child td { border-bottom: 0; }
+    code { padding: 2px 5px; background: var(--brand-soft); border-radius: 5px; font-size: .92em; }
+    .back { display: inline-block; margin-top: 12px; font-size: .9rem; }
+    footer { margin-top: 60px; padding-top: 24px; border-top: 1px solid var(--line); color: var(--muted); font-size: .94rem; }
+    @media (max-width: 700px) {
+      main { width: min(100% - 16px, 980px); margin: 8px auto; border-radius: 14px; }
+      body { word-break: normal; }
+      .toc ol { columns: 1; }
+      h2 { margin-top: 42px; }
+    }
+    @media print {
+      body { background: #fff; color: #000; }
+      main { width: 100%; margin: 0; padding: 0; border: 0; box-shadow: none; }
+      .toc { break-after: page; }
+      h2, h3 { break-after: avoid; }
+      .table-wrap { overflow: visible; }
+      table { min-width: 0; font-size: 9pt; }
+      a { color: inherit; }
+    }
   </style>
 </head>
 <body>
-<main>
-  <h1>Cashtory</h1>
-  <p class="meta">개인정보처리방침 · Privacy Policy</p>
-  <nav class="lang-nav" aria-label="Language">
-    <a href="#ko">한국어</a><a href="#en" lang="en">English</a><a href="#ja" lang="ja">日本語</a><a href="#hi" lang="hi">हिन्दी</a><a href="#pt-br" lang="pt-BR">Português (Brasil)</a><a href="#id" lang="id">Bahasa Indonesia</a>
+<main id="top">
+  <header>
+    <p class="meta">Y&amp;O Studio</p>
+    <h1>Cashtory 개인정보 처리방침</h1>
+    <p class="meta"><strong>문서 버전:</strong> 1.0<br><strong>시행일:</strong> 2026년 8월 15일<br><strong>최종 개정일:</strong> 2026년 8월 15일</p>
+  </header>
+
+  <p class="lead">Y&amp;O Studio(이하 “개발자”)는 Cashtory 이용자의 자유와 권리를 보호하기 위해 「개인정보 보호법」 및 관계 법령을 준수합니다. 이 방침은 Cashtory가 어떤 정보를 처리하고 어디에 저장하며, 이용자가 이를 어떻게 관리할 수 있는지 설명합니다.</p>
+  <p class="notice"><strong>핵심 안내:</strong> Cashtory에는 회원가입·로그인·개발자 서버가 없습니다. 가계부 기록과 영수증에서 저장한 거래 정보는 이용자 기기에 보관되며 개발자는 이를 열람할 수 없습니다. 다만 Android 버전의 광고 SDK와 Google ML Kit는 아래에 설명한 기술정보를 Google로 전송할 수 있습니다.</p>
+
+  <nav class="toc" aria-label="목차">
+    <h2>목차</h2>
+    <ol>
+      <li><a href="#section-1">수집·처리하는 정보와 저장 위치</a></li>
+      <li><a href="#section-2">권한 사용 목적</a></li>
+      <li><a href="#section-3">카메라·사진 및 영수증 인식</a></li>
+      <li><a href="#section-4">광고</a></li>
+      <li><a href="#section-5">데이터 보관 위치와 백업</a></li>
+      <li><a href="#section-6">제3자 서비스</a></li>
+      <li><a href="#section-7">정보 보관 기간과 파기</a></li>
+      <li><a href="#section-8">아동의 개인정보</a></li>
+      <li><a href="#section-9">이용자의 권리와 행사 방법</a></li>
+      <li><a href="#section-10">보안</a></li>
+      <li><a href="#section-11">방침 변경 고지</a></li>
+      <li><a href="#section-12">문의처</a></li>
+      <li><a href="#section-13">대한민국 이용자에 대한 추가 안내</a></li>
+    </ol>
   </nav>
 
-  <section id="ko" class="language" lang="ko">
-    <h1>개인정보처리방침</h1>
-    <p class="meta"><strong>시행일:</strong> 2026년 8월 2일<br><strong>최종 업데이트:</strong> 2026년 8월 11일</p>
-    <p>Y&amp;O Studio(이하 “개발자”)는 Cashtory 이용자의 개인정보와 금융 기록을 중요하게 생각합니다. 이 개인정보처리방침은 Cashtory가 어떤 정보를 처리하고, 해당 정보가 어떻게 이용·보관·공유되는지 설명합니다.</p>
-    <h2>1. 앱의 기본 데이터 처리 방식</h2>
-    <p>Cashtory는 회원가입이나 사용자 계정을 요구하지 않습니다. 수입·지출·이체, 자산·부채·카드, 카테고리, 정기거래, 즐겨찾기, 메모, 앱 설정 및 사용자가 저장한 영수증 인식 결과는 원칙적으로 사용자의 기기 내부에만 저장됩니다.</p>
-    <p class="notice">개발자는 금융 기록을 운영하는 별도 서버를 두지 않으며, 해당 기록을 개발자 서버로 전송하거나 열람하지 않습니다.</p>
-    <h2>2. 광고 서비스가 처리하는 정보</h2>
-    <p>Cashtory의 Android 버전은 광고 제공을 위해 Google AdMob 및 Google Mobile Ads SDK를 사용합니다. Google Mobile Ads SDK는 광고 제공, 분석 및 부정행위 방지를 위해 다음 정보를 자동으로 수집하거나 제3자와 공유할 수 있습니다.</p>
-    <ul><li>IP 주소 및 이를 통해 추정되는 대략적인 위치</li><li>앱 실행, 화면 또는 광고와의 상호작용 등 사용자 제품 상호작용 정보</li><li>앱 및 광고 SDK의 성능·오류 등 진단 정보</li><li>Android 광고 ID, 앱 세트 ID 등 기기 또는 계정 관련 식별자</li></ul>
-    <p>이 광고 관련 정보는 Google의 정책에 따라 처리되며 전송 중 암호화될 수 있습니다. 이용자는 Android 기기 설정을 통해 광고 ID를 재설정하거나 삭제하고 광고 개인 최적화 설정을 변경할 수 있습니다.</p>
-    <ul><li><a href="https://policies.google.com/privacy">Google 개인정보처리방침</a></li><li><a href="https://policies.google.com/technologies/ads">Google의 광고 기술 사용 방식</a></li><li><a href="https://developers.google.com/admob/android/privacy/play-data-disclosure">Google Mobile Ads SDK 데이터 공개 안내</a></li></ul>
-    <p>관련 법령이 요구되는 지역에서는 Google의 동의 관리 플랫폼을 통해 광고 목적의 개인정보 처리에 대한 선택 화면이 제공됩니다. 현재 적용되는 광고 기술 제공업체와 처리 목적은 해당 동의 화면 또는 앱의 ‘광고 개인정보 설정’에서 확인할 수 있습니다.</p>
-    <h2>3. 카메라, 사진 및 영수증 인식</h2>
-    <p>Cashtory는 영수증의 글자를 인식하기 위해 사용자가 선택한 경우에만 카메라 또는 사진 접근 권한을 사용합니다.</p>
-    <ul><li>촬영하거나 선택한 영수증 이미지는 금융 기록 추출을 위해 기기에서 처리하도록 설계되어 있습니다.</li><li>개발자는 영수증 이미지나 인식된 금융 내용을 개발자 서버로 전송하거나 보관하지 않습니다.</li><li>Cashtory는 인식이 끝난 영수증 이미지를 앱의 장기 보관 자료로 저장하지 않습니다.</li><li>기기 사진 앱에서 선택한 원본 사진은 Cashtory가 삭제하지 않습니다.</li><li>인식 결과를 거래로 저장하면 텍스트와 금액 정보는 다른 거래 기록과 같이 기기 내부에 저장됩니다.</li></ul>
-    <p>운영체제, 앱 스토어 제공자 또는 기기에 포함된 Google 구성요소가 자체 정책에 따라 기술 정보를 처리할 수 있습니다.</p>
-    <h2>4. 백업, 복원 및 내보내기</h2>
-    <p>사용자는 금융 기록을 JSON 백업 파일 또는 CSV 파일로 직접 내보낼 수 있습니다. 내보내기는 사용자가 명시적으로 실행한 경우에만 이루어집니다. 사용자가 이메일, 메신저, 클라우드 저장소 등 외부 서비스를 선택하면 파일은 해당 서비스의 개인정보처리방침과 보관 정책을 따릅니다. 개발자는 해당 파일을 열람하거나 관리하지 않습니다. 백업과 CSV에는 민감한 금융 기록이 포함될 수 있으므로 안전한 위치에 보관해야 합니다.</p>
-    <h2>5. 정보의 보관과 삭제</h2>
-    <p>기기 내부 데이터는 앱 안에서 기록을 삭제하거나, 앱 데이터를 초기화하거나, Android 설정에서 저장공간을 삭제하거나, 앱을 삭제할 때까지 보관될 수 있습니다. 외부로 내보낸 파일은 앱을 삭제해도 자동으로 삭제되지 않으므로 저장 위치 또는 외부 서비스에서 직접 삭제해야 합니다.</p>
-    <p>개발자는 금융 기록을 서버에 보유하지 않으므로 이를 대신 열람하거나 서버에서 삭제할 수 없습니다. 광고 관련 정보의 보관기간은 Google 및 해당 광고 기술 제공업체의 정책과 처리 목적에 따라 정해집니다.</p>
-    <h2>6. 정보의 제3자 제공</h2>
-    <p>개발자는 사용자의 금융 기록을 판매하지 않으며 개발자 서버를 통해 제3자에게 제공하지 않습니다. 다만 AdMob을 통한 광고·분석·부정행위 방지, 사용자가 직접 실행한 외부 파일 공유, 적법한 법률상 의무가 있는 경우에는 제3자가 관련 정보를 처리할 수 있습니다.</p>
-    <h2>7. 보안</h2>
-    <p>Cashtory는 금융 기록을 기기에 저장하여 외부 전송을 최소화하지만 어떤 저장 방식도 절대적인 안전을 보장할 수는 없습니다. 기기 화면 잠금, 운영체제 업데이트와 안전한 백업 위치를 이용하고, 암호화되지 않은 백업 또는 CSV 파일을 공개된 장소에 저장하지 않도록 주의해야 합니다.</p>
+  <section id="section-1">
+    <h2>1. 수집·처리하는 정보와 저장 위치</h2>
+    <h3>1.1 이용자 기기 안에만 저장되는 정보</h3>
+    <p>Cashtory는 이용자가 가계부 기능을 사용하기 위해 직접 입력하거나 저장한 다음 정보를 기기 내부 SQLite 데이터베이스에서 처리합니다.</p>
+    <ul>
+      <li>수입·지출·이체 거래 내역</li>
+      <li>자산·부채·카드 정보 및 카드 할부 회차</li>
+      <li>분류(카테고리), 정기거래, 즐겨찾기 및 메모</li>
+      <li>테마, 언어, 통화, 월 시작일을 포함한 앱 설정</li>
+      <li>영수증에서 확인한 가게 이름·날짜·총액 중 이용자가 저장한 정보와 그에 따라 저장한 거래</li>
+    </ul>
+    <p>개발자는 위 정보를 저장하는 서버를 운영하지 않으며, 위 정보에 원격으로 접근하거나 열람할 수 없습니다.</p>
+
+    <h3>1.2 Google SDK가 자동으로 처리할 수 있는 기술정보</h3>
+    <ul>
+      <li><strong>Google Mobile Ads SDK:</strong> IP 주소와 이를 통해 추정되는 대략적 위치, 앱·광고 상호작용, 성능·오류 진단정보, Android 광고 ID 및 앱 세트 ID</li>
+      <li><strong>Google ML Kit:</strong> 기기·앱 정보, 기기 또는 설치 식별자, 성능 지표, API 설정값, 입력·출력 크기, 기능 버전, 기능 실행·모델 다운로드·리소스 해제 이벤트 및 오류 코드</li>
+    </ul>
+    <p>영수증 이미지와 인식된 글자 자체는 개발자 서버 또는 Google 서버로 전송하지 않고 기기에서 처리합니다. Google SDK가 처리하는 기술정보에 관한 상세 내용은 제6항과 제13항에서 안내합니다.</p>
+
+    <h3>1.3 처리하지 않는 정보</h3>
+    <p>Cashtory에는 회원가입·로그인·계정 생성 기능이 없으며, 개발자는 이름·이메일·전화번호·연락처·통화기록·정확한 GPS 위치·주민등록번호·여권번호 또는 민감정보를 앱을 통해 수집하지 않습니다. 별도의 이용자 행동 분석 도구인 Firebase Analytics도 직접 도입하지 않았습니다.</p>
+    <a class="back" href="#top">맨 위로</a>
+  </section>
+
+  <section id="section-2">
+    <h2>2. 권한 사용 목적</h2>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>상황</th><th>실제 동작</th><th>권한</th></tr></thead>
+        <tbody>
+          <tr><td>Google 문서 스캐너로 촬영</td><td>Google Play 서비스가 촬영 화면을 제공하고 이용자가 선택한 결과 이미지만 Cashtory에 전달합니다.</td><td>Cashtory는 카메라 권한을 요청하지 않습니다.</td></tr>
+          <tr><td>문서 스캐너를 사용할 수 없거나 실행에 실패한 경우</td><td>Cashtory의 자체 카메라 촬영 기능으로 전환합니다.</td><td>이 경우에만 Cashtory가 카메라 권한을 요청합니다.</td></tr>
+          <tr><td>기기에 저장된 사진 한 장 선택</td><td>Android 시스템 사진 선택기가 열리고 이용자가 고른 사진만 앱에 전달됩니다.</td><td>사진첩 전체에 접근하는 사진·미디어 권한을 요청하지 않습니다.</td></tr>
+          <tr><td>JSON·CSV를 기기에 저장</td><td>Android 시스템의 파일·폴더 선택 화면에서 이용자가 저장 위치를 선택합니다.</td><td>선택한 위치에 파일을 만들기 위한 접근이며 기기 전체 저장소 권한이 아닙니다.</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p>카메라 권한을 허용하지 않거나 영수증 기능을 사용하지 않아도 거래를 직접 입력하는 핵심 가계부 기능은 계속 사용할 수 있습니다.</p>
+    <a class="back" href="#top">맨 위로</a>
+  </section>
+
+  <section id="section-3">
+    <h2>3. 카메라·사진 및 영수증 인식</h2>
+    <h3>3.1 Google ML Kit Document Scanner</h3>
+    <p>문서 스캐너를 사용할 수 있는 Android 기기에서는 Google ML Kit Document Scanner가 기본 촬영 방식입니다. Google Play 서비스가 촬영 화면, ML 모델 및 관련 리소스를 제공하며, 영수증 테두리를 감지하고 기울어진 이미지를 보정하는 촬영·편집 기능을 이용할 수 있습니다. 제공 기능은 Google Play 서비스 버전에 따라 달라질 수 있습니다.</p>
+    <p>이 경로에서는 Google Play 서비스가 자체 카메라 권한으로 촬영하고, 이용자가 스캐너 화면에서 선택한 결과 이미지만 Cashtory에 전달합니다. Cashtory는 카메라 권한을 요청하지 않습니다.</p>
+    <p>Google Play 서비스가 스캐너 모델이나 대용량 리소스를 동적으로 내려받을 수 있으므로 필요한 리소스가 기기에 없으면 네트워크 통신과 대기 시간이 발생할 수 있습니다. 이미 설치되어 있으면 별도의 다운로드 과정이 보이지 않을 수 있습니다.</p>
+
+    <h3>3.2 앱 자체 카메라와 시스템 사진 선택기</h3>
+    <p>문서 스캐너를 사용할 수 없거나 실행에 실패한 경우에만 Cashtory가 자체 카메라로 전환하고 카메라 권한을 요청합니다. 앨범에서 선택할 때에는 Android 시스템 사진 선택기를 사용하며, 사진첩 전체 접근 권한 없이 이용자가 고른 사진 한 장만 앱에 전달됩니다.</p>
+
+    <h3>3.3 기기 내 글자 인식</h3>
+    <p>Cashtory는 Google ML Kit Text Recognition을 사용해 영수증 글자를 기기 안에서 인식합니다. 지원하는 글자 인식 모델은 라틴 문자, 한국어, 일본어 및 데바나가리입니다. 모델은 앱에 포함되지 않으며, 필요한 모델이 Google Play 서비스에 없으면 설치 과정 또는 처음 기능을 실행하는 과정에서 내려받을 수 있습니다.</p>
+    <ul>
+      <li>영수증 이미지와 인식된 글자는 개발자 서버 또는 Google 서버로 보내지 않습니다.</li>
+      <li>영수증 이미지는 앱 데이터베이스에 저장하지 않고 인식에만 사용합니다.</li>
+      <li>문서 스캐너가 전달한 이미지 파일이 기기의 임시 폴더에 남을 수 있으며 Cashtory가 이를 별도로 삭제하지는 않습니다.</li>
+      <li>앨범에서 선택한 원본 사진은 Cashtory가 삭제하지 않습니다.</li>
+      <li>인식된 글자 원문은 앱 데이터베이스에 저장하지 않습니다.</li>
+      <li>이용자가 저장한 가게 이름·날짜·총액과 거래 정보만 기기 내부에 남습니다.</li>
+    </ul>
+    <p>ML Kit는 영수증 이미지나 인식된 글자 대신 제1.2항의 기술정보를 진단과 사용량 분석 목적으로 Google에 전송할 수 있습니다. 전송되는 기술정보는 HTTPS로 암호화됩니다.</p>
+    <a class="back" href="#top">맨 위로</a>
+  </section>
+
+  <section id="section-4">
+    <h2>4. 광고</h2>
+    <p>Cashtory Android 버전은 배너 광고를 제공하기 위해 Google AdMob 및 Google Mobile Ads SDK를 사용합니다. SDK는 광고 제공, 분석 및 부정행위 방지를 위해 IP 주소, 앱·광고 상호작용, 진단정보, Android 광고 ID 및 앱 세트 ID를 자동으로 수집하거나 공유할 수 있습니다. IP 주소는 대략적 위치를 추정하는 데 사용될 수 있습니다.</p>
+    <p>동의가 필요한 지역에서는 Google User Messaging Platform(UMP)이 광고 관련 선택 화면을 표시하고 동의 절차가 완료된 뒤 광고 SDK를 초기화합니다. 해당 지역에서는 <strong>더보기 → 광고 개인정보 설정</strong>에서 선택을 변경할 수 있습니다. 현재 배포 지역은 대한민국이지만 앱에 해당 기능이 포함되어 있어 실제 동작을 안내합니다.</p>
+    <p>개인 맞춤 광고를 거부해도 가계부의 핵심 기능은 그대로 사용할 수 있습니다. 광고의 유형이나 제공 방식은 달라질 수 있습니다. Android 기기 설정에서도 광고 ID를 재설정하거나 삭제할 수 있습니다.</p>
+    <p>현재 출시 대상인 Android 버전에만 광고가 포함됩니다. 추후 iOS 버전을 출시하는 경우 그 버전에는 광고를 포함하지 않을 예정이며, 실제 출시 사양이 변경되면 이 방침을 개정합니다.</p>
+    <a class="back" href="#top">맨 위로</a>
+  </section>
+
+  <section id="section-5">
+    <h2>5. 데이터 보관 위치와 백업</h2>
+    <h3>5.1 기기 내부 저장</h3>
+    <p>가계부 데이터는 이용자 기기의 앱 전용 SQLite 데이터베이스에 저장됩니다. 개발자 서버 또는 개발자가 관리하는 클라우드에는 저장되지 않습니다.</p>
+
+    <h3>5.2 앱 내부 자동 백업</h3>
+    <p>Cashtory는 이전 시점의 가계부 데이터를 복원할 수 있도록 앱 전용 저장공간에 자동 백업 파일을 만들 수 있습니다. 백업 보관 개수를 초과하면 오래된 백업부터 자동 삭제됩니다. 이 백업도 이용자 기기 안에만 있습니다.</p>
+
+    <h3>5.3 수동 백업과 내보내기</h3>
+    <p>이용자가 직접 실행한 경우에만 JSON 백업 파일 또는 CSV 파일을 내보냅니다. 기기에 저장할 때 Android 시스템의 파일·폴더 선택 화면이 표시될 수 있습니다. 이용자가 선택한 위치에 파일을 만들기 위한 접근이며 Cashtory가 기기 전체 저장소에 접근하는 것은 아닙니다.</p>
+    <p>내보낸 파일을 이메일·메신저·클라우드 등 외부 서비스로 보내면 해당 서비스의 개인정보처리방침과 보관 정책이 적용됩니다. 개발자는 파일의 저장 위치를 결정하거나 파일을 열람·관리하지 않습니다. 내보낸 파일은 앱을 삭제해도 자동으로 삭제되지 않으므로 이용자가 저장 위치에서 직접 삭제해야 합니다.</p>
+
+    <h3>5.4 Android 운영체제 백업과 기기 이전</h3>
+    <p>Cashtory는 Android 자동 클라우드 백업을 사용하지 않도록 <code>allowBackup=false</code>로 설정되어 있으므로 앱 데이터가 이용자의 Google Drive 백업 공간으로 자동 업로드되지 않습니다.</p>
+    <p class="warning">Android 12 이상을 대상으로 하는 앱은 일부 제조사 기기에서 이 설정이 클라우드 백업은 차단하지만, 이용자가 새 기기로 직접 데이터를 옮길 때 앱 데이터의 기기 간 전송까지 차단하지 못할 수 있습니다.</p>
+    <p>클라우드 자동 복원은 제공하지 않으므로 앱을 삭제하거나 기기를 바꾸기 전에 앱 안의 JSON 수동 백업 기능을 이용할 것을 권장합니다. 다만 위와 같이 기기 제조사의 직접 전송 기능을 사용하면 데이터가 새 기기로 함께 이동할 수 있습니다.</p>
+    <a class="back" href="#top">맨 위로</a>
+  </section>
+
+  <section id="section-6">
+    <h2>6. 제3자 서비스</h2>
+    <p>개발자는 아래 SDK를 앱에 포함합니다. Google 광고 서비스는 Google과 개발자가 각자의 처리 목적을 정하는 독립적인 처리 관계가 될 수 있으며, ML Kit는 기능 제공과 SDK 진단을 위해 Google이 기술정보를 처리합니다. 개발자는 Firebase Analytics를 별도로 도입하지 않았습니다. 실제 출시 AAB에는 Firebase Remote Config 및 Firebase Installations SDK가 포함되어 있지 않습니다.</p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>서비스</th><th>용도</th><th>처리될 수 있는 정보</th><th>영수증 이미지·원문 전송</th></tr></thead>
+        <tbody>
+          <tr><td>Google AdMob / Google Mobile Ads SDK</td><td>배너 광고, 광고 성과 분석, 부정행위 방지</td><td>IP 주소·대략적 위치, 앱·광고 상호작용, 진단정보, Android 광고 ID, 앱 세트 ID</td><td>해당 없음</td></tr>
+          <tr><td>Google User Messaging Platform</td><td>동의가 필요한 지역에서 광고 선택 화면 제공</td><td>광고 동의 상태 및 동의 절차 제공에 필요한 기술정보</td><td>해당 없음</td></tr>
+          <tr><td>Google ML Kit Document Scanner</td><td>영수증 촬영 화면, 문서 감지·보정 및 결과 이미지 전달</td><td>기기·앱 정보, 식별자, 성능·API 설정, 기능 이벤트 및 오류 코드</td><td>전송하지 않음</td></tr>
+          <tr><td>Google ML Kit Text Recognition</td><td>기기 내 영수증 글자 인식</td><td>기기·앱 정보, 식별자, 성능·API 설정, 입력·출력 크기, 모델 다운로드·기능 이벤트 및 오류 코드</td><td>전송하지 않음</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <ul>
+      <li><a href="https://policies.google.com/privacy?hl=ko">Google 개인정보처리방침</a></li>
+      <li><a href="https://policies.google.com/technologies/partner-sites?hl=ko">Google 서비스를 사용하는 앱의 정보 처리 방식</a></li>
+      <li><a href="https://developers.google.com/admob/android/privacy/play-data-disclosure?hl=ko">Google Mobile Ads SDK 데이터 공개 안내</a></li>
+      <li><a href="https://developers.google.com/ml-kit/android-data-disclosure?hl=ko">Google ML Kit 데이터 공개 안내</a></li>
+      <li><a href="https://developers.google.com/ml-kit/vision/doc-scanner?hl=ko">Google ML Kit Document Scanner 안내</a></li>
+      <li><a href="https://developers.google.com/ml-kit/tips/installation-paths?hl=ko">Google ML Kit 모델 설치 방식</a></li>
+    </ul>
+    <a class="back" href="#top">맨 위로</a>
+  </section>
+
+  <section id="section-7">
+    <h2>7. 정보 보관 기간과 파기</h2>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>정보</th><th>보관 기간 또는 기준</th><th>파기 방법</th></tr></thead>
+        <tbody>
+          <tr><td>가계부 기록·설정·저장한 영수증 결과</td><td>이용자가 앱에서 삭제하거나, 앱 데이터를 삭제하거나, 앱을 삭제할 때까지</td><td>앱 또는 Android 운영체제가 기기 내부 데이터베이스와 앱 파일을 삭제</td></tr>
+          <tr><td>영수증 이미지와 인식된 글자 원문</td><td>앱 데이터베이스에 저장하지 않고 인식 처리 중에만 사용</td><td>처리 후 앱 기록으로 남기지 않음. 스캐너 임시 파일은 운영체제의 임시파일 관리 또는 앱 데이터 삭제 시 정리될 수 있음</td></tr>
+          <tr><td>앱 내부 자동 백업</td><td>설정된 보관 개수를 초과하면 오래된 파일부터 삭제되며, 앱 데이터 삭제 또는 앱 삭제 시까지</td><td>앱이 오래된 백업을 자동 삭제하거나 Android 운영체제가 앱 전용 저장공간을 삭제</td></tr>
+          <tr><td>이용자가 내보낸 JSON·CSV</td><td>이용자가 선택한 저장 위치에서 직접 삭제할 때까지</td><td>이용자가 파일 앱 또는 외부 서비스에서 삭제</td></tr>
+          <tr><td>Google SDK 기술정보</td><td>정보 종류, 처리 목적 및 이용자 설정에 따라 Google 정책에서 정한 기간</td><td>Google 정책에 따라 삭제되거나 익명화됨</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p>개발자는 가계부 기록을 서버에 보유하지 않으므로 이용자를 대신하여 서버에서 열람하거나 삭제할 수 없습니다. Google은 광고 서버 로그 등의 데이터를 일정 기간 후 자동 삭제하거나 익명화할 수 있으며, 보안·사기 방지·법적 의무를 위해 더 오래 보관할 수 있습니다. 자세한 내용은 <a href="https://policies.google.com/technologies/retention?hl=ko">Google 데이터 보관 정책</a>에서 확인할 수 있습니다.</p>
+    <a class="back" href="#top">맨 위로</a>
+  </section>
+
+  <section id="section-8">
     <h2>8. 아동의 개인정보</h2>
-    <p>Cashtory는 아동을 주요 대상으로 설계된 서비스가 아닙니다. 개발자가 아동의 개인정보가 개발자에게 직접 전달되었음을 알게 된 경우 확인 가능한 범위에서 필요한 조치를 취합니다.</p>
-    <h2>9. 이용자의 선택과 권리</h2>
-    <p>이용자는 앱 안에서 금융 기록을 확인·수정·삭제하고 기기 설정에서 앱 권한, 광고 ID 및 광고 개인정보 보호 설정을 관리할 수 있습니다. 개발자가 보유하지 않는 기기 내부 정보나 Google이 독립적으로 처리하는 정보는 개발자가 직접 열람·삭제할 수 없을 수 있습니다.</p>
-    <h2>10. 유럽경제지역(EEA), 영국 및 스위스 이용자</h2>
-    <p>관련 개인정보 보호법이 적용되는 경우, 개발자는 자신이 처리 목적과 방법을 결정하는 개인정보에 대해 개인정보처리자 역할을 합니다. 기기 내부 금융 기록과 영수증 인식 결과는 이용자가 요청한 앱 기능을 제공하기 위해 기기에서 처리되며 개발자 서버로 전송되지 않습니다.</p>
-    <p>개인 맞춤 광고, 광고 식별자 및 광고 관련 저장 기술은 법령상 필요한 경우 이용자의 동의를 근거로 처리됩니다. 광고 보안, 부정행위 방지, 서비스 안정성 및 제한적·문맥 기반 광고에 필요한 처리는 관련 법령이 허용하는 범위에서 정당한 이익이나 기타 적용 가능한 법적 근거에 따라 이루어질 수 있습니다. Google과 동의 화면에 표시되는 광고 기술 제공업체는 각자의 고지와 법적 지위에 따라 정보를 처리할 수 있습니다.</p>
-    <p>이용자는 적용되는 법령에 따라 개인정보 열람, 정정, 삭제, 처리 제한, 처리 반대 및 데이터 이동을 요청할 수 있으며, 동의를 언제든 철회할 수 있습니다. 동의 철회는 철회 전에 이루어진 처리의 적법성에는 영향을 미치지 않습니다. 개발자는 이용자에게 법적 또는 이에 준하는 중대한 영향을 미치는 자동화된 의사결정을 직접 수행하지 않습니다.</p>
-    <p>광고 동의는 Cashtory의 <strong>더보기 → 광고 개인정보 설정</strong>에서 변경할 수 있습니다. 해당 메뉴가 제공되지 않는 경우 기기의 광고 개인정보 설정을 이용할 수 있습니다. 광고 동의를 거부하거나 철회해도 가계부의 핵심 기능은 계속 사용할 수 있지만 광고의 유형 또는 제공 여부는 달라질 수 있습니다.</p>
-    <p>광고 관련 정보는 Google 및 광고 기술 제공업체가 운영하는 거주국 밖의 서버에서 처리될 수 있습니다. 필요한 경우 적정성 결정, 표준계약조항 또는 기타 적용 가능한 보호장치가 사용될 수 있습니다. 이용자는 거주 지역의 개인정보 감독기관에 민원을 제기할 수 있습니다. 권리 행사 또는 문의는 <a href="mailto:official.yo.studio@gmail.com">official.yo.studio@gmail.com</a>으로 연락할 수 있습니다.</p>
-    <h2>11. 개인정보처리방침의 변경</h2>
-    <p>앱 기능, 사용 SDK 또는 관련 법령이 변경되면 이 방침도 변경될 수 있습니다. 중요한 변경은 앱, 스토어 등록정보 또는 이 페이지를 통해 알리고 최종 업데이트 날짜를 수정합니다.</p>
+    <p>Google Play에서 설정하는 Cashtory의 목표 이용자 연령은 <strong>만 18세 이상</strong>입니다. 이는 앱의 목표 이용자 설정이며, 앱 콘텐츠의 유해성 정도를 나타내는 콘텐츠 등급과는 다른 개념입니다.</p>
+    <p>Cashtory는 만 14세 미만 아동을 대상으로 설계되지 않았고, 회원가입이나 연령 확인 기능도 없습니다. 개발자는 앱을 통해 만 14세 미만 아동의 이름·연락처 등 개인정보를 직접 수집하지 않으므로 법정대리인 동의를 받는 절차를 운영하지 않습니다.</p>
+    <p>만 14세 미만 아동의 개인정보가 문의 이메일 등을 통해 개발자에게 전달된 사실을 알게 되면, 법령에 따라 필요한 확인을 거쳐 해당 정보를 삭제하는 등 보호조치를 취합니다. 법정대리인은 제12항의 연락처로 관련 문의를 할 수 있습니다.</p>
+    <a class="back" href="#top">맨 위로</a>
+  </section>
+
+  <section id="section-9">
+    <h2>9. 이용자의 권리와 행사 방법</h2>
+    <ul>
+      <li>가계부 기록은 앱 안에서 직접 열람·정정·삭제할 수 있습니다.</li>
+      <li>JSON 백업 또는 CSV 내보내기로 자신의 데이터를 받을 수 있습니다.</li>
+      <li>Android 설정에서 Cashtory의 카메라 권한을 허용하거나 철회할 수 있습니다.</li>
+      <li>앨범 선택은 시스템 사진 선택기를 사용하므로 사진첩 전체 접근 권한을 부여하지 않습니다.</li>
+      <li>Android 설정에서 광고 ID를 재설정·삭제하고 광고 관련 설정을 관리할 수 있습니다.</li>
+      <li>동의 화면이 제공되는 지역에서는 <strong>더보기 → 광고 개인정보 설정</strong>에서 광고 선택을 변경할 수 있습니다.</li>
+    </ul>
+    <p>개발자에게 개인정보 열람·정정·삭제·처리정지 또는 동의 철회와 관련해 문의하려면 제12항의 이메일로 요청할 수 있습니다. 개발자는 요청자가 본인 또는 정당한 대리인인지 확인하기 위해 필요한 최소한의 정보를 요청할 수 있습니다.</p>
+    <p>기기 안에만 저장되어 개발자가 보유하지 않는 가계부 기록은 개발자가 대신 열람·정정·삭제할 수 없습니다. Google이 독립적으로 처리하는 정보에 대한 권리는 <a href="https://policies.google.com/privacy?hl=ko">Google 개인정보처리방침</a>에 안내된 방법으로 행사할 수 있습니다.</p>
+    <a class="back" href="#top">맨 위로</a>
+  </section>
+
+  <section id="section-10">
+    <h2>10. 보안</h2>
+    <ul>
+      <li>개발자 서버를 운영하지 않고 가계부 기록을 이용자 기기에 저장하여 외부 전송을 최소화합니다.</li>
+      <li>영수증 이미지와 인식된 글자 원문을 앱 데이터베이스에 저장하지 않습니다.</li>
+      <li>출시 AAB에서 마이크, 광범위한 사진·미디어 및 외부 저장소 접근 권한을 제거했습니다.</li>
+      <li>Google Mobile Ads SDK 및 ML Kit가 전송하는 기술정보는 TLS 또는 HTTPS로 전송 중 암호화됩니다.</li>
+    </ul>
+    <p>어떤 저장 방식도 절대적인 안전을 보장할 수는 없습니다. 이용자는 기기 화면 잠금과 최신 운영체제를 사용하고, JSON·CSV 파일을 안전한 위치에 보관해야 합니다. 이메일·메신저·공용 클라우드 등에 파일을 보낼 때에는 해당 서비스의 공개 범위와 보안 설정을 확인해야 합니다.</p>
+    <a class="back" href="#top">맨 위로</a>
+  </section>
+
+  <section id="section-11">
+    <h2>11. 방침 변경 고지</h2>
+    <p>앱 기능, 사용 SDK, 배포 지역 또는 관계 법령이 변경되면 이 방침을 개정할 수 있습니다. 중요한 변경은 앱, Google Play 스토어 등록정보 또는 이 페이지 등 이용자가 확인하기 쉬운 방법으로 안내하고 시행일과 최종 개정일을 변경합니다.</p>
+    <p>이 방침은 2026년 8월 15일부터 적용됩니다. 현재 정식 배포 지역은 대한민국이며, 배포 지역을 확대할 경우 해당 지역 법령과 실제 앱 동작에 맞춰 이 방침을 개정합니다.</p>
+    <a class="back" href="#top">맨 위로</a>
+  </section>
+
+  <section id="section-12">
     <h2>12. 문의처</h2>
-    <ul><li>개발자: <strong>Y&amp;O Studio</strong></li><li>앱: <strong>Cashtory</strong></li><li>이메일: <a href="mailto:official.yo.studio@gmail.com">official.yo.studio@gmail.com</a></li></ul>
+    <p>개발자는 개인정보 처리에 관한 문의, 불만 및 피해구제를 처리하기 위해 다음과 같이 개인정보 보호책임자와 담당 창구를 운영합니다.</p>
+    <ul>
+      <li><strong>개발자:</strong> Y&amp;O Studio</li>
+      <li><strong>앱:</strong> Cashtory</li>
+      <li><strong>패키지명:</strong> <code>com.yandostudio.cashtory</code></li>
+      <li><strong>개인정보 보호책임자:</strong> Y&amp;O Studio 대표</li>
+      <li><strong>개인정보 보호업무 및 고충처리 담당:</strong> Y&amp;O Studio 개인정보 보호 담당</li>
+      <li><strong>이메일:</strong> <a href="mailto:official.yo.studio@gmail.com">official.yo.studio@gmail.com</a></li>
+    </ul>
+    <p>개인정보 보호 관련 문의를 받으면 확인 후 가능한 범위에서 지체 없이 답변하겠습니다.</p>
+    <a class="back" href="#top">맨 위로</a>
   </section>
 
-  <section id="en" class="language" lang="en">
-    <h1>Privacy Policy</h1>
-    <p class="meta"><strong>Effective date:</strong> August 2, 2026<br><strong>Last updated:</strong> August 11, 2026</p>
-    <p>Y&amp;O Studio (the “Developer”) respects the privacy and financial records of Cashtory users. This Privacy Policy explains what information Cashtory processes and how that information is used, stored, and shared.</p>
-    <h2>1. Core Data Processing</h2>
-    <p>Cashtory does not require registration or a user account. Income, expenses, transfers, assets, liabilities, cards, categories, recurring entries, favorites, notes, app preferences, and receipt-recognition results saved by the user are stored locally on the user's device by default.</p>
-    <p class="notice">The Developer does not operate a separate server for these financial records and does not transmit or access them through a Developer-controlled server.</p>
-    <h2>2. Information Processed by Advertising Services</h2>
-    <p>The Android version of Cashtory uses Google AdMob and the Google Mobile Ads SDK. For advertising, analytics, and fraud-prevention purposes, the SDK may automatically collect or share:</p>
-    <ul><li>IP addresses and approximate location inferred from them</li><li>User product interactions, such as app launches and interactions with screens or ads</li><li>Diagnostic information about the app and advertising SDK</li><li>Device or account-related identifiers, including the Android advertising ID and app set ID</li></ul>
-    <p>This information is processed under Google's policies and may be encrypted in transit. Users can manage advertising IDs and ad-personalization settings through Android settings.</p>
-    <ul><li><a href="https://policies.google.com/privacy">Google Privacy Policy</a></li><li><a href="https://policies.google.com/technologies/ads">How Google uses advertising technologies</a></li><li><a href="https://developers.google.com/admob/android/privacy/play-data-disclosure">Google Mobile Ads SDK data disclosure</a></li></ul>
-    <p>Where required by law, Google's consent management platform presents choices regarding the processing of personal data for advertising. The advertising technology providers currently involved and their purposes can be reviewed in that consent screen or in the app's “Ad Privacy Settings.”</p>
-    <h2>3. Camera, Photos, and Receipt Recognition</h2>
-    <p>Cashtory accesses the camera or photos only when the user chooses to use receipt recognition.</p>
-    <ul><li>Receipt images are designed to be processed on the device to extract financial information.</li><li>The Developer does not transmit receipt images or recognized financial content to a Developer-controlled server.</li><li>Cashtory does not retain processed receipt images as long-term app records.</li><li>Original images selected from the photo library are not deleted by Cashtory.</li><li>When recognized results are saved as a transaction, the resulting text and amounts are stored locally like other records.</li></ul>
-    <p>The operating system, app-store provider, or Google components included on the device may independently process technical information under their policies.</p>
-    <h2>4. Backup, Restore, and Export</h2>
-    <p>Users may export financial records as JSON backup files or CSV files. Exports occur only when explicitly initiated by the user. If the user selects email, a messaging app, cloud storage, or another external service, the file is governed by that service's privacy and retention policies. The Developer cannot access or manage those files. Backup and CSV files may contain sensitive financial records and should be stored securely.</p>
-    <h2>5. Retention and Deletion</h2>
-    <p>Local data may remain until the user deletes individual records, resets app data, clears Cashtory storage through Android settings, or uninstalls the app. Exported files are not automatically deleted when the app is uninstalled and must be removed from their storage location or external service by the user.</p>
-    <p>Because the Developer does not hold financial records on a server, the Developer cannot access or delete those records on the user's behalf. The retention of advertising-related information is determined by Google and the applicable advertising technology providers according to their policies and processing purposes.</p>
-    <h2>6. Disclosure to Third Parties</h2>
-    <p>The Developer does not sell users' financial records or disclose them through a Developer-controlled server. Third parties may process information through AdMob for advertising, analytics, and fraud prevention; when a user intentionally shares an exported file; or when required by a valid legal obligation.</p>
-    <h2>7. Security</h2>
-    <p>Cashtory minimizes external transmission by storing financial records on the user's device, but no storage method is completely secure. Users should use device-screen locks, keep the operating system updated, store exported files securely, and avoid placing unencrypted backup or CSV files in public locations.</p>
-    <h2>8. Children's Privacy</h2>
-    <p>Cashtory is not designed primarily for children. If the Developer becomes aware that a child's personal information has been directly provided to the Developer, appropriate action will be taken to the extent reasonably possible.</p>
-    <h2>9. User Choices and Rights</h2>
-    <p>Users can view, edit, and delete financial records in the app and manage app permissions, advertising IDs, and advertising privacy settings through device settings. The Developer may be unable to access or delete information stored only on the user's device or independently processed by Google.</p>
-    <h2>10. Users in the EEA, United Kingdom, and Switzerland</h2>
-    <p>Where applicable data-protection law applies, the Developer acts as the controller for personal data whose purposes and means of processing it determines. On-device financial records and receipt-recognition results are processed on the device to provide app features requested by the user and are not transmitted to a Developer-controlled server.</p>
-    <p>Personalized advertising, advertising identifiers, and advertising-related storage technologies are processed on the basis of consent where consent is required by law. Processing necessary for advertising security, fraud prevention, service integrity, and limited or contextual advertising may rely on legitimate interests or another applicable legal basis where permitted by law. Google and the advertising technology providers shown in the consent screen may process information under their own notices and legal roles.</p>
-    <p>Subject to applicable law, users may request access, correction, deletion, restriction, objection, and data portability, and may withdraw consent at any time. Withdrawal does not affect the lawfulness of processing before withdrawal. The Developer does not directly carry out automated decision-making that produces legal or similarly significant effects on users.</p>
-    <p>Advertising consent can be changed in Cashtory under <strong>More → Ad Privacy Settings</strong>. If that menu is not available, users may use the advertising privacy controls provided by their device. Refusing or withdrawing advertising consent does not prevent use of Cashtory's core budgeting features, although the type or availability of advertising may change.</p>
-    <p>Advertising-related information may be processed on servers outside the user's country by Google and advertising technology providers. Where required, adequacy decisions, standard contractual clauses, or other applicable safeguards may be used. Users may lodge a complaint with the data-protection supervisory authority in their place of residence. To exercise rights or ask a privacy question, contact <a href="mailto:official.yo.studio@gmail.com">official.yo.studio@gmail.com</a>.</p>
-    <h2>11. Changes to This Privacy Policy</h2>
-    <p>This Privacy Policy may be updated when app features, SDKs, or applicable laws change. Material changes may be communicated through the app, store listing, or this page, and the “Last updated” date will be revised.</p>
-    <h2>12. Contact</h2>
-    <ul><li>Developer: <strong>Y&amp;O Studio</strong></li><li>App: <strong>Cashtory</strong></li><li>Email: <a href="mailto:official.yo.studio@gmail.com">official.yo.studio@gmail.com</a></li></ul>
+  <section id="section-13">
+    <h2>13. 대한민국 이용자에 대한 추가 안내</h2>
+
+    <h3>13.1 처리 목적·항목·보유기간</h3>
+    <p>Cashtory는 서비스 제공에 필요한 최소한의 범위에서 아래 정보를 처리합니다.</p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>구분</th><th>처리 목적</th><th>처리 항목</th><th>저장·처리 위치</th><th>보유기간 또는 기준</th></tr></thead>
+        <tbody>
+          <tr><td>가계부 기능</td><td>거래 기록, 통계, 자산·부채·카드 및 할부 관리</td><td>거래, 자산·부채·카드, 할부 회차, 분류, 정기거래, 즐겨찾기, 메모, 앱 설정</td><td>이용자 기기 내부</td><td>이용자가 삭제하거나 앱 데이터·앱을 삭제할 때까지</td></tr>
+          <tr><td>영수증 저장 결과</td><td>영수증을 바탕으로 거래 입력 지원</td><td>이용자가 저장한 가게 이름·날짜·총액 및 거래</td><td>이용자 기기 내부</td><td>이용자가 삭제하거나 앱 데이터·앱을 삭제할 때까지</td></tr>
+          <tr><td>문서 스캐너</td><td>영수증 촬영·감지·보정</td><td>이용자가 선택한 결과 이미지, SDK 진단용 기기·앱 정보, 식별자, 성능·API 설정, 이벤트·오류 코드</td><td>이미지: 기기 내부 처리<br>기술정보: Google 처리</td><td>이미지는 DB에 저장하지 않음. 임시 파일은 운영체제 관리 또는 앱 데이터 삭제 시까지 남을 수 있음. 기술정보는 Google 정책에 따름</td></tr>
+          <tr><td>글자 인식</td><td>영수증 글자를 기기에서 인식</td><td>처리 중인 이미지와 글자, SDK 진단용 기기·앱 정보, 식별자, 성능 지표, API 설정, 입력·출력 크기, 이벤트·오류 코드</td><td>이미지·글자: 기기 내부 처리<br>기술정보: Google 처리</td><td>이미지·글자 원문은 DB에 저장하지 않음. 기술정보는 Google 정책에 따름</td></tr>
+          <tr><td>광고</td><td>광고 제공, 분석, 부정행위 방지</td><td>IP 주소·대략적 위치, 앱·광고 상호작용, 성능·오류 진단정보, Android 광고 ID, 앱 세트 ID</td><td>Google 처리</td><td>Google 데이터 보관 정책과 이용자 설정에 따라 삭제 또는 익명화될 때까지</td></tr>
+          <tr><td>앱 내부 자동 백업</td><td>이전 시점의 가계부 데이터 복원 지원</td><td>기기 내부 가계부 데이터가 포함된 백업 파일</td><td>이용자 기기의 앱 전용 저장공간</td><td>보관 개수를 초과하면 오래된 백업부터 자동 삭제되며, 앱 데이터 삭제 또는 앱 삭제 시까지</td></tr>
+          <tr><td>수동 백업·내보내기</td><td>이용자가 직접 데이터를 보관하거나 이동</td><td>가계부 데이터가 포함된 JSON 또는 CSV</td><td>이용자가 선택한 기기 폴더 또는 외부 서비스</td><td>이용자가 해당 위치에서 직접 삭제할 때까지</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3>13.2 파기 절차와 방법</h3>
+    <p>이용자는 앱에서 개별 기록을 삭제하거나 앱 데이터를 초기화할 수 있습니다. Android 설정에서 Cashtory 저장공간을 삭제하거나 앱을 삭제하면 앱 전용 데이터베이스와 내부 백업이 운영체제에 의해 삭제됩니다. 이용자가 외부로 내보낸 JSON·CSV 및 사진 앱의 원본 이미지는 앱 삭제와 함께 지워지지 않으므로 이용자가 직접 삭제해야 합니다.</p>
+    <p>영수증 이미지와 인식된 글자 원문은 앱 데이터베이스에 기록하지 않습니다. 다만 문서 스캐너 결과 파일이 기기의 임시 폴더에 남을 수 있으며, 운영체제의 임시파일 관리 또는 앱 데이터 삭제를 통해 정리될 수 있습니다.</p>
+
+    <h3>13.3 자동 수집 장치와 거부 방법</h3>
+    <p>Cashtory Android 버전은 Google Mobile Ads SDK라는 모바일 SDK를 통해 Google이 광고 관련 행태정보를 자동으로 수집하도록 허용합니다.</p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>수집 장치</th><th>수집 사업자</th><th>자동 수집 항목</th><th>목적</th><th>거부·관리 방법</th></tr></thead>
+        <tbody>
+          <tr><td>Google Mobile Ads SDK</td><td>Google LLC 및 Google 계열사</td><td>IP 주소·대략적 위치, 앱·광고 상호작용, 진단정보, Android 광고 ID, 앱 세트 ID</td><td>광고 제공, 분석, 부정행위 방지</td><td>동의 화면이 제공되는 지역: 더보기 → 광고 개인정보 설정<br>Android: 설정 → 개인정보 보호 관련 메뉴 → 광고 → 광고 ID 재설정 또는 삭제<br>기기·OS 버전에 따라 메뉴명이 다를 수 있음</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p>개인 맞춤 광고를 거부해도 가계부 핵심 기능은 이용할 수 있습니다. 다만 광고 ID를 삭제하거나 맞춤 광고를 거부해도 광고 제공과 보안에 필요한 제한된 기술정보 처리가 계속될 수 있습니다.</p>
+
+    <h3>13.4 정보주체와 법정대리인의 권리</h3>
+    <p>정보주체는 자신의 개인정보에 대해 열람·정정·삭제·처리정지 및 동의 철회를 요구할 수 있습니다. 가계부 기록은 앱 안에서 직접 확인·수정·삭제·내보내기할 수 있으며, 개발자가 보유한 문의 기록 등에 대한 권리 행사는 제12항의 이메일로 요청할 수 있습니다. 법정대리인이나 위임받은 사람을 통해 권리를 행사하는 경우 개발자는 정당한 대리권을 확인할 수 있습니다.</p>
+    <p>만 14세 미만 아동의 권리는 법정대리인이 행사할 수 있습니다. 다만 Cashtory는 만 14세 미만 아동을 대상으로 하지 않으며, 계정이나 법정대리인 동의 절차를 운영하지 않습니다.</p>
+
+    <h3>13.5 개인정보의 국외 처리·이전</h3>
+    <p>Google SDK는 기술정보를 Google이 운영하는 국외 서버에서 직접 수집하거나 처리할 수 있습니다. Google은 전 세계에 서버를 운영하며, 이용자의 정보가 거주국 밖에서 처리될 수 있다고 공개하고 있습니다. Google이 공개하는 제품별 정보에 따라 다음과 같이 안내합니다.</p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>서비스</th><th>이전받는 자</th><th>이전 항목</th><th>국가·시기·방법</th><th>목적·보유기간</th><th>거부 방법과 효과</th></tr></thead>
+        <tbody>
+          <tr><td>AdMob / Mobile Ads / UMP</td><td>Google LLC 및 Google 계열사<br><a href="https://policies.google.com/privacy?hl=ko">Google 문의·정책</a></td><td>IP 주소·대략적 위치, 앱·광고 상호작용, 진단정보, Android 광고 ID, 앱 세트 ID, 광고 동의 상태</td><td>앱 실행·광고 요청·광고 상호작용 및 동의 절차 시 암호화된 네트워크로 전송. Google이 전 세계에서 운영하는 서버 소재 국가에서 처리될 수 있음</td><td>광고 제공·분석·부정행위 방지·동의 관리. Google 정책과 이용자 설정에 따라 보관 후 삭제 또는 익명화</td><td>광고 개인정보 설정 또는 Android 광고 설정에서 관리. 맞춤 광고 거부 후에도 핵심 가계부 기능은 이용 가능하나 제한된 광고 기술정보 처리는 계속될 수 있음</td></tr>
+          <tr><td>ML Kit Document Scanner</td><td>Google LLC 및 Google 계열사<br><a href="https://policies.google.com/privacy?hl=ko">Google 문의·정책</a></td><td>기기·앱 정보, 식별자, 성능·API 설정, 기능·모델 다운로드 이벤트, 오류 코드. 영수증 이미지와 인식 글자는 제외</td><td>문서 스캐너 실행 또는 리소스 다운로드 시 암호화된 네트워크로 전송. Google이 전 세계에서 운영하는 서버 소재 국가에서 처리될 수 있음</td><td>기능 제공, 진단 및 사용량 분석. Google 정책에 따라 보관 후 삭제 또는 익명화</td><td>영수증 스캔 기능을 사용하지 않고 직접 입력 가능. 핵심 가계부 기능은 이용 가능</td></tr>
+          <tr><td>ML Kit Text Recognition</td><td>Google LLC 및 Google 계열사<br><a href="https://policies.google.com/privacy?hl=ko">Google 문의·정책</a></td><td>기기·앱 정보, 식별자, 성능 지표, API 설정, 입력·출력 크기, 모델 다운로드·기능 이벤트, 오류 코드. 영수증 이미지와 인식 글자는 제외</td><td>글자 인식 또는 모델 다운로드 시 암호화된 네트워크로 전송. Google이 전 세계에서 운영하는 서버 소재 국가에서 처리될 수 있음</td><td>기능 제공, 진단 및 사용량 분석. Google 정책에 따라 보관 후 삭제 또는 익명화</td><td>영수증 인식 기능을 사용하지 않고 직접 입력 가능. 핵심 가계부 기능은 이용 가능</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p>Google은 제품별 전체 처리 국가와 각 기술정보의 단일 보유기간을 공개하지 않고, 정보 종류·이용 방식·설정에 따라 기간이 달라질 수 있다고 안내합니다. 최신 처리 지역과 보유 기준은 <a href="https://policies.google.com/privacy?hl=ko">Google 개인정보처리방침</a> 및 <a href="https://policies.google.com/technologies/retention?hl=ko">Google 데이터 보관 정책</a>에서 확인할 수 있습니다.</p>
+    <p class="warning">Google SDK 처리 관계의 구체적인 법적 유형과 국외 처리·이전의 법적 근거는 적용되는 Google 계약 및 실제 동의 절차를 확인하여 관계 법령에 맞게 이 방침에 반영합니다.</p>
+
+    <h3>13.6 권익침해 구제방법</h3>
+    <p>개인정보 침해로 분쟁 해결이나 상담이 필요한 경우 먼저 제12항의 개인정보 보호 담당자에게 문의할 수 있습니다. 추가적인 상담·구제가 필요한 경우 다음 기관에 신청할 수 있습니다.</p>
+    <ul>
+      <li>개인정보 분쟁조정위원회: 국번 없이 1833-6972, <a href="https://www.kopico.go.kr">www.kopico.go.kr</a></li>
+      <li>개인정보침해 신고센터: 국번 없이 118, <a href="https://privacy.kisa.or.kr">privacy.kisa.or.kr</a></li>
+      <li>경찰청: 국번 없이 182, <a href="https://ecrm.police.go.kr">ecrm.police.go.kr</a></li>
+    </ul>
+
+    <h3>13.7 해당하지 않는 사항</h3>
+    <ul>
+      <li><strong>회원·계정 정보:</strong> 회원가입·로그인·계정이 없어 이름·이메일·전화번호를 앱에서 수집하지 않습니다.</li>
+      <li><strong>정확한 위치·연락처·통화기록:</strong> 관련 권한과 기능이 없습니다.</li>
+      <li><strong>고유식별정보·민감정보:</strong> 주민등록번호·여권번호와 법령상 민감정보를 수집하지 않습니다.</li>
+      <li><strong>별도 행동 분석:</strong> 개발자가 Firebase Analytics 같은 별도 이용자 행동 분석 도구를 직접 도입하지 않았습니다.</li>
+      <li><strong>가명정보:</strong> 가명처리·결합·분석을 하지 않습니다.</li>
+      <li><strong>자동화된 결정:</strong> 이용자의 권리·의무에 중대한 영향을 주는 자동화된 의사결정을 하지 않습니다.</li>
+      <li><strong>영상정보처리기기:</strong> 고정형·이동형 영상정보처리기기를 운영하지 않습니다. 영수증 촬영은 이용자가 직접 실행하는 기능이며 감시 목적으로 사용하지 않습니다.</li>
+      <li><strong>금융 기록의 판매·제3자 제공:</strong> 개발자는 기기 내부 금융 기록을 열람할 수 없으며 이를 판매하거나 제공하지 않습니다.</li>
+      <li><strong>금융상품 기능:</strong> 대출·결제·송금·투자·보험·재무자문 기능을 제공하지 않습니다.</li>
+    </ul>
+    <a class="back" href="#top">맨 위로</a>
   </section>
 
-  <section id="ja" class="language" lang="ja">
-    <h1>プライバシーポリシー</h1>
-    <p class="meta"><strong>施行日：</strong>2026年8月2日<br><strong>最終更新日：</strong>2026年8月11日</p>
-    <p>Y&amp;O Studio（以下「開発者」）は、Cashtory利用者のプライバシーおよび金融記録を重要視しています。本ポリシーは、Cashtoryが取り扱う情報と、その利用・保存・共有方法について説明します。</p>
-    <h2>1. アプリの基本的なデータ処理</h2>
-    <p>Cashtoryは登録やユーザーアカウントを必要としません。取引、資産、負債、カード、カテゴリ、定期記録、よく使う記録、メモ、アプリ設定、および利用者が保存したレシート認識結果は、原則として端末内にのみ保存されます。</p>
-    <p class="notice">開発者は、金融記録を管理する独自サーバーを運用しておらず、開発者管理のサーバーへ送信またはアクセスしません。</p>
-    <h2>2. 広告サービスが処理する情報</h2>
-    <p>Android版Cashtoryは、Google AdMobおよびGoogle Mobile Ads SDKを使用します。広告配信、分析、不正行為防止の目的で、SDKは次の情報を自動的に収集または共有する場合があります。</p>
-    <ul><li>IPアドレスおよび推定されるおおよその位置情報</li><li>アプリの起動、画面や広告との操作などのユーザー操作情報</li><li>アプリおよび広告SDKの性能やエラーに関する診断情報</li><li>Android広告ID、アプリセットIDなどの端末・アカウント識別子</li></ul>
-    <p>広告関連情報はGoogleのポリシーに従って処理され、通信時に暗号化される場合があります。広告IDと広告のパーソナライズ設定はAndroid端末の設定から管理できます。</p>
-    <ul><li><a href="https://policies.google.com/privacy?hl=ja">Googleプライバシーポリシー</a></li><li><a href="https://policies.google.com/technologies/ads?hl=ja">Googleによる広告技術の利用方法</a></li><li><a href="https://developers.google.com/admob/android/privacy/play-data-disclosure?hl=ja">Google Mobile Ads SDKのデータ開示</a></li></ul>
-    <p>法令上必要な地域では、Googleの同意管理プラットフォームにより、広告目的の個人データ処理に関する選択画面が表示されます。現在適用される広告技術プロバイダと処理目的は、その同意画面またはアプリの「広告プライバシー設定」で確認できます。</p>
-    <h2>3. カメラ、写真、レシート認識</h2>
-    <p>Cashtoryは利用者がレシート認識を選択した場合にのみ、カメラまたは写真へアクセスします。画像は端末上で処理されるよう設計され、開発者管理のサーバーへ送信されません。処理済み画像は長期保存されず、写真ライブラリの元画像も削除されません。保存した認識結果は他の取引と同様に端末内へ保存されます。</p>
-    <p>OS、アプリストア提供者、または端末のGoogleコンポーネントは、それぞれのポリシーに従って技術情報を独自に処理する場合があります。</p>
-    <h2>4. バックアップ、復元、エクスポート</h2>
-    <p>利用者は金融記録をJSONまたはCSVとしてエクスポートできます。エクスポートは利用者が明示的に実行した場合に限られます。外部サービスへ共有したファイルには、そのサービスのポリシーが適用され、開発者はアクセスまたは管理できません。ファイルには機密性の高い金融記録が含まれる場合があるため、安全に保管してください。</p>
-    <h2>5. 情報の保存と削除</h2>
-    <p>端末内のデータは、個別記録の削除、アプリデータの初期化、Android設定からのデータ削除、またはアプリのアンインストールまで保存される場合があります。エクスポートしたファイルは自動削除されないため、保存先から利用者自身で削除してください。</p>
-    <p>開発者はサーバー上に金融記録を保有していないため、代わりに閲覧または削除できません。広告関連情報の保存期間は、Googleおよび該当する広告技術プロバイダのポリシーと処理目的に基づいて決定されます。</p>
-    <h2>6. 第三者への開示</h2>
-    <p>開発者は金融記録を販売せず、開発者管理のサーバーを通じて第三者へ提供しません。ただし、AdMobによる広告・分析・不正行為防止、利用者が自ら行う外部ファイル共有、または有効な法的義務への対応では、第三者が情報を処理する場合があります。</p>
-    <h2>7. セキュリティ</h2>
-    <p>Cashtoryは金融記録を端末に保存して外部送信を最小限に抑えますが、完全な安全を保証する保存方法はありません。画面ロック、OS更新、安全なバックアップ先を使用し、暗号化されていないファイルを公開場所へ保存しないでください。</p>
-    <h2>8. 子どものプライバシー</h2>
-    <p>Cashtoryは子どもを主な対象として設計されたサービスではありません。子どもの個人情報が開発者へ直接提供されたことを把握した場合、合理的に可能な範囲で適切な措置を講じます。</p>
-    <h2>9. 利用者の選択と権利</h2>
-    <p>利用者はアプリ内で金融記録を確認、修正、削除し、端末設定でアプリ権限、広告ID、広告プライバシー設定を管理できます。端末内にのみ保存された情報、またはGoogleが独自に処理する情報を開発者が直接閲覧・削除できない場合があります。</p>
-    <h2>10. 欧州経済領域（EEA）、英国およびスイスの利用者</h2>
-    <p>適用されるデータ保護法の対象となる場合、開発者は、処理の目的および方法を自ら決定する個人データについて管理者となります。端末内の金融記録およびレシート認識結果は、利用者が求めるアプリ機能を提供するために端末上で処理され、開発者管理のサーバーには送信されません。</p>
-    <p>パーソナライズ広告、広告識別子および広告関連の保存技術は、法令上必要な場合、利用者の同意に基づいて処理されます。広告の安全性、不正行為防止、サービスの完全性、限定的広告またはコンテキスト広告に必要な処理は、法令で認められる範囲において、正当な利益その他の適用可能な法的根拠に基づく場合があります。Googleおよび同意画面に表示される広告技術プロバイダは、それぞれの通知および法的立場に従って情報を処理する場合があります。</p>
-    <p>利用者は、適用法令に基づき、個人データへのアクセス、訂正、削除、処理制限、異議申立ておよびデータポータビリティを求めることができ、同意はいつでも撤回できます。撤回は、撤回前の処理の適法性に影響しません。開発者は、利用者に法的または同様に重大な影響を及ぼす自動意思決定を直接行いません。</p>
-    <p>広告に関する同意は、Cashtoryの<strong>その他 → 広告プライバシー設定</strong>から変更できます。このメニューが表示されない場合は、端末の広告プライバシー設定を利用できます。同意を拒否または撤回してもCashtoryの主要な家計簿機能は引き続き利用できますが、広告の種類または表示の有無が変わる場合があります。</p>
-    <p>広告関連情報は、Googleおよび広告技術プロバイダにより、利用者の居住国以外のサーバーで処理される場合があります。必要に応じて、十分性認定、標準契約条項またはその他の適用可能な保護措置が用いられます。利用者は居住地のデータ保護監督機関へ苦情を申し立てることができます。権利行使またはお問い合わせは、<a href="mailto:official.yo.studio@gmail.com">official.yo.studio@gmail.com</a>までご連絡ください。</p>
-    <h2>11. 本ポリシーの変更</h2>
-    <p>アプリ機能、SDK、適用法令の変更に伴い、本ポリシーを更新する場合があります。重要な変更はアプリ、ストア掲載情報、または本ページを通じて通知し、最終更新日を変更します。</p>
-    <h2>12. お問い合わせ</h2>
-    <ul><li>開発者：<strong>Y&amp;O Studio</strong></li><li>アプリ：<strong>Cashtory</strong></li><li>メール：<a href="mailto:official.yo.studio@gmail.com">official.yo.studio@gmail.com</a></li></ul>
-  </section>
-
-  <section id="hi" class="language" lang="hi">
-    <h1>गोपनीयता नीति</h1>
-    <p class="meta"><strong>प्रभावी तिथि:</strong> 2 अगस्त 2026<br><strong>अंतिम अपडेट:</strong> 11 अगस्त 2026</p>
-    <p>Y&amp;O Studio (“डेवलपर”) Cashtory उपयोगकर्ताओं की गोपनीयता और वित्तीय रिकॉर्ड का सम्मान करता है। यह नीति बताती है कि Cashtory कौन-सी जानकारी संसाधित करता है और उसका उपयोग, संग्रहण तथा साझा करना कैसे होता है।</p>
-    <h2>1. ऐप में डेटा संसाधन</h2>
-    <p>Cashtory के लिए पंजीकरण या उपयोगकर्ता खाता आवश्यक नहीं है। लेन-देन, संपत्ति, देनदारी, कार्ड, श्रेणियाँ, नियमित प्रविष्टियाँ, पसंदीदा प्रविष्टियाँ, नोट्स, ऐप सेटिंग्स और उपयोगकर्ता द्वारा सहेजे गए रसीद पहचान परिणाम सामान्यतः केवल डिवाइस पर संग्रहीत होते हैं।</p>
-    <p class="notice">डेवलपर इन वित्तीय रिकॉर्ड के लिए कोई अलग सर्वर संचालित नहीं करता और इन्हें डेवलपर-नियंत्रित सर्वर पर भेजता या वहाँ से एक्सेस नहीं करता।</p>
-    <h2>2. विज्ञापन सेवाओं द्वारा संसाधित जानकारी</h2>
-    <p>Cashtory का Android संस्करण Google AdMob और Google Mobile Ads SDK का उपयोग करता है। विज्ञापन, विश्लेषण और धोखाधड़ी रोकने के लिए SDK निम्न जानकारी स्वचालित रूप से एकत्र या साझा कर सकता है:</p>
-    <ul><li>IP पता और उससे अनुमानित सामान्य स्थान</li><li>ऐप शुरू करने तथा स्क्रीन या विज्ञापन के साथ इंटरैक्शन</li><li>ऐप और विज्ञापन SDK की निदान जानकारी</li><li>Android विज्ञापन ID, ऐप सेट ID और अन्य डिवाइस या खाता पहचानकर्ता</li></ul>
-    <p>यह जानकारी Google की नीतियों के अनुसार संसाधित होती है और ट्रांसमिशन के दौरान एन्क्रिप्ट की जा सकती है। उपयोगकर्ता Android सेटिंग्स में विज्ञापन ID और वैयक्तिकरण सेटिंग्स नियंत्रित कर सकते हैं।</p>
-    <ul><li><a href="https://policies.google.com/privacy?hl=hi">Google गोपनीयता नीति</a></li><li><a href="https://policies.google.com/technologies/ads?hl=hi">Google विज्ञापन तकनीकों का उपयोग कैसे करता है</a></li><li><a href="https://developers.google.com/admob/android/privacy/play-data-disclosure?hl=hi">Google Mobile Ads SDK डेटा प्रकटीकरण</a></li></ul>
-    <p>जहाँ कानून आवश्यक करता है, Google का सहमति प्रबंधन प्लेटफ़ॉर्म विज्ञापन हेतु व्यक्तिगत डेटा संसाधन के विकल्प दिखाता है। वर्तमान विज्ञापन तकनीक प्रदाताओं और उनके उद्देश्यों की जानकारी उस सहमति स्क्रीन या ऐप की “विज्ञापन गोपनीयता सेटिंग्स” में देखी जा सकती है।</p>
-    <h2>3. कैमरा, फ़ोटो और रसीद पहचान</h2>
-    <p>Cashtory कैमरा या फ़ोटो केवल तब एक्सेस करता है जब उपयोगकर्ता रसीद पहचान चुनता है। छवियाँ डिवाइस पर संसाधित होने के लिए बनाई गई हैं और डेवलपर-नियंत्रित सर्वर पर नहीं भेजी जातीं। संसाधित छवियाँ लंबे समय तक संग्रहीत नहीं होतीं और मूल फ़ोटो नहीं मिटाई जाती। सहेजा गया पहचान परिणाम अन्य लेन-देन की तरह डिवाइस पर रहता है।</p>
-    <p>ऑपरेटिंग सिस्टम, ऐप स्टोर प्रदाता या Google घटक अपनी नीतियों के अनुसार तकनीकी जानकारी स्वतंत्र रूप से संसाधित कर सकते हैं।</p>
-    <h2>4. बैकअप, पुनर्स्थापना और निर्यात</h2>
-    <p>उपयोगकर्ता रिकॉर्ड को JSON या CSV में निर्यात कर सकते हैं। निर्यात केवल उपयोगकर्ता द्वारा शुरू करने पर होता है। बाहरी सेवा को भेजी गई फ़ाइल उस सेवा की नीति के अधीन होती है और डेवलपर उसे एक्सेस या प्रबंधित नहीं कर सकता। इन फ़ाइलों में संवेदनशील वित्तीय रिकॉर्ड हो सकते हैं, इसलिए इन्हें सुरक्षित रखें।</p>
-    <h2>5. प्रतिधारण और मिटाना</h2>
-    <p>स्थानीय डेटा अलग-अलग रिकॉर्ड हटाने, ऐप डेटा रीसेट करने, Android सेटिंग्स से डेटा साफ़ करने या ऐप अनइंस्टॉल करने तक रह सकता है। निर्यात की गई फ़ाइलें अपने-आप नहीं मिटतीं। डेवलपर वित्तीय रिकॉर्ड सर्वर पर नहीं रखता, इसलिए उपयोगकर्ता की ओर से उन्हें देख या मिटा नहीं सकता। विज्ञापन-संबंधी जानकारी की प्रतिधारण अवधि Google और संबंधित विज्ञापन तकनीक प्रदाताओं की नीतियों तथा संसाधन उद्देश्यों के अनुसार निर्धारित होती है।</p>
-    <h2>6. तीसरे पक्ष को जानकारी देना</h2>
-    <p>डेवलपर वित्तीय रिकॉर्ड नहीं बेचता या डेवलपर-नियंत्रित सर्वर से तीसरे पक्ष को नहीं देता। AdMob द्वारा विज्ञापन, विश्लेषण और धोखाधड़ी रोकने, उपयोगकर्ता द्वारा जानबूझकर बाहरी फ़ाइल साझा करने या वैध कानूनी दायित्व के मामलों में तीसरे पक्ष जानकारी संसाधित कर सकते हैं।</p>
-    <h2>7. सुरक्षा</h2>
-    <p>Cashtory डिवाइस पर रिकॉर्ड रखकर बाहरी ट्रांसमिशन कम करता है, लेकिन कोई भी संग्रहण विधि पूरी तरह सुरक्षित नहीं है। स्क्रीन लॉक, अपडेटेड ऑपरेटिंग सिस्टम और सुरक्षित बैकअप स्थान का उपयोग करें तथा बिना एन्क्रिप्शन वाली फ़ाइलें सार्वजनिक स्थान पर न रखें।</p>
-    <h2>8. बच्चों की गोपनीयता</h2>
-    <p>Cashtory मुख्य रूप से बच्चों के लिए नहीं बनाया गया है। यदि किसी बच्चे की व्यक्तिगत जानकारी सीधे डेवलपर को मिलने का पता चलता है, तो उचित सीमा तक आवश्यक कार्रवाई की जाएगी।</p>
-    <h2>9. उपयोगकर्ता के विकल्प और अधिकार</h2>
-    <p>उपयोगकर्ता ऐप में वित्तीय रिकॉर्ड देख, बदल और मिटा सकते हैं तथा डिवाइस सेटिंग्स से अनुमतियाँ, विज्ञापन ID और विज्ञापन गोपनीयता सेटिंग्स नियंत्रित कर सकते हैं। केवल डिवाइस पर संग्रहीत या Google द्वारा स्वतंत्र रूप से संसाधित जानकारी को डेवलपर सीधे एक्सेस या मिटा नहीं सकता।</p>
-    <h2>10. EEA, यूनाइटेड किंगडम और स्विट्ज़रलैंड के उपयोगकर्ता</h2>
-    <p>जहाँ लागू डेटा संरक्षण कानून लागू होता है, डेवलपर उस व्यक्तिगत डेटा के लिए डेटा नियंत्रक के रूप में कार्य करता है जिसके संसाधन के उद्देश्य और साधन वह तय करता है। डिवाइस पर मौजूद वित्तीय रिकॉर्ड और रसीद-पहचान परिणाम उपयोगकर्ता द्वारा माँगी गई ऐप सुविधाएँ देने के लिए डिवाइस पर ही संसाधित होते हैं और डेवलपर-नियंत्रित सर्वर पर नहीं भेजे जाते।</p>
-    <p>वैयक्तिकृत विज्ञापन, विज्ञापन पहचानकर्ता और विज्ञापन-संबंधी भंडारण तकनीकें, जहाँ कानून आवश्यक करता है, उपयोगकर्ता की सहमति के आधार पर संसाधित होती हैं। विज्ञापन सुरक्षा, धोखाधड़ी रोकथाम, सेवा की अखंडता तथा सीमित या संदर्भ-आधारित विज्ञापन के लिए आवश्यक संसाधन, कानून द्वारा अनुमति होने पर वैध हित या किसी अन्य लागू कानूनी आधार पर किया जा सकता है। Google और सहमति स्क्रीन पर दिखाए गए विज्ञापन तकनीक प्रदाता अपनी सूचनाओं और कानूनी भूमिकाओं के अनुसार जानकारी संसाधित कर सकते हैं।</p>
-    <p>लागू कानून के अधीन, उपयोगकर्ता पहुँच, सुधार, मिटाने, संसाधन सीमित करने, आपत्ति और डेटा पोर्टेबिलिटी का अनुरोध कर सकते हैं तथा किसी भी समय सहमति वापस ले सकते हैं। सहमति वापस लेने से उससे पहले हुए संसाधन की वैधता प्रभावित नहीं होती। डेवलपर ऐसा स्वचालित निर्णय सीधे नहीं करता जिसका उपयोगकर्ता पर कानूनी या समान रूप से महत्वपूर्ण प्रभाव हो।</p>
-    <p>विज्ञापन सहमति Cashtory में <strong>अधिक → विज्ञापन गोपनीयता सेटिंग्स</strong> से बदली जा सकती है। यह मेनू उपलब्ध न होने पर डिवाइस के विज्ञापन गोपनीयता नियंत्रणों का उपयोग किया जा सकता है। सहमति न देने या वापस लेने पर भी Cashtory की मुख्य बजट सुविधाएँ उपलब्ध रहती हैं, हालाँकि विज्ञापन का प्रकार या उपलब्धता बदल सकती है।</p>
-    <p>विज्ञापन-संबंधी जानकारी Google और विज्ञापन तकनीक प्रदाताओं द्वारा उपयोगकर्ता के देश से बाहर स्थित सर्वरों पर संसाधित की जा सकती है। जहाँ आवश्यक हो, पर्याप्तता निर्णय, मानक संविदात्मक धाराएँ या अन्य लागू सुरक्षा उपाय उपयोग किए जा सकते हैं। उपयोगकर्ता अपने निवास स्थान के डेटा संरक्षण पर्यवेक्षी प्राधिकरण में शिकायत कर सकते हैं। अधिकारों का प्रयोग करने या प्रश्न पूछने के लिए <a href="mailto:official.yo.studio@gmail.com">official.yo.studio@gmail.com</a> पर संपर्क करें।</p>
-    <h2>11. इस नीति में बदलाव</h2>
-    <p>ऐप सुविधाओं, SDK या कानूनों में बदलाव के साथ यह नीति अपडेट हो सकती है। महत्वपूर्ण बदलाव ऐप, स्टोर सूची या इस पेज के माध्यम से बताए जा सकते हैं और अंतिम अपडेट तिथि बदली जाएगी।</p>
-    <h2>12. संपर्क</h2>
-    <ul><li>डेवलपर: <strong>Y&amp;O Studio</strong></li><li>ऐप: <strong>Cashtory</strong></li><li>ईमेल: <a href="mailto:official.yo.studio@gmail.com">official.yo.studio@gmail.com</a></li></ul>
-  </section>
-
-  <section id="pt-br" class="language" lang="pt-BR">
-    <h1>Política de Privacidade</h1>
-    <p class="meta"><strong>Data de vigência:</strong> 2 de agosto de 2026<br><strong>Última atualização:</strong> 11 de agosto de 2026</p>
-    <p>A Y&amp;O Studio (“Desenvolvedor”) respeita a privacidade e os registros financeiros dos usuários do Cashtory. Esta Política explica quais informações o Cashtory processa e como elas são usadas, armazenadas e compartilhadas.</p>
-    <h2>1. Processamento básico de dados</h2>
-    <p>O Cashtory não exige cadastro nem conta de usuário. Transações, ativos, dívidas, cartões, categorias, lançamentos recorrentes, favoritos, observações, preferências do aplicativo e resultados de reconhecimento de recibos salvos pelo usuário ficam armazenados, por padrão, apenas no dispositivo.</p>
-    <p class="notice">O Desenvolvedor não mantém um servidor próprio para esses registros financeiros e não os transmite nem os acessa por meio de um servidor controlado pelo Desenvolvedor.</p>
-    <h2>2. Informações processadas por serviços de publicidade</h2>
-    <p>A versão Android usa o Google AdMob e o Google Mobile Ads SDK. Para publicidade, análise e prevenção de fraudes, o SDK pode coletar ou compartilhar automaticamente:</p>
-    <ul><li>Endereço IP e localização aproximada inferida</li><li>Abertura do aplicativo e interações com telas ou anúncios</li><li>Informações de diagnóstico do aplicativo e do SDK de anúncios</li><li>ID de publicidade do Android, ID do conjunto de aplicativos e outros identificadores do dispositivo ou da conta</li></ul>
-    <p>Essas informações são tratadas conforme as políticas do Google e podem ser criptografadas durante a transmissão. O usuário pode gerenciar o ID de publicidade e a personalização de anúncios nas configurações do Android.</p>
-    <ul><li><a href="https://policies.google.com/privacy?hl=pt-BR">Política de Privacidade do Google</a></li><li><a href="https://policies.google.com/technologies/ads?hl=pt-BR">Como o Google usa tecnologias de publicidade</a></li><li><a href="https://developers.google.com/admob/android/privacy/play-data-disclosure?hl=pt-BR">Divulgação de dados do Google Mobile Ads SDK</a></li></ul>
-    <p>Quando exigido por lei, a plataforma de gestão de consentimento do Google apresenta opções sobre o processamento de dados pessoais para publicidade. Os provedores de tecnologia de publicidade atualmente envolvidos e suas finalidades podem ser consultados nessa tela de consentimento ou nas “Configurações de privacidade de anúncios” do aplicativo.</p>
-    <h2>3. Câmera, fotos e reconhecimento de recibos</h2>
-    <p>O Cashtory acessa câmera ou fotos somente quando o usuário escolhe reconhecer um recibo. As imagens são projetadas para processamento no dispositivo e não são enviadas a um servidor controlado pelo Desenvolvedor. Imagens processadas não são mantidas como registros permanentes e as fotos originais não são excluídas. Resultados salvos ficam no dispositivo como as demais transações.</p>
-    <p>O sistema operacional, a loja de aplicativos ou componentes do Google podem processar informações técnicas de forma independente conforme suas políticas.</p>
-    <h2>4. Backup, restauração e exportação</h2>
-    <p>O usuário pode exportar registros em JSON ou CSV. A exportação ocorre somente quando iniciada pelo usuário. Arquivos enviados a serviços externos ficam sujeitos às políticas desses serviços, e o Desenvolvedor não pode acessá-los ou gerenciá-los. Esses arquivos podem conter registros financeiros confidenciais e devem ser armazenados com segurança.</p>
-    <h2>5. Retenção e exclusão</h2>
-    <p>Os dados locais podem permanecer até que o usuário exclua registros, redefina os dados do aplicativo, limpe o armazenamento nas configurações do Android ou desinstale o aplicativo. Arquivos exportados não são excluídos automaticamente. Como o Desenvolvedor não mantém os registros financeiros em servidor, não pode acessá-los ou excluí-los em nome do usuário. O prazo de retenção das informações relacionadas à publicidade é definido pelo Google e pelos provedores de tecnologia de publicidade aplicáveis, conforme suas políticas e finalidades de tratamento.</p>
-    <h2>6. Compartilhamento com terceiros</h2>
-    <p>O Desenvolvedor não vende os registros financeiros nem os fornece por um servidor próprio. Terceiros podem processar informações para publicidade, análise e prevenção de fraudes pelo AdMob, quando o usuário compartilha intencionalmente um arquivo externo ou quando exigido por obrigação legal válida.</p>
-    <h2>7. Segurança</h2>
-    <p>O armazenamento no dispositivo reduz transmissões externas, mas nenhum método é totalmente seguro. Use bloqueio de tela, mantenha o sistema atualizado, escolha locais seguros para backup e não armazene arquivos não criptografados em locais públicos.</p>
-    <h2>8. Privacidade de crianças e adolescentes</h2>
-    <p>O Cashtory não foi desenvolvido principalmente para crianças. Se o Desenvolvedor souber que recebeu diretamente informações pessoais de uma criança, adotará medidas cabíveis dentro do que for razoavelmente possível.</p>
-    <h2>9. Escolhas e direitos do usuário</h2>
-    <p>O usuário pode consultar, corrigir e excluir registros no aplicativo e gerenciar permissões, ID de publicidade e privacidade de anúncios nas configurações do dispositivo. O Desenvolvedor pode não conseguir acessar ou excluir informações armazenadas apenas no dispositivo ou processadas independentemente pelo Google.</p>
-    <h2>10. Usuários no EEE, Reino Unido e Suíça</h2>
-    <p>Quando a legislação de proteção de dados aplicável incidir, o Desenvolvedor atua como controlador dos dados pessoais cujas finalidades e meios de tratamento determina. Os registros financeiros e resultados de reconhecimento de recibos mantidos no dispositivo são processados nele para fornecer as funções solicitadas pelo usuário e não são enviados a um servidor controlado pelo Desenvolvedor.</p>
-    <p>A publicidade personalizada, os identificadores de publicidade e as tecnologias de armazenamento relacionadas a anúncios são tratados com base no consentimento quando ele é exigido por lei. O tratamento necessário à segurança da publicidade, à prevenção de fraudes, à integridade do serviço e à publicidade limitada ou contextual pode se basear em legítimo interesse ou em outra base legal aplicável, quando permitido. O Google e os provedores de tecnologia de publicidade exibidos na tela de consentimento podem tratar informações de acordo com seus próprios avisos e papéis legais.</p>
-    <p>Nos termos da legislação aplicável, o usuário pode solicitar acesso, correção, exclusão, limitação do tratamento, oposição e portabilidade dos dados, bem como retirar o consentimento a qualquer momento. A retirada não afeta a licitude do tratamento anterior. O Desenvolvedor não realiza diretamente decisões automatizadas que produzam efeitos jurídicos ou efeitos igualmente significativos sobre o usuário.</p>
-    <p>O consentimento para publicidade pode ser alterado no Cashtory em <strong>Mais → Configurações de privacidade de anúncios</strong>. Se esse menu não estiver disponível, o usuário poderá utilizar os controles de privacidade de anúncios do dispositivo. Recusar ou retirar o consentimento não impede o uso das funções principais de orçamento do Cashtory, embora o tipo ou a disponibilidade dos anúncios possa mudar.</p>
-    <p>Informações relacionadas à publicidade podem ser processadas em servidores fora do país do usuário pelo Google e por provedores de tecnologia de publicidade. Quando necessário, poderão ser usadas decisões de adequação, cláusulas contratuais-padrão ou outras salvaguardas aplicáveis. O usuário pode apresentar reclamação à autoridade supervisora de proteção de dados de seu local de residência. Para exercer direitos ou esclarecer dúvidas, entre em contato pelo e-mail <a href="mailto:official.yo.studio@gmail.com">official.yo.studio@gmail.com</a>.</p>
-    <h2>11. Alterações nesta Política</h2>
-    <p>Esta Política poderá ser atualizada quando houver mudanças no aplicativo, nos SDKs ou na legislação. Alterações relevantes poderão ser comunicadas pelo aplicativo, pela página da loja ou por esta página, com atualização da data acima.</p>
-    <h2>12. Contato</h2>
-    <ul><li>Desenvolvedor: <strong>Y&amp;O Studio</strong></li><li>Aplicativo: <strong>Cashtory</strong></li><li>E-mail: <a href="mailto:official.yo.studio@gmail.com">official.yo.studio@gmail.com</a></li></ul>
-  </section>
-
-  <section id="id" class="language" lang="id">
-    <h1>Kebijakan Privasi</h1>
-    <p class="meta"><strong>Tanggal berlaku:</strong> 2 Agustus 2026<br><strong>Terakhir diperbarui:</strong> 11 Agustus 2026</p>
-    <p>Y&amp;O Studio (“Pengembang”) menghormati privasi dan catatan keuangan pengguna Cashtory. Kebijakan ini menjelaskan informasi yang diproses Cashtory serta cara informasi tersebut digunakan, disimpan, dan dibagikan.</p>
-    <h2>1. Pemrosesan data utama</h2>
-    <p>Cashtory tidak mewajibkan pendaftaran atau akun pengguna. Transaksi, aset, kewajiban, kartu, kategori, transaksi rutin, favorit, catatan, preferensi aplikasi, dan hasil pengenalan struk yang disimpan pengguna secara default hanya berada di perangkat.</p>
-    <p class="notice">Pengembang tidak mengoperasikan server tersendiri untuk catatan keuangan tersebut dan tidak mengirim atau mengaksesnya melalui server yang dikendalikan Pengembang.</p>
-    <h2>2. Informasi yang diproses layanan periklanan</h2>
-    <p>Cashtory versi Android menggunakan Google AdMob dan Google Mobile Ads SDK. Untuk periklanan, analitik, dan pencegahan penipuan, SDK dapat secara otomatis mengumpulkan atau membagikan:</p>
-    <ul><li>Alamat IP dan perkiraan lokasi umum</li><li>Peluncuran aplikasi dan interaksi dengan layar atau iklan</li><li>Informasi diagnostik aplikasi dan SDK iklan</li><li>ID iklan Android, ID set aplikasi, serta pengenal perangkat atau akun lainnya</li></ul>
-    <p>Informasi tersebut diproses sesuai kebijakan Google dan dapat dienkripsi saat dikirim. Pengguna dapat mengelola ID iklan dan personalisasi iklan melalui setelan Android.</p>
-    <ul><li><a href="https://policies.google.com/privacy?hl=id">Kebijakan Privasi Google</a></li><li><a href="https://policies.google.com/technologies/ads?hl=id">Cara Google menggunakan teknologi periklanan</a></li><li><a href="https://developers.google.com/admob/android/privacy/play-data-disclosure?hl=id">Pengungkapan data Google Mobile Ads SDK</a></li></ul>
-    <p>Jika diwajibkan oleh hukum, platform pengelolaan izin Google menampilkan pilihan terkait pemrosesan data pribadi untuk iklan. Penyedia teknologi iklan yang sedang digunakan beserta tujuannya dapat dilihat pada layar persetujuan tersebut atau di “Setelan Privasi Iklan” dalam aplikasi.</p>
-    <h2>3. Kamera, foto, dan pengenalan struk</h2>
-    <p>Cashtory mengakses kamera atau foto hanya ketika pengguna memilih pengenalan struk. Gambar dirancang untuk diproses di perangkat dan tidak dikirim ke server yang dikendalikan Pengembang. Gambar yang telah diproses tidak disimpan sebagai catatan jangka panjang dan foto asli tidak dihapus. Hasil yang disimpan tetap berada di perangkat seperti transaksi lainnya.</p>
-    <p>Sistem operasi, penyedia toko aplikasi, atau komponen Google dapat memproses informasi teknis secara terpisah sesuai kebijakan masing-masing.</p>
-    <h2>4. Pencadangan, pemulihan, dan ekspor</h2>
-    <p>Pengguna dapat mengekspor catatan dalam JSON atau CSV. Ekspor hanya berlangsung ketika dimulai pengguna. File yang dikirim ke layanan eksternal tunduk pada kebijakan layanan tersebut, dan Pengembang tidak dapat mengakses atau mengelolanya. File dapat memuat catatan keuangan sensitif dan harus disimpan dengan aman.</p>
-    <h2>5. Penyimpanan dan penghapusan</h2>
-    <p>Data lokal dapat tetap berada di perangkat sampai pengguna menghapus catatan, mereset data aplikasi, menghapus penyimpanan melalui setelan Android, atau menghapus instalasi aplikasi. File yang diekspor tidak terhapus otomatis. Karena Pengembang tidak menyimpan catatan keuangan di server, Pengembang tidak dapat mengakses atau menghapusnya atas nama pengguna. Masa penyimpanan informasi terkait iklan ditentukan oleh Google dan penyedia teknologi iklan yang berlaku sesuai kebijakan dan tujuan pemrosesan mereka.</p>
-    <h2>6. Pengungkapan kepada pihak ketiga</h2>
-    <p>Pengembang tidak menjual catatan keuangan atau membagikannya melalui server sendiri. Pihak ketiga dapat memproses informasi untuk iklan, analitik, dan pencegahan penipuan melalui AdMob, ketika pengguna sengaja membagikan file eksternal, atau untuk memenuhi kewajiban hukum yang sah.</p>
-    <h2>7. Keamanan</h2>
-    <p>Penyimpanan di perangkat mengurangi pengiriman eksternal, tetapi tidak ada metode yang sepenuhnya aman. Gunakan kunci layar, perbarui sistem operasi, pilih lokasi cadangan yang aman, dan jangan menyimpan file yang tidak dienkripsi di tempat umum.</p>
-    <h2>8. Privasi anak</h2>
-    <p>Cashtory tidak dirancang terutama untuk anak-anak. Jika Pengembang mengetahui bahwa informasi pribadi seorang anak diberikan langsung kepada Pengembang, tindakan yang sesuai akan diambil sejauh yang secara wajar memungkinkan.</p>
-    <h2>9. Pilihan dan hak pengguna</h2>
-    <p>Pengguna dapat melihat, mengubah, dan menghapus catatan di aplikasi serta mengelola izin, ID iklan, dan privasi iklan melalui setelan perangkat. Pengembang mungkin tidak dapat mengakses atau menghapus informasi yang hanya berada di perangkat atau diproses secara mandiri oleh Google.</p>
-    <h2>10. Pengguna di EEA, Britania Raya, dan Swiss</h2>
-    <p>Jika undang-undang perlindungan data yang berlaku mengaturnya, Pengembang bertindak sebagai pengendali atas data pribadi yang tujuan dan cara pemrosesannya ditentukan oleh Pengembang. Catatan keuangan dan hasil pengenalan struk di perangkat diproses pada perangkat untuk menyediakan fungsi aplikasi yang diminta pengguna dan tidak dikirim ke server yang dikendalikan Pengembang.</p>
-    <p>Iklan yang dipersonalisasi, pengenal iklan, dan teknologi penyimpanan terkait iklan diproses berdasarkan persetujuan jika diwajibkan oleh hukum. Pemrosesan yang diperlukan untuk keamanan iklan, pencegahan penipuan, integritas layanan, serta iklan terbatas atau kontekstual dapat didasarkan pada kepentingan yang sah atau dasar hukum lain yang berlaku jika diizinkan. Google dan penyedia teknologi iklan yang ditampilkan pada layar persetujuan dapat memproses informasi sesuai pemberitahuan dan peran hukum masing-masing.</p>
-    <p>Sesuai hukum yang berlaku, pengguna dapat meminta akses, koreksi, penghapusan, pembatasan pemrosesan, mengajukan keberatan, dan portabilitas data, serta menarik persetujuan kapan saja. Penarikan persetujuan tidak memengaruhi keabsahan pemrosesan sebelum penarikan. Pengembang tidak secara langsung melakukan pengambilan keputusan otomatis yang menimbulkan akibat hukum atau dampak penting serupa bagi pengguna.</p>
-    <p>Persetujuan iklan dapat diubah di Cashtory melalui <strong>Lainnya → Setelan Privasi Iklan</strong>. Jika menu ini tidak tersedia, pengguna dapat memakai kontrol privasi iklan pada perangkat. Menolak atau menarik persetujuan tidak mencegah penggunaan fungsi utama pencatatan keuangan Cashtory, meskipun jenis atau ketersediaan iklan dapat berubah.</p>
-    <p>Informasi terkait iklan dapat diproses pada server di luar negara pengguna oleh Google dan penyedia teknologi iklan. Jika diperlukan, keputusan kecukupan, klausul kontrak standar, atau perlindungan lain yang berlaku dapat digunakan. Pengguna dapat mengajukan keluhan kepada otoritas pengawas perlindungan data di tempat tinggalnya. Untuk menggunakan hak atau mengajukan pertanyaan, hubungi <a href="mailto:official.yo.studio@gmail.com">official.yo.studio@gmail.com</a>.</p>
-    <h2>11. Perubahan Kebijakan ini</h2>
-    <p>Kebijakan ini dapat diperbarui ketika fitur aplikasi, SDK, atau hukum berubah. Perubahan penting dapat diberitahukan melalui aplikasi, halaman toko, atau halaman ini, dan tanggal pembaruan akan disesuaikan.</p>
-    <h2>12. Kontak</h2>
-    <ul><li>Pengembang: <strong>Y&amp;O Studio</strong></li><li>Aplikasi: <strong>Cashtory</strong></li><li>Email: <a href="mailto:official.yo.studio@gmail.com">official.yo.studio@gmail.com</a></li></ul>
-  </section>
-
-  <footer>© 2026 Y&amp;O Studio · Cashtory</footer>
+  <footer>
+    <p>© 2026 Y&amp;O Studio · Cashtory</p>
+    <p>현재 정식 배포 지역: 대한민국</p>
+  </footer>
 </main>
 </body>
 </html>
