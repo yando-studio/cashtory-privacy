@@ -84,6 +84,8 @@
     tr:last-child td { border-bottom: 0; }
     code { padding: 2px 5px; background: var(--brand-soft); border-radius: 5px; font-size: .92em; }
     .back { display: inline-block; margin-top: 12px; font-size: .9rem; }
+    .lang-switch { display: flex; justify-content: flex-end; gap: 8px; margin: 0 0 22px; font-size: .94rem; }
+    .lang-switch a[aria-current="page"] { color: var(--text); font-weight: 750; text-decoration: none; }
     footer { margin-top: 60px; padding-top: 24px; border-top: 1px solid var(--line); color: var(--muted); font-size: .94rem; }
     @media (max-width: 700px) {
       main { width: min(100% - 16px, 980px); margin: 8px auto; border-radius: 14px; }
@@ -104,10 +106,15 @@
 </head>
 <body>
 <main id="top">
+  <nav class="lang-switch" aria-label="언어 선택">
+    <a href="./" lang="ko" aria-current="page">한국어</a>
+    <span aria-hidden="true">·</span>
+    <a href="./en/" lang="en">English</a>
+  </nav>
   <header>
     <p class="meta">Y&amp;O STUDIO</p>
     <h1>CashTory 개인정보 처리방침</h1>
-    <p class="meta"><strong>문서 버전:</strong> 1.1.0<br><strong>시행일:</strong> 2026년 8월 15일<br><strong>최종 개정일:</strong> 2026년 9월 2일</p>
+    <p class="meta"><strong>문서 버전:</strong> 1.2.0<br><strong>시행일:</strong> 2026년 9월 16일<br><strong>최종 개정일:</strong> 2026년 9월 16일</p>
   </header>
 
   <p class="lead">Y&amp;O STUDIO(이하 “개발자”)는 CashTory 이용자의 자유와 권리를 보호하기 위해 「개인정보 보호법」 및 관계 법령을 준수합니다. 이 방침은 CashTory가 어떤 정보를 처리하고 어디에 저장하며, 이용자가 이를 어떻게 관리할 수 있는지 설명합니다.</p>
@@ -129,6 +136,7 @@
       <li><a href="#section-11">방침 변경 고지</a></li>
       <li><a href="#section-12">문의처</a></li>
       <li><a href="#section-13">대한민국 이용자에 대한 추가 안내</a></li>
+      <li><a href="#section-14">미국 이용자에 대한 추가 안내</a></li>
     </ol>
   </nav>
 
@@ -206,7 +214,7 @@
   <section id="section-4">
     <h2>4. 광고</h2>
     <p>CashTory Android 버전은 배너 광고를 제공하기 위해 Google AdMob 및 Google Mobile Ads SDK를 사용합니다. SDK는 광고 제공, 분석 및 부정행위 방지를 위해 IP 주소, 앱·광고 상호작용, 진단정보, Android 광고 ID 및 앱 세트 ID를 자동으로 수집하거나 공유할 수 있습니다. IP 주소는 대략적 위치를 추정하는 데 사용될 수 있습니다.</p>
-    <p>동의가 필요한 지역에서는 Google User Messaging Platform(UMP)이 광고 관련 선택 화면을 표시하고 동의 절차가 완료된 뒤 광고 SDK를 초기화합니다. 해당 지역에서는 <strong>더보기 → 광고 개인정보 설정</strong>에서 선택을 변경할 수 있습니다. 현재 배포 지역은 대한민국이지만 앱에 해당 기능이 포함되어 있어 실제 동작을 안내합니다.</p>
+    <p>동의 또는 개인정보 선택권 제공이 필요한 지역에서는 Google User Messaging Platform(UMP)이 광고 관련 선택 화면을 표시합니다. 해당 지역에서는 <strong>더보기 → 광고 개인정보 설정</strong>에서 선택을 변경할 수 있습니다. 미국의 적용 대상 지역에서는 관련 법령과 Google의 제공 범위에 따라 맞춤형 광고, 타겟 광고 또는 개인정보의 판매·공유와 관련된 선택 화면이 제공될 수 있습니다.</p>
     <p>개인 맞춤 광고를 거부해도 가계부의 핵심 기능은 그대로 사용할 수 있습니다. 광고의 유형이나 제공 방식은 달라질 수 있습니다. Android 기기 설정에서도 광고 ID를 재설정하거나 삭제할 수 있습니다.</p>
     <p>현재 출시 대상인 Android 버전에만 광고가 포함됩니다. 추후 iOS 버전을 출시하는 경우 그 버전에는 광고를 포함하지 않을 예정이며, 실제 출시 사양이 변경되면 이 방침을 개정합니다.</p>
     <a class="back" href="#top">맨 위로</a>
@@ -278,8 +286,8 @@
   <section id="section-8">
     <h2>8. 아동의 개인정보</h2>
     <p>Google Play에서 설정하는 CashTory의 목표 이용자 연령은 <strong>만 18세 이상</strong>입니다. 이는 앱의 목표 이용자 설정이며, 앱 콘텐츠의 유해성 정도를 나타내는 콘텐츠 등급과는 다른 개념입니다.</p>
-    <p>CashTory는 만 14세 미만 아동을 대상으로 설계되지 않았고, 회원가입이나 연령 확인 기능도 없습니다. 개발자는 앱을 통해 만 14세 미만 아동의 이름·연락처 등 개인정보를 직접 수집하지 않으므로 법정대리인 동의를 받는 절차를 운영하지 않습니다.</p>
-    <p>만 14세 미만 아동의 개인정보가 문의 이메일 등을 통해 개발자에게 전달된 사실을 알게 되면, 법령에 따라 필요한 확인을 거쳐 해당 정보를 삭제하는 등 보호조치를 취합니다. 법정대리인은 제12항의 연락처로 관련 문의를 할 수 있습니다.</p>
+    <p>CashTory는 대한민국의 만 14세 미만 아동 또는 미국의 만 13세 미만 아동을 대상으로 설계되지 않았고, 회원가입이나 연령 확인 기능도 없습니다. 개발자는 앱을 통해 해당 아동의 이름·연락처 등 개인정보를 고의로 수집하지 않으며 법정대리인 동의를 받는 절차를 운영하지 않습니다.</p>
+    <p>해당 연령 미만 아동의 개인정보가 문의 이메일 등을 통해 개발자에게 전달된 사실을 알게 되면, 법령에 따라 필요한 확인을 거쳐 해당 정보를 삭제하는 등 보호조치를 취합니다. 법정대리인은 제12항의 연락처로 관련 문의를 할 수 있습니다.</p>
     <a class="back" href="#top">맨 위로</a>
   </section>
 
@@ -313,7 +321,7 @@
   <section id="section-11">
     <h2>11. 방침 변경 고지</h2>
     <p>앱 기능, 사용 SDK, 배포 지역 또는 관계 법령이 변경되면 이 방침을 개정할 수 있습니다. 중요한 변경은 앱, Google Play 스토어 등록정보 또는 이 페이지 등 이용자가 확인하기 쉬운 방법으로 안내하고 시행일과 최종 개정일을 변경합니다.</p>
-    <p>이 방침은 2026년 8월 15일부터 적용됩니다. 현재 정식 배포 지역은 대한민국이며, 배포 지역을 확대할 경우 해당 지역 법령과 실제 앱 동작에 맞춰 이 방침을 개정합니다.</p>
+    <p>이 방침은 2026년 9월 16일부터 적용됩니다. CashTory의 배포 대상 지역은 대한민국과 미국이며, 배포 지역을 확대하거나 실제 앱 동작이 변경되면 해당 지역 법령과 변경된 처리 방식에 맞춰 이 방침을 개정합니다.</p>
     <a class="back" href="#top">맨 위로</a>
   </section>
 
@@ -411,9 +419,45 @@
     <a class="back" href="#top">맨 위로</a>
   </section>
 
+  <section id="section-14">
+    <h2>14. 미국 이용자에 대한 추가 안내</h2>
+
+    <h3>14.1 적용 범위</h3>
+    <p>이 항목은 미국에서 CashTory를 이용하는 이용자에게 추가로 적용됩니다. 미국의 주별 개인정보 보호법이 개발자에게 적용되는 경우, 이용자는 거주하는 주와 적용 법령에 따라 개인정보의 열람·삭제·정정, 처리 내역 확인, 타겟 광고 또는 개인정보의 판매·공유 거부 등의 권리를 가질 수 있습니다.</p>
+    <p>CashTory의 가계부 기록은 이용자 기기에만 저장되며 개발자가 수집하거나 보유하지 않습니다. 따라서 개발자는 기기 내부 기록을 이용자를 대신하여 열람·삭제·정정할 수 없습니다. 앱에서 직접 기록을 관리하거나 Android 설정에서 앱 데이터 또는 앱을 삭제할 수 있습니다.</p>
+
+    <h3>14.2 미국에서 처리될 수 있는 정보의 범주</h3>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>범주</th><th>구체적인 정보</th><th>출처·목적</th><th>처리 주체</th></tr></thead>
+        <tbody>
+          <tr><td>식별자 및 기기정보</td><td>IP 주소, Android 광고 ID, 앱 세트 ID, 기기 또는 설치 식별자, 기기·앱 정보</td><td>앱 또는 SDK에서 자동 생성·수집되며 광고 제공, 부정행위 방지, 기능 제공 및 진단에 사용</td><td>Google 및 Google의 광고 파트너</td></tr>
+          <tr><td>인터넷 또는 전자적 활동정보</td><td>앱·광고 상호작용, 광고 요청, 기능 실행·모델 다운로드 이벤트</td><td>광고 제공·성과 측정, SDK 운영 및 진단</td><td>Google 및 Google의 광고 파트너</td></tr>
+          <tr><td>대략적 위치정보</td><td>IP 주소를 통해 추정될 수 있는 국가·지역 수준의 위치</td><td>광고 제공, 부정행위 방지 및 지역별 개인정보 선택 화면 제공</td><td>Google 및 Google의 광고 파트너</td></tr>
+          <tr><td>진단정보</td><td>성능 지표, API 설정값, 입력·출력 크기, 기능 버전, 이벤트 및 오류 코드</td><td>SDK 기능 제공, 성능 측정, 오류 진단</td><td>Google</td></tr>
+          <tr><td>이용자가 직접 제공한 연락정보</td><td>문의 이메일 주소, 문의 내용, 앱 버전, OS 이름·버전, 기기 모델명, 앱 언어·통화 설정</td><td>이용자가 이메일을 전송한 경우 문의 답변과 문제 해결</td><td>Y&amp;O STUDIO 및 이메일 서비스 제공자</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p>가계부 거래, 자산·부채·카드, 할부 및 메모 정보는 기기 내부에서만 처리되며 개발자나 광고 SDK에 전달되지 않습니다. 영수증 이미지와 인식된 글자 원문도 개발자 서버 또는 Google 서버로 전송되지 않습니다.</p>
+
+    <h3>14.3 개인정보의 판매·공유 및 타겟 광고</h3>
+    <p>Y&amp;O STUDIO는 이용자의 개인정보를 금전적 대가를 받고 판매하지 않습니다. 다만 Google Mobile Ads SDK를 통한 맞춤형 광고를 위해 식별자, 앱·광고 상호작용 및 대략적 위치정보가 Google과 광고 파트너에 의해 처리될 수 있으며, 이러한 처리는 일부 미국 주 법률에서 개인정보의 “판매” 또는 “공유”, “타겟 광고”로 정의될 수 있습니다.</p>
+    <p>적용 법령상 선택권이 제공되는 이용자는 앱의 <strong>더보기 → 광고 개인정보 설정</strong>에서 선택을 확인하거나 변경할 수 있습니다. Android 광고 설정과 Google의 내 광고 센터에서도 광고 관련 설정을 관리할 수 있습니다. 거부 선택을 하더라도 CashTory의 핵심 가계부 기능은 계속 사용할 수 있으나, 문맥 기반 광고 또는 제한된 기술정보 처리는 계속될 수 있습니다.</p>
+    <p>개발자는 가계부 기록을 판매·공유하거나 이를 타겟 광고에 사용하지 않으며, 실제로 알게 된 만 16세 미만 이용자의 개인정보를 판매·공유하지 않습니다.</p>
+
+    <h3>14.4 Do Not Track 및 개인정보 선택 신호</h3>
+    <p>CashTory는 네이티브 모바일 앱이므로 웹 브라우저의 Do Not Track 신호를 직접 수신하거나 이에 독립적으로 반응하지 않습니다. 광고 관련 선택은 앱의 광고 개인정보 설정과 Google이 제공하는 광고 설정에서 관리할 수 있습니다. Google Mobile Ads SDK와 UMP는 적용 가능한 미국 주에서 Global Privacy Platform(GPP) 신호와 제한된 데이터 처리 방식을 지원할 수 있습니다.</p>
+
+    <h3>14.5 권리 행사와 이의 제기</h3>
+    <p>적용되는 미국 주 법률이 권리를 부여하는 경우, 이용자는 개발자가 보유한 개인정보의 범주와 처리 목적 확인, 열람, 정정, 삭제 또는 특정 처리의 거부를 요청할 수 있습니다. 요청은 제12항의 이메일로 보낼 수 있으며, 제목에 “U.S. Privacy Request”를 기재하면 확인에 도움이 됩니다. 개발자는 요청 확인에 필요한 최소한의 정보만 요구하며, 법에서 정한 기간과 예외에 따라 답변합니다.</p>
+    <p>이용자는 정당한 권한을 부여한 대리인을 통해 요청할 수 있습니다. 개발자는 이용자 본인의 신원과 대리권 확인을 요청할 수 있습니다. 요청이 거절된 경우 적용 법령이 보장하는 범위에서 같은 이메일로 이의를 제기할 수 있으며, 개인정보 권리를 행사했다는 이유로 부당하게 차별하지 않습니다.</p>
+    <a class="back" href="#top">맨 위로</a>
+  </section>
+
   <footer>
     <p>© 2026 Y&amp;O STUDIO · CashTory</p>
-    <p>현재 정식 배포 지역: 대한민국</p>
+    <p>배포 대상 지역: 대한민국 · 미국</p>
   </footer>
 </main>
 </body>
