@@ -106,7 +106,7 @@
   <header>
     <p class="meta">Y&amp;O STUDIO</p>
     <h1>CashTory Privacy Policy</h1>
-    <p class="meta"><strong>Document version:</strong> 1.3.0<br><strong>Effective date:</strong> October 4, 2026<br><strong>Last updated:</strong> October 4, 2026</p>
+    <p class="meta"><strong>Document version:</strong> 1.4.0<br><strong>Effective date:</strong> October 18, 2026<br><strong>Last updated:</strong> October 18, 2026</p>
   </header>
 
   <p class="lead">Y&amp;O STUDIO (the “Developer”) respects the privacy and rights of CashTory users. This Privacy Policy explains what information CashTory processes, where it is stored, and how users can manage it.</p>
@@ -140,11 +140,12 @@
     <ul>
       <li>income, expense, and transfer records;</li>
       <li>asset, liability, card, and installment information;</li>
-      <li>categories, recurring transactions, favorites, and notes;</li>
-      <li>settings such as theme, language, currency, and month start date; and</li>
+      <li>categories, recurring transactions, favorites, daily notes, and anniversaries;</li>
+      <li>vehicle details, driving and maintenance records, and vehicle photos selected by the user;</li>
+      <li>settings such as theme, language, currency, month start date, and notification display; and</li>
       <li>merchant name, date, total, and transaction details the user chooses to save from a receipt.</li>
     </ul>
-    <p>The Developer does not operate a server for this information and cannot remotely access or view it.</p>
+    <p>Selected vehicle photos are resized and stored in the app database and may be included in JSON backups. Unlike receipt images, saved vehicle photos remain in the app. The Developer does not operate a server for this information and cannot remotely access or view it.</p>
 
     <h3>1.2 Technical information Google SDKs may process automatically</h3>
     <ul>
@@ -171,11 +172,14 @@
           <tr><td>Scanning with Google’s document scanner</td><td>Google Play services provides the capture screen and returns only the image selected by the user.</td><td>CashTory does not request camera permission.</td></tr>
           <tr><td>The document scanner is unavailable or fails</td><td>CashTory switches to its own camera capture.</td><td>CashTory requests camera permission only in this case.</td></tr>
           <tr><td>Selecting one stored photo</td><td>The Android system photo picker returns only the photo chosen by the user.</td><td>No broad photo or media permission is requested.</td></tr>
+          <tr><td>Using device notifications</td><td>CashTory schedules and displays reminders about selected dates, balances, and vehicle maintenance on the device.</td><td>Android may request notification permission; notifications can be disabled in device settings.</td></tr>
+          <tr><td>Importing JSON or CSV files</td><td>The user selects a file through the system picker for restoration or import. A copy of the selected file may remain temporarily in app storage.</td><td>No broad storage permission is requested.</td></tr>
           <tr><td>Saving JSON or CSV</td><td>The user selects a destination through Android’s system file or folder picker.</td><td>Access is limited to the selected destination and is not full-device storage access.</td></tr>
         </tbody>
       </table>
     </div>
-    <p>Users can continue to enter transactions manually without granting camera permission or using receipt features.</p>
+    <p>Users can continue to enter transactions manually without granting camera permission or using receipt features. Core features also remain available without notification permission.</p>
+    <p>CashTory currently uses only notifications scheduled on the device. It does not register a push token or send remote push notifications. A notification may show a user-entered name or amount, including on the lock screen depending on device settings. Users can turn notifications off or hide amounts in the app and control lock-screen display in Android settings.</p>
     <a class="back" href="#top">Back to top</a>
   </section>
 
@@ -216,10 +220,10 @@
     <p>Budget data is stored in CashTory’s app-specific SQLite database on the user’s device. It is not stored on a Developer-operated server or cloud service.</p>
 
     <h3>5.2 In-app automatic backups</h3>
-    <p>CashTory may create automatic backup files in app-specific storage so the user can restore an earlier state. When the configured limit is exceeded, older backups are deleted first. These backups remain on the device.</p>
+    <p>CashTory may create automatic backup files in app-specific storage so the user can restore an earlier state. Stored data, including vehicle photos, may be included in these backups. When the configured limit is exceeded, older backups are deleted first. These backups remain on the device.</p>
 
     <h3>5.3 Manual backup and export</h3>
-    <p>CashTory exports JSON backups or CSV files only when the user initiates the action. Android may display its system file or folder picker so the user can choose the destination. CashTory does not gain broad access to device storage.</p>
+    <p>CashTory exports JSON backups or CSV files only when the user initiates the action. JSON backups may contain saved vehicle photos and other stored data. Android may display its system file or folder picker so the user can choose the destination. CashTory does not gain broad access to device storage.</p>
     <p>If a user sends an exported file through email, messaging, or cloud storage, that service’s privacy and retention terms apply. Exported files are not automatically deleted when CashTory is uninstalled.</p>
 
     <h3>5.4 Android backup and device transfer</h3>
@@ -230,7 +234,7 @@
 
   <section id="section-6">
     <h2>6. Third-party services</h2>
-    <p>CashTory includes the SDKs below. Google and the Developer may act independently for their respective advertising purposes. ML Kit processes technical information to provide and diagnose SDK features. Firebase Analytics is not separately integrated, and the release build does not include Firebase Remote Config or Firebase Installations.</p>
+    <p>CashTory includes the SDKs below. Google and the Developer may act independently for their respective advertising purposes. ML Kit processes technical information to provide and diagnose SDK features. Firebase Analytics is not separately integrated. Firebase Cloud Messaging components may be bundled through <code>expo-notifications</code>, but CashTory currently uses only locally scheduled notifications and does not register push tokens or send remote push notifications.</p>
     <div class="table-wrap">
       <table>
         <thead><tr><th>Service</th><th>Purpose</th><th>Information that may be processed</th><th>Receipt image or text sent?</th></tr></thead>
@@ -259,11 +263,11 @@
       <table>
         <thead><tr><th>Information</th><th>Retention</th><th>Deletion</th></tr></thead>
         <tbody>
-          <tr><td>Budget records, settings, and saved receipt results</td><td>Until the user deletes them, clears app data, or uninstalls the app</td><td>Deleted by CashTory or Android from the local database and app files</td></tr>
+          <tr><td>Budget records, settings, saved receipt results, and vehicle details and photos</td><td>Until the user deletes them, clears app data, or uninstalls the app</td><td>Deleted by CashTory or Android from the local database and app files</td></tr>
           <tr><td>Receipt images and full recognized text</td><td>Used only during recognition and not stored in the database</td><td>Not retained as app records; temporary scanner files may be managed by the operating system or removed with app data</td></tr>
           <tr><td>In-app automatic backups</td><td>Until replaced under the retention limit, app data is cleared, or the app is uninstalled</td><td>Deleted by CashTory or Android from app-specific storage</td></tr>
           <tr><td>Exported JSON or CSV files</td><td>Until the user deletes them from the selected location</td><td>Deleted by the user from the file app or external service</td></tr>
-          <tr><td>Contact emails and included app/device information</td><td>For as long as needed to resolve the inquiry and provide follow-up</td><td>Deleted from the Developer’s email account</td></tr>
+          <tr><td>Contact emails and included app/device information</td><td>One month after receipt</td><td>Deleted from the Developer’s email account</td></tr>
           <tr><td>Google SDK technical information</td><td>According to Google’s policies, the type of information, purpose, and user settings</td><td>Deleted or anonymized under Google’s policies</td></tr>
         </tbody>
       </table>
@@ -309,14 +313,14 @@
   <section id="section-11">
     <h2>11. Changes to this Policy</h2>
     <p>This Policy may be updated when app features, SDKs, distribution regions, or applicable law change. Material changes will be announced through the app, the Google Play listing, or this page, and the effective and last-updated dates will be revised.</p>
-    <p>This revised version is effective October 4, 2026. South Korea and the United States were previously identified as distribution regions. We have prepared an additional notice for the planned launch in Japan. This Policy will be updated if distribution expands further or actual data practices change.</p>
+    <p>This revised version is effective October 18, 2026. South Korea and the United States were previously identified as distribution regions. We have prepared an additional notice for the planned launch in Japan. This Policy will be updated if distribution expands further or actual data practices change.</p>
     <a class="back" href="#top">Back to top</a>
   </section>
 
   <section id="section-12">
     <h2>12. Contact</h2>
     <ul>
-      <li><strong>Developer:</strong> Y&amp;O STUDIO</li>
+      <li><strong>Developer:</strong> Y&amp;O STUDIO (sole proprietor in South Korea)</li>
       <li><strong>App:</strong> CashTory</li>
       <li><strong>Package name:</strong> <code>com.yandostudio.cashtory</code></li>
       <li><strong>Privacy contact:</strong> Y&amp;O STUDIO Privacy Team</li>
@@ -338,7 +342,7 @@
           <tr><td>Document scanning and text recognition</td><td>On-device image and text processing; SDK device, app, identifier, performance, configuration, event, and error information</td><td>Image/text: device; technical information: Google</td><td>Image/text not retained in the database; technical information under Google’s policy</td></tr>
           <tr><td>Advertising and privacy choices</td><td>IP address, approximate location, ad interactions, diagnostics, Android advertising ID, app set ID, and choice status</td><td>Google</td><td>Under Google’s policies and user settings</td></tr>
           <tr><td>Backups and exports</td><td>JSON or CSV containing local budget data</td><td>App storage or destination selected by the user</td><td>Until replaced, app data is removed, or the user deletes the exported file</td></tr>
-          <tr><td>Contact</td><td>Email address, message, app version, OS, device model, language, and currency for support</td><td>Developer’s email account</td><td>For as long as needed to resolve the inquiry and follow up</td></tr>
+          <tr><td>Contact</td><td>Email address, message, app version, OS, device model, language, and currency for support</td><td>Developer’s email account</td><td>One month after receipt</td></tr>
         </tbody>
       </table>
     </div>
