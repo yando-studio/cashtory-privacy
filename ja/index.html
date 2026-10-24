@@ -35,8 +35,13 @@
     tr:last-child td { border-bottom:0; }
     code { padding:2px 5px; background:var(--brand-soft); border-radius:5px; font-size:.92em; }
     .back { display:inline-block; margin-top:12px; font-size:.9rem; }
-    .lang-switch { display:flex; justify-content:flex-end; gap:8px; margin:0 0 22px; font-size:.94rem; }
-    .lang-switch a[aria-current="page"] { color:var(--text); font-weight:750; text-decoration:none; }
+    .lang-switch { display: flex; align-items: center; justify-content: flex-end; gap: 10px; margin: 0 0 22px; font-size: .94rem; }
+    .lang-switch label { flex-shrink: 0; color: var(--muted); font-weight: 600; }
+    .lang-select { width: 15rem; max-width: 100%; min-width: 0; min-height: 44px; padding: 9px 12px; border: 1px solid var(--line); border-radius: 10px; background: var(--card); color: var(--text); font: inherit; cursor: pointer; }
+    .lang-select:hover { border-color: var(--brand); }
+    .lang-select:focus-visible { outline: 2px solid var(--brand); outline-offset: 3px; }
+    .lang-fallback { margin: 0 0 22px; font-size: .94rem; }
+    @media (max-width: 380px) { .lang-switch { gap: 8px; } .lang-select { flex: 1; width: auto; } }
     footer { margin-top:60px; padding-top:24px; border-top:1px solid var(--line); color:var(--muted); font-size:.94rem; }
     @media (max-width:700px) { main { width:min(100% - 16px,980px); margin:8px auto; border-radius:14px; } .toc ol { columns:1; } h2 { margin-top:42px; } }
     @media print { body { background:#fff; color:#000; } main { width:100%; margin:0; padding:0; border:0; box-shadow:none; } .toc { break-after:page; } h2,h3 { break-after:avoid; } .table-wrap { overflow:visible; } table { min-width:0; font-size:9pt; } a { color:inherit; } }
@@ -44,13 +49,18 @@
 </head>
 <body>
 <main id="top">
-      <p>旅行ファイル・画像の共有や地図リンクの機能を利用すると、外部サービスに情報が渡る場合があります。地図リンクの場所情報は自動で照会される場合があります。詳細は<a href="#section-1">第1.5項</a>と<a href="#section-5">第5項</a>をご確認ください。</p>
-  <nav class="lang-switch" aria-label="言語を選択">
-    <a href="../" lang="ko">한국어</a><span aria-hidden="true">·</span>
-    <a href="../en/" lang="en">English</a><span aria-hidden="true">·</span>
-    <a href="./" lang="ja" aria-current="page">日本語</a><span aria-hidden="true">·</span>
-    <a href="../pt/" lang="pt-BR">Português (Brasil)</a>
+  <nav class="lang-switch" aria-label="言語">
+    <label for="language-select">言語</label>
+    <select id="language-select" class="lang-select" name="language" aria-label="言語を選択 — 選択した言語のポリシーに移動" onchange="window.location.assign(this.value)">
+      <option value="../" lang="ko">한국어</option>
+      <option value="../en/" lang="en">English</option>
+      <option value="./" lang="ja" selected>日本語</option>
+      <option value="../pt/" lang="pt-BR">Português (Brasil)</option>
+    </select>
   </nav>
+  <noscript>
+    <p class="lang-fallback"><a href="../" lang="ko">한국어</a> · <a href="../en/" lang="en">English</a> · <a href="./" lang="ja" aria-current="page">日本語</a> · <a href="../pt/" lang="pt-BR">Português (Brasil)</a></p>
+  </noscript>
   <header>
     <p class="meta">Y&amp;O STUDIO</p>
     <h1>CashTory プライバシーポリシー</h1>
@@ -58,6 +68,7 @@
   </header>
   <p class="lead">Y&amp;O STUDIO（以下「開発者」）は、CashToryの利用者のプライバシーを尊重します。本ポリシーは、アプリ内の情報、第三者のSDKが取り扱う情報、利用者が開発者に直接送る情報を区別し、それぞれの利用目的・保存場所・管理方法を説明します。日本の利用者に適用される範囲で、個人情報の保護に関する法律その他の関係法令に従います。</p>
   <p class="notice"><strong>概要：</strong>CashToryに会員登録・ログイン・開発者が運営するデータサーバーはありません。家計簿の記録やレシートから保存した取引情報は利用者の端末に保存され、開発者は閲覧できません。一方、広告およびGoogle ML KitのSDKは下記の技術情報をGoogleに送信することがあります。利用者がメールを送信した場合に限り、お問い合わせ内容と一部のアプリ・端末情報を開発者が受け取ります。</p>
+  <p>旅行ファイル・画像の共有や地図リンクの機能を利用すると、外部サービスに情報が渡る場合があります。地図リンクの場所情報は自動で照会される場合があります。詳細は<a href="#section-1">第1.5項</a>と<a href="#section-5">第5項</a>をご確認ください。</p>
   <nav class="toc" aria-label="目次">
     <h2>目次</h2>
     <ol>
