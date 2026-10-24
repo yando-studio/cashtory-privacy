@@ -95,6 +95,7 @@
 </head>
 <body>
 <main id="top">
+      <p>Os recursos de compartilhamento de arquivos e imagens de viagem e de links de mapas podem transmitir informações aos serviços externos envolvidos. Os detalhes de um local em um link de mapa podem ser consultados automaticamente. Veja a <a href="#section-1">Seção 1.5</a> e a <a href="#section-5">Seção 5</a>.</p>
   <nav class="lang-switch" aria-label="Selecionar idioma">
     <a href="../" lang="ko">한국어</a><span aria-hidden="true">·</span>
     <a href="../en/" lang="en">English</a><span aria-hidden="true">·</span>
@@ -104,7 +105,7 @@
   <header>
     <p class="meta">Y&amp;O STUDIO</p>
     <h1>Política de Privacidade do CashTory</h1>
-    <p class="meta"><strong>Versão:</strong> 1.4.4<br><strong>Vigência:</strong> 18 de outubro de 2026<br><strong>Última atualização:</strong> 18 de outubro de 2026</p>
+    <p class="meta"><strong>Versão:</strong> 1.4.5<br><strong>Vigência:</strong> 24 de outubro de 2026<br><strong>Última atualização:</strong> 24 de outubro de 2026</p>
   </header>
   <p class="lead">Esta Política explica como o CashTory para Android trata informações, onde elas ficam armazenadas e como o usuário pode exercer seus direitos. A Y&amp;O STUDIO é um negócio individual sediado na República da Coreia (Coreia do Sul). O canal de privacidade está na Seção 12.</p>
   <p class="notice"><strong>Em resumo:</strong> o CashTory não exige cadastro ou login e não possui servidor do Desenvolvedor para armazenar o livro financeiro. Os registros inseridos pelo usuário ficam no dispositivo. O Desenvolvedor não consegue consultá-los remotamente. Os SDKs do Google para anúncios e leitura de comprovantes podem tratar os dados técnicos descritos abaixo. O Desenvolvedor recebe informações de contato somente quando o usuário envia um e-mail.</p>
@@ -131,6 +132,7 @@
     <h3>1.1 Informações no dispositivo</h3>
     <p>O usuário pode registrar receitas, despesas, transferências, contas, ativos, dívidas, cartões, parcelas, categorias, transações recorrentes, favoritos, anotações por data, datas comemorativas, veículos, abastecimentos e manutenção. Também pode salvar foto de veículo, informações extraídas de comprovantes e preferências de idioma, moeda, tema e notificações. Esses dados são usados para os recursos financeiros, estatísticas, lembretes e backups escolhidos pelo usuário. Ficam no banco de dados e no armazenamento do aplicativo no dispositivo; o Desenvolvedor não opera servidor para eles nem consegue acessá-los remotamente.</p>
     <p>A foto de veículo escolhida pelo usuário é reduzida e salva no banco de dados. Ela pode integrar arquivos de backup JSON. Diferentemente da foto do veículo, a imagem do comprovante e a transcrição integral reconhecida não são salvas como registros do banco de dados; somente as informações de transação que o usuário confirma são salvas.</p>
+    <p>O livro de viagens também guarda informações inseridas pelo usuário ou importadas de um arquivo de viagem: nome, destinos, datas e fuso horário da viagem; nomes ou apelidos dos acompanhantes; datas, horários, anotações, locais, endereços e links do roteiro; listas de bagagem e itens marcados; moedas e taxas de câmbio; despesas, pagadores, divisão de valores e acertos. Identificadores aleatórios (UUIDs) são gerados e salvos para distinguir viagens, pessoas e registros na troca de arquivos. Essas informações são usadas no planejamento, nos cálculos de despesas, nos acertos, na exibição das regiões visitadas e na troca de arquivos. Os destinos e endereços são inseridos ou salvos pelo usuário; o CashTory não lê a localização GPS do dispositivo para esses recursos.</p>
     <h3>1.2 Dados técnicos dos SDKs do Google</h3>
     <ul>
       <li><strong>Google Mobile Ads / AdMob:</strong> endereço IP, localização aproximada inferida dele, interações com o aplicativo e os anúncios, diagnósticos, ID de publicidade do Android e ID do conjunto de aplicativos podem ser tratados para exibição e medição de anúncios e prevenção de fraude.</li>
@@ -142,6 +144,9 @@
     <p>Ao selecionar “Contato”, o aplicativo de e-mail do dispositivo pode preencher a versão do CashTory, nome e versão do sistema operacional, modelo do dispositivo, idioma e moeda do aplicativo. O usuário pode conferir e retirar essas informações antes de enviar. Se enviar a mensagem, o Desenvolvedor receberá o endereço de e-mail, o conteúdo e as informações mantidas pelo usuário. Elas são usadas para responder, investigar problemas e melhorar o serviço e são conservadas até a conclusão do atendimento e do acompanhamento necessário e depois excluídas.</p>
     <h3>1.4 Informações não solicitadas no uso comum</h3>
     <p>O CashTory não tem conta ou login e o Desenvolvedor não solicita separadamente nome, telefone, contatos, histórico de chamadas, localização GPS precisa ou documentos de identidade no uso comum. Informações que o usuário incluir voluntariamente em um e-mail serão recebidas.</p>
+    <h3>1.5 Links de mapas e serviços externos</h3>
+    <p>Ao adicionar ao roteiro um link do Google Maps sem endereço salvo, ou ao abrir uma tela que contenha esse tipo de link, o CashTory pode acessar o link automaticamente para preencher o nome e o endereço do local. O link, o endereço IP e outras informações necessárias à conexão podem chegar ao Google. O aplicativo lê informações do local no endereço de redirecionamento do link; não envia nessa consulta o livro de viagens inteiro nem os registros de acompanhantes, despesas ou acertos.</p>
+    <p>Ao escolher ver um local, pesquisar no mapa ou traçar uma rota, o usuário abre o Google Maps, NAVER Map, KakaoMap ou o aplicativo ou site externo indicado no link salvo. O texto da busca, nome do local, endereço ou destino pode integrar o link e ser transmitido ao serviço. Se o aplicativo externo de mapas usar a localização atual, serão aplicadas as permissões e configurações dele. O tratamento das informações por esses serviços segue suas respectivas políticas de privacidade.</p>
     <a class="back" href="#top">Voltar ao início</a>
   </section>
 
@@ -152,7 +157,7 @@
       <tr><td>Câmera do aplicativo</td><td>Usada se o scanner não estiver disponível ou falhar.</td><td>A permissão de câmera é solicitada apenas nesse caso.</td></tr>
       <tr><td>Foto de comprovante ou veículo</td><td>O seletor de fotos do Android entrega somente a imagem escolhida.</td><td>Não é solicitado acesso amplo à biblioteca.</td></tr>
       <tr><td>Notificações</td><td>Lembretes são agendados e exibidos no dispositivo.</td><td>O Android pode solicitar permissão de notificações; ela pode ser revogada nas configurações do dispositivo.</td></tr>
-      <tr><td>Importação de arquivos</td><td>O usuário escolhe o arquivo de backup, CSV ou Excel pelo seletor do sistema. Uma cópia pode permanecer temporariamente no espaço do aplicativo.</td><td>Não é solicitado acesso ao armazenamento inteiro.</td></tr>
+      <tr><td>Importação de arquivos</td><td>O usuário escolhe o arquivo de backup, CSV, Excel ou .cashtrip pelo seletor do sistema. Uma cópia pode permanecer temporariamente no espaço do aplicativo.</td><td>Não é solicitado acesso ao armazenamento inteiro.</td></tr>
       <tr><td>Exportação de JSON ou CSV</td><td>O usuário escolhe o destino pelo seletor do sistema.</td><td>O acesso é limitado ao local escolhido.</td></tr>
     </tbody></table></div>
     <p>Os recursos financeiros principais continuam disponíveis sem a permissão de câmera ou de notificações.</p>
@@ -176,9 +181,13 @@
 
   <section id="section-5">
     <h2>5. Armazenamento, backups, notificações e widgets</h2>
-    <p>O banco de dados e os backups automáticos do CashTory ficam no armazenamento do aplicativo no dispositivo. Backups podem incluir a foto de veículo salva. Quando o número de backups internos ultrapassa o limite configurado, os mais antigos são apagados primeiro. O aplicativo define <code>allowBackup=false</code> para não usar o backup automático do Android na nuvem. Em alguns dispositivos com Android 12 ou posterior, essa opção pode não impedir transferência direta entre aparelhos feita pelo fabricante.</p>
-    <p>O CashTory exporta JSON ou CSV quando o usuário solicita. O backup JSON pode conter todos os dados salvos, inclusive fotos de veículos. Arquivos enviados a e-mail, mensagens ou armazenamento em nuvem passam a seguir as políticas desses serviços. Arquivos exportados não são apagados automaticamente ao desinstalar o aplicativo; o usuário deve excluí-los no local escolhido.</p>
+    <p>O banco de dados e os backups automáticos do CashTory ficam no armazenamento do aplicativo no dispositivo. Backups JSON automáticos podem incluir a foto de veículo salva e os registros de viagens, acompanhantes, roteiros, despesas, acertos e listas de bagagem. Quando o número de backups internos ultrapassa o limite configurado, os mais antigos são apagados primeiro. O aplicativo define <code>allowBackup=false</code> para não usar o backup automático do Android na nuvem. Em alguns dispositivos com Android 12 ou posterior, essa opção pode não impedir transferência direta entre aparelhos feita pelo fabricante.</p>
+    <p>O CashTory exporta JSON ou CSV quando o usuário solicita. O backup JSON manual também pode conter fotos de veículos e os registros de viagens, acompanhantes, roteiros, despesas, acertos e listas de bagagem. Arquivos enviados a e-mail, mensagens ou armazenamento em nuvem passam a seguir as políticas desses serviços. Arquivos exportados não são apagados automaticamente ao desinstalar o aplicativo; o usuário deve excluí-los no local escolhido.</p>
     <p>O CashTory usa notificações agendadas no dispositivo, sem registro de token de push nem envio de push remoto. Nomes e valores inseridos pelo usuário podem aparecer no aviso e, conforme as configurações do Android, na tela bloqueada. No aplicativo, o usuário pode desligar notificações ou ocultar valores; o Android também oferece controles da tela bloqueada. Widgets na tela inicial podem mostrar valores dos registros financeiros.</p>
+    <h3>Compartilhamento de arquivos e imagens de viagem</h3>
+    <p>Quando o usuário escolhe enviar uma viagem, o CashTory cria um arquivo <code>.cashtrip</code> e abre a tela de compartilhamento do sistema. O arquivo contém nome, destinos, datas e fuso horário da viagem; nomes ou apelidos e identificadores dos acompanhantes; moedas e taxas de câmbio; anotações, horários, locais, endereços e links do roteiro; valores, categorias, descrições, observações, pagadores e participantes da divisão das despesas; acertos; e itens da lista de bagagem. As marcações dos itens de bagagem e os meios de pagamento ou vínculos com transações do livro financeiro pessoal não são incluídos. Os destinatários podem consultar o conteúdo e importá-lo no próprio aplicativo ou mesclá-lo com a mesma viagem.</p>
+    <p>O usuário também pode selecionar tabelas de roteiro, despesas detalhadas ou acertos para compartilhar como imagem. A imagem pode mostrar horários, locais, endereços, nomes dos acompanhantes e valores das tabelas escolhidas. Antes de compartilhar, confira o conteúdo e os destinatários e obtenha as permissões necessárias ao inserir ou compartilhar informações de outras pessoas.</p>
+    <p>Arquivos e imagens são enviados pelo aplicativo ou serviço externo escolhido pelo usuário, conforme a política de privacidade e os critérios de conservação desse serviço. A criação pode deixar cópias no armazenamento temporário do dispositivo; não é garantida a exclusão imediata após compartilhar. Apagar uma viagem no CashTory não apaga arquivos ou imagens já enviados nem registros importados por outra pessoa. Transações registradas separadamente no livro financeiro pessoal e listas de bagagem salvas à parte devem ser gerenciadas nos respectivos recursos.</p>
     <a class="back" href="#top">Voltar ao início</a>
   </section>
 
@@ -194,20 +203,23 @@
       <li><a href="https://developers.google.com/admob/android/privacy/play-data-disclosure">Informações sobre dados do Google Mobile Ads SDK</a></li>
       <li><a href="https://developers.google.com/ml-kit/android-data-disclosure">Informações sobre dados do Google ML Kit</a></li>
     </ul>
+    <p>A Seção 1.5 descreve o acesso a links de mapas e a transmissão de informações para aplicativos ou sites externos de mapas. A Seção 5 descreve o envio de arquivos e imagens de viagem por e-mail, mensagens, nuvem ou outro serviço escolhido pelo usuário. Essas conexões podem ocorrer separadamente do tratamento pelos SDKs de anúncios e leitura de comprovantes.</p>
     <a class="back" href="#top">Voltar ao início</a>
   </section>
 
   <section id="section-7">
     <h2>7. Conservação e exclusão</h2>
     <div class="table-wrap"><table><thead><tr><th>Informação</th><th>Prazo ou critério</th><th>Exclusão</th></tr></thead><tbody>
-      <tr><td>Registros, configurações e fotos de veículos no aplicativo</td><td>Até o usuário excluir os dados, limpar os dados do aplicativo ou desinstalá-lo</td><td>Pelo aplicativo ou pelo Android no armazenamento local</td></tr>
+      <tr><td>Registros financeiros e de viagens, listas de bagagem, configurações e fotos de veículos no aplicativo</td><td>Até o usuário excluir os dados, limpar os dados do aplicativo ou desinstalá-lo</td><td>Pelo aplicativo ou pelo Android no armazenamento local</td></tr>
       <tr><td>Imagem de comprovante e texto integral reconhecido</td><td>Não são salvos no banco de dados; arquivos temporários podem permanecer no dispositivo</td><td>Pela gestão de arquivos temporários do sistema ou ao limpar os dados do aplicativo</td></tr>
       <tr><td>Backups internos</td><td>Até serem substituídos pelo limite de cópias, limpos ou removidos com o aplicativo</td><td>Pelo CashTory ou Android no espaço do aplicativo</td></tr>
-      <tr><td>Arquivos JSON ou CSV exportados</td><td>Até o usuário excluí-los do local escolhido</td><td>Pelo usuário no serviço ou gerenciador de arquivos</td></tr>
+      <tr><td>Arquivos JSON, CSV ou .cashtrip exportados e imagens de viagem compartilhadas</td><td>Até o usuário excluí-los do local escolhido</td><td>Pelo usuário no serviço ou gerenciador de arquivos</td></tr>
       <tr><td>E-mails de contato e informações incluídas</td><td>Até a conclusão do atendimento e do acompanhamento necessário</td><td>Excluídos da conta de e-mail do Desenvolvedor quando esse período terminar</td></tr>
       <tr><td>Dados técnicos tratados por SDKs do Google</td><td>Conforme o serviço, a finalidade, as escolhas do usuário e as políticas do Google</td><td>Conforme as políticas do Google</td></tr>
-    </tbody></table></div>
+          <tr><td>Arquivos e imagens temporários de compartilhamento de viagens e cópias temporárias de arquivos importados</td><td>Podem permanecer no armazenamento temporário, sem prazo fixo de exclusão imediata</td><td>Podem ser removidos pela gestão de cache do sistema, ao limpar o cache ou os dados do aplicativo ou ao desinstalá-lo</td></tr>
+        </tbody></table></div>
     <p>O Desenvolvedor não guarda os registros financeiros em servidor próprio e não pode excluí-los remotamente. O usuário deve apagar separadamente cópias exportadas e fotos originais mantidas fora do CashTory.</p>
+    <p>Os registros de viagens e as listas de bagagem seguem os critérios dos registros locais. Apagar um registro pode mantê-lo em um backup interno anterior até a exclusão desse backup conforme os critérios acima. O histórico nos serviços externos de mapas e as cópias dos destinatários são gerenciados por esses serviços ou destinatários.</p>
     <a class="back" href="#top">Voltar ao início</a>
   </section>
 
@@ -220,7 +232,7 @@
 
   <section id="section-9">
     <h2>9. Crianças e segurança</h2>
-    <p>O CashTory é classificado para maiores de 18 anos no Google Play e não é direcionado a crianças. Não possui cadastro nem mecanismo de verificação de idade. Se o Desenvolvedor souber que recebeu informações de uma criança ou adolescente por e-mail, tomará as medidas exigidas pela legislação aplicável.</p>
+    <p>O público-alvo configurado para o CashTory no Google Play é de pessoas com 18 anos ou mais. Essa configuração de público-alvo é diferente da classificação indicativa do conteúdo. O aplicativo não é direcionado a crianças. Não possui cadastro nem mecanismo de verificação de idade. Se o Desenvolvedor souber que recebeu informações de uma criança ou adolescente por e-mail, tomará as medidas exigidas pela legislação aplicável.</p>
     <p>Os registros financeiros ficam no dispositivo. O Desenvolvedor limita o acesso à sua conta de e-mail e elimina as mensagens após o prazo indicado. O usuário pode proteger o aparelho com bloqueio de tela e guardar arquivos exportados em local seguro. Nenhuma forma de armazenamento garante segurança absoluta.</p>
     <a class="back" href="#top">Voltar ao início</a>
   </section>
@@ -240,7 +252,8 @@
 
   <section id="section-11">
     <h2>11. Alterações desta Política</h2>
-    <p>Esta versão entra em vigor em 18 de outubro de 2026. O texto será atualizado se mudarem os recursos do aplicativo, os serviços de terceiros, as regiões de distribuição ou as práticas de tratamento. Alterações relevantes poderão ser comunicadas nesta página, no aplicativo ou na página do Google Play.</p>
+    <p>Esta versão entra em vigor em 24 de outubro de 2026. O texto será atualizado se mudarem os recursos do aplicativo, os serviços de terceiros, as regiões de distribuição ou as práticas de tratamento. Alterações relevantes poderão ser comunicadas nesta página, no aplicativo ou na página do Google Play.</p>
+    <p>Esta revisão acrescenta informações sobre registros e backups de viagens, compartilhamento de arquivos e imagens de viagem, consulta automática de links de mapas e uso de serviços externos de mapas. A descrição de cada recurso se aplica às versões do aplicativo que o oferecem.</p>
     <a class="back" href="#top">Voltar ao início</a>
   </section>
 
