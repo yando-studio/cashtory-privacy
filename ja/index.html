@@ -35,13 +35,14 @@
     tr:last-child td { border-bottom:0; }
     code { padding:2px 5px; background:var(--brand-soft); border-radius:5px; font-size:.92em; }
     .back { display:inline-block; margin-top:12px; font-size:.9rem; }
-    .lang-switch { display: flex; align-items: center; justify-content: flex-end; gap: 10px; margin: 0 0 22px; font-size: .94rem; }
-    .lang-switch label { flex-shrink: 0; color: var(--muted); font-weight: 600; }
-    .lang-select { width: 15rem; max-width: 100%; min-width: 0; min-height: 44px; padding: 9px 12px; border: 1px solid var(--line); border-radius: 10px; background: var(--card); color: var(--text); font: inherit; cursor: pointer; }
+    .lang-switch { display: flex; align-items: center; justify-content: flex-end; gap: 8px; margin: 0 0 12px; font-size: .875rem; }
+    .lang-switch label { flex-shrink: 0; color: var(--muted); font-weight: 500; }
+    .lang-select { flex: 0 1 auto; width: 7rem; max-width: 100%; min-width: 0; min-height: 44px; padding: 6px 10px; border: 1px solid var(--line); border-radius: 8px; background: var(--card); color: var(--text); font: inherit; cursor: pointer; }
+    html[lang="en"] .lang-select { width: 7.5rem; }
+    html[lang="pt-BR"] .lang-select { width: 11.5rem; }
     .lang-select:hover { border-color: var(--brand); }
     .lang-select:focus-visible { outline: 2px solid var(--brand); outline-offset: 3px; }
-    .lang-fallback { margin: 0 0 22px; font-size: .94rem; }
-    @media (max-width: 380px) { .lang-switch { gap: 8px; } .lang-select { flex: 1; width: auto; } }
+    .lang-fallback { margin: 0 0 12px; font-size: .875rem; }
     footer { margin-top:60px; padding-top:24px; border-top:1px solid var(--line); color:var(--muted); font-size:.94rem; }
     @media (max-width:700px) { main { width:min(100% - 16px,980px); margin:8px auto; border-radius:14px; } .toc ol { columns:1; } h2 { margin-top:42px; } }
     @media print { body { background:#fff; color:#000; } main { width:100%; margin:0; padding:0; border:0; box-shadow:none; } .toc { break-after:page; } h2,h3 { break-after:avoid; } .table-wrap { overflow:visible; } table { min-width:0; font-size:9pt; } a { color:inherit; } }
