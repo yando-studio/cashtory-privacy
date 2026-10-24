@@ -84,8 +84,13 @@
     tr:last-child td { border-bottom: 0; }
     code { padding: 2px 5px; background: var(--brand-soft); border-radius: 5px; font-size: .92em; }
     .back { display: inline-block; margin-top: 12px; font-size: .9rem; }
-    .lang-switch { display: flex; justify-content: flex-end; gap: 8px; margin: 0 0 22px; font-size: .94rem; }
-    .lang-switch a[aria-current="page"] { color: var(--text); font-weight: 750; text-decoration: none; }
+    .lang-switch { display: flex; align-items: center; justify-content: flex-end; gap: 10px; margin: 0 0 22px; font-size: .94rem; }
+    .lang-switch label { flex-shrink: 0; color: var(--muted); font-weight: 600; }
+    .lang-select { width: 15rem; max-width: 100%; min-width: 0; min-height: 44px; padding: 9px 12px; border: 1px solid var(--line); border-radius: 10px; background: var(--card); color: var(--text); font: inherit; cursor: pointer; }
+    .lang-select:hover { border-color: var(--brand); }
+    .lang-select:focus-visible { outline: 2px solid var(--brand); outline-offset: 3px; }
+    .lang-fallback { margin: 0 0 22px; font-size: .94rem; }
+    @media (max-width: 380px) { .lang-switch { gap: 8px; } .lang-select { flex: 1; width: auto; } }
     footer { margin-top: 60px; padding-top: 24px; border-top: 1px solid var(--line); color: var(--muted); font-size: .94rem; }
     @media (max-width: 700px) {
       main { width: min(100% - 16px, 980px); margin: 8px auto; border-radius: 14px; }
@@ -106,16 +111,18 @@
 </head>
 <body>
 <main id="top">
-      <p>여행 파일·이미지 공유와 지도 링크 기능을 이용하면 선택한 외부 서비스로 정보가 전달될 수 있습니다. 지도 링크의 장소 정보는 자동으로 조회될 수 있으며, 자세한 내용은 <a href="#section-1">제1.5항</a>과 <a href="#section-5">제5.5항</a>을 참고하십시오.</p>
-  <nav class="lang-switch" aria-label="언어 선택">
-    <a href="./" lang="ko" aria-current="page">한국어</a>
-    <span aria-hidden="true">·</span>
-    <a href="./en/" lang="en">English</a>
-    <span aria-hidden="true">·</span>
-    <a href="./ja/" lang="ja">日本語</a>
-    <span aria-hidden="true">·</span>
-    <a href="./pt/" lang="pt-BR">Português (Brasil)</a>
+  <nav class="lang-switch" aria-label="언어">
+    <label for="language-select">언어</label>
+    <select id="language-select" class="lang-select" name="language" aria-label="언어 선택 — 선택한 언어의 방침으로 이동" onchange="window.location.assign(this.value)">
+      <option value="./" lang="ko" selected>한국어</option>
+      <option value="./en/" lang="en">English</option>
+      <option value="./ja/" lang="ja">日本語</option>
+      <option value="./pt/" lang="pt-BR">Português (Brasil)</option>
+    </select>
   </nav>
+  <noscript>
+    <p class="lang-fallback"><a href="./" lang="ko" aria-current="page">한국어</a> · <a href="./en/" lang="en">English</a> · <a href="./ja/" lang="ja">日本語</a> · <a href="./pt/" lang="pt-BR">Português (Brasil)</a></p>
+  </noscript>
   <header>
     <p class="meta">Y&amp;O STUDIO</p>
     <h1>CashTory 개인정보 처리방침</h1>
@@ -124,6 +131,7 @@
 
   <p class="lead">Y&amp;O STUDIO(이하 “개발자”)는 CashTory 이용자의 자유와 권리를 보호하기 위해 「개인정보 보호법」 및 관계 법령을 준수합니다. 이 방침은 CashTory가 어떤 정보를 처리하고 어디에 저장하며, 이용자가 이를 어떻게 관리할 수 있는지 설명합니다.</p>
   <p class="notice"><strong>핵심 안내:</strong> CashTory에는 회원가입·로그인·개발자 서버가 없습니다. 가계부 기록과 영수증에서 저장한 거래 정보는 이용자 기기에 보관되며 개발자는 이를 열람할 수 없습니다. 다만 Android 버전의 광고 SDK와 Google ML Kit는 아래에 설명한 기술정보를 Google로 전송할 수 있습니다. 또한 이용자가 문의하기를 통해 이메일을 직접 전송하는 경우 문의 내용과 일부 기기·앱 환경정보가 개발자의 문의 이메일 계정으로 전달될 수 있습니다.</p>
+  <p>여행 파일·이미지 공유와 지도 링크 기능을 이용하면 선택한 외부 서비스로 정보가 전달될 수 있습니다. 지도 링크의 장소 정보는 자동으로 조회될 수 있으며, 자세한 내용은 <a href="#section-1">제1.5항</a>과 <a href="#section-5">제5.5항</a>을 참고하십시오.</p>
 
   <nav class="toc" aria-label="목차">
     <h2>목차</h2>
