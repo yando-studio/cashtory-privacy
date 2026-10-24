@@ -74,8 +74,13 @@
     tr:last-child td { border-bottom: 0; }
     code { padding: 2px 5px; background: var(--brand-soft); border-radius: 5px; font-size: .92em; }
     .back { display: inline-block; margin-top: 12px; font-size: .9rem; }
-    .lang-switch { display: flex; justify-content: flex-end; gap: 8px; margin: 0 0 22px; font-size: .94rem; }
-    .lang-switch a[aria-current="page"] { color: var(--text); font-weight: 750; text-decoration: none; }
+    .lang-switch { display: flex; align-items: center; justify-content: flex-end; gap: 10px; margin: 0 0 22px; font-size: .94rem; }
+    .lang-switch label { flex-shrink: 0; color: var(--muted); font-weight: 600; }
+    .lang-select { width: 15rem; max-width: 100%; min-width: 0; min-height: 44px; padding: 9px 12px; border: 1px solid var(--line); border-radius: 10px; background: var(--card); color: var(--text); font: inherit; cursor: pointer; }
+    .lang-select:hover { border-color: var(--brand); }
+    .lang-select:focus-visible { outline: 2px solid var(--brand); outline-offset: 3px; }
+    .lang-fallback { margin: 0 0 22px; font-size: .94rem; }
+    @media (max-width: 380px) { .lang-switch { gap: 8px; } .lang-select { flex: 1; width: auto; } }
     footer { margin-top: 60px; padding-top: 24px; border-top: 1px solid var(--line); color: var(--muted); font-size: .94rem; }
     @media (max-width: 700px) {
       main { width: min(100% - 16px, 980px); margin: 8px auto; border-radius: 14px; }
@@ -95,16 +100,18 @@
 </head>
 <body>
 <main id="top">
-      <p>Trip-file and image sharing and map-link features may pass information to the external services involved. Place details from a map link may be looked up automatically. See <a href="#section-1">Section 1.5</a> and <a href="#section-5">Section 5.5</a> for details.</p>
-  <nav class="lang-switch" aria-label="Language selection">
-    <a href="../" lang="ko">한국어</a>
-    <span aria-hidden="true">·</span>
-    <a href="./" lang="en" aria-current="page">English</a>
-    <span aria-hidden="true">·</span>
-    <a href="../ja/" lang="ja">日本語</a>
-    <span aria-hidden="true">·</span>
-    <a href="../pt/" lang="pt-BR">Português (Brasil)</a>
+  <nav class="lang-switch" aria-label="Language">
+    <label for="language-select">Language</label>
+    <select id="language-select" class="lang-select" name="language" aria-label="Select language — opens the policy in that language" onchange="window.location.assign(this.value)">
+      <option value="../" lang="ko">한국어</option>
+      <option value="./" lang="en" selected>English</option>
+      <option value="../ja/" lang="ja">日本語</option>
+      <option value="../pt/" lang="pt-BR">Português (Brasil)</option>
+    </select>
   </nav>
+  <noscript>
+    <p class="lang-fallback"><a href="../" lang="ko">한국어</a> · <a href="./" lang="en" aria-current="page">English</a> · <a href="../ja/" lang="ja">日本語</a> · <a href="../pt/" lang="pt-BR">Português (Brasil)</a></p>
+  </noscript>
 
   <header>
     <p class="meta">Y&amp;O STUDIO</p>
@@ -114,6 +121,7 @@
 
   <p class="lead">Y&amp;O STUDIO (the “Developer”) respects the privacy and rights of CashTory users. This Privacy Policy explains what information CashTory processes, where it is stored, and how users can manage it.</p>
   <p class="notice"><strong>At a glance:</strong> CashTory has no account, login, or Developer-operated server. Budget records and transaction data saved from receipts remain on the user’s device, and the Developer cannot access them. The Google advertising SDK and Google ML Kit may transmit the technical information described below to Google. If a user chooses to email the Developer through the Contact feature, the message and certain app and device information may be sent to the Developer’s email account.</p>
+  <p>Trip-file and image sharing and map-link features may pass information to the external services involved. Place details from a map link may be looked up automatically. See <a href="#section-1">Section 1.5</a> and <a href="#section-5">Section 5.5</a> for details.</p>
 
   <nav class="toc" aria-label="Table of contents">
     <h2>Contents</h2>
