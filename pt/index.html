@@ -74,8 +74,13 @@
     tr:last-child td { border-bottom: 0; }
     code { padding: 2px 5px; background: var(--brand-soft); border-radius: 5px; font-size: .92em; }
     .back { display: inline-block; margin-top: 12px; font-size: .9rem; }
-    .lang-switch { display: flex; justify-content: flex-end; gap: 8px; margin: 0 0 22px; font-size: .94rem; }
-    .lang-switch a[aria-current="page"] { color: var(--text); font-weight: 750; text-decoration: none; }
+    .lang-switch { display: flex; align-items: center; justify-content: flex-end; gap: 10px; margin: 0 0 22px; font-size: .94rem; }
+    .lang-switch label { flex-shrink: 0; color: var(--muted); font-weight: 600; }
+    .lang-select { width: 15rem; max-width: 100%; min-width: 0; min-height: 44px; padding: 9px 12px; border: 1px solid var(--line); border-radius: 10px; background: var(--card); color: var(--text); font: inherit; cursor: pointer; }
+    .lang-select:hover { border-color: var(--brand); }
+    .lang-select:focus-visible { outline: 2px solid var(--brand); outline-offset: 3px; }
+    .lang-fallback { margin: 0 0 22px; font-size: .94rem; }
+    @media (max-width: 380px) { .lang-switch { gap: 8px; } .lang-select { flex: 1; width: auto; } }
     footer { margin-top: 60px; padding-top: 24px; border-top: 1px solid var(--line); color: var(--muted); font-size: .94rem; }
     @media (max-width: 700px) {
       main { width: min(100% - 16px, 980px); margin: 8px auto; border-radius: 14px; }
@@ -95,13 +100,18 @@
 </head>
 <body>
 <main id="top">
-      <p>Os recursos de compartilhamento de arquivos e imagens de viagem e de links de mapas podem transmitir informações aos serviços externos envolvidos. Os detalhes de um local em um link de mapa podem ser consultados automaticamente. Veja a <a href="#section-1">Seção 1.5</a> e a <a href="#section-5">Seção 5</a>.</p>
-  <nav class="lang-switch" aria-label="Selecionar idioma">
-    <a href="../" lang="ko">한국어</a><span aria-hidden="true">·</span>
-    <a href="../en/" lang="en">English</a><span aria-hidden="true">·</span>
-    <a href="../ja/" lang="ja">日本語</a><span aria-hidden="true">·</span>
-    <a href="./" lang="pt-BR" aria-current="page">Português (Brasil)</a>
+  <nav class="lang-switch" aria-label="Idioma">
+    <label for="language-select">Idioma</label>
+    <select id="language-select" class="lang-select" name="language" aria-label="Selecionar idioma — abre a política nesse idioma" onchange="window.location.assign(this.value)">
+      <option value="../" lang="ko">한국어</option>
+      <option value="../en/" lang="en">English</option>
+      <option value="../ja/" lang="ja">日本語</option>
+      <option value="./" lang="pt-BR" selected>Português (Brasil)</option>
+    </select>
   </nav>
+  <noscript>
+    <p class="lang-fallback"><a href="../" lang="ko">한국어</a> · <a href="../en/" lang="en">English</a> · <a href="../ja/" lang="ja">日本語</a> · <a href="./" lang="pt-BR" aria-current="page">Português (Brasil)</a></p>
+  </noscript>
   <header>
     <p class="meta">Y&amp;O STUDIO</p>
     <h1>Política de Privacidade do CashTory</h1>
@@ -109,6 +119,7 @@
   </header>
   <p class="lead">Esta Política explica como o CashTory para Android trata informações, onde elas ficam armazenadas e como o usuário pode exercer seus direitos. A Y&amp;O STUDIO é um negócio individual sediado na República da Coreia (Coreia do Sul). O canal de privacidade está na Seção 12.</p>
   <p class="notice"><strong>Em resumo:</strong> o CashTory não exige cadastro ou login e não possui servidor do Desenvolvedor para armazenar o livro financeiro. Os registros inseridos pelo usuário ficam no dispositivo. O Desenvolvedor não consegue consultá-los remotamente. Os SDKs do Google para anúncios e leitura de comprovantes podem tratar os dados técnicos descritos abaixo. O Desenvolvedor recebe informações de contato somente quando o usuário envia um e-mail.</p>
+  <p>Os recursos de compartilhamento de arquivos e imagens de viagem e de links de mapas podem transmitir informações aos serviços externos envolvidos. Os detalhes de um local em um link de mapa podem ser consultados automaticamente. Veja a <a href="#section-1">Seção 1.5</a> e a <a href="#section-5">Seção 5</a>.</p>
   <nav class="toc" aria-label="Índice">
     <h2>Índice</h2>
     <ol>
