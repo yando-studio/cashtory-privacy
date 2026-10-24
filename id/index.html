@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="id"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="description" content="Kebijakan Privasi CashTory"><title>Kebijakan Privasi CashTory</title><style>
+    :root {
+      color-scheme: light dark;
+      --bg: #f6f4fc;
+      --card: #ffffff;
+      --text: #241f36;
+      --muted: #6f6880;
+      --brand: #6655e6;
+      --brand-soft: #f0edff;
+      --line: #e4dff1;
+      --warn-bg: #fff8e7;
+      --warn-line: #df9a16;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #151221;
+        --card: #1f1a2e;
+        --text: #f3efff;
+        --muted: #bbb2cd;
+        --brand: #b8adff;
+        --brand-soft: #2b2440;
+        --line: #393249;
+        --warn-bg: #342a16;
+        --warn-line: #f1b84b;
+      }
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+      line-height: 1.72;
+    }
+    main {
+      width: min(980px, calc(100% - 28px));
+      margin: 28px auto;
+      padding: clamp(22px, 5vw, 56px);
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 20px;
+      box-shadow: 0 16px 48px rgba(39, 26, 86, .08);
+    }
+    h1 { margin: 0 0 10px; font-size: clamp(2rem, 5vw, 3rem); line-height: 1.22; }
+    h2 { margin: 52px 0 14px; padding-top: 8px; font-size: 1.45rem; line-height: 1.4; }
+    h3 { margin: 28px 0 10px; font-size: 1.1rem; }
+    p, li { max-width: 82ch; }
+    a { color: var(--brand); text-underline-offset: 3px; }
+    strong { font-weight: 750; }
+    .meta { color: var(--muted); margin: 0; }
+    .lead { font-size: 1.04rem; }
+    .notice, .warning { margin: 20px 0; padding: 16px 18px; border-radius: 12px; }
+    .notice { background: var(--brand-soft); border-left: 4px solid var(--brand); }
+    .warning { background: var(--warn-bg); border-left: 4px solid var(--warn-line); }
+    .toc { margin: 30px 0 42px; padding: 22px; background: var(--brand-soft); border-radius: 14px; }
+    .toc h2 { margin: 0 0 12px; padding: 0; font-size: 1.15rem; }
+    .toc ol { margin: 0; padding-left: 1.35rem; columns: 2; column-gap: 34px; }
+    .toc li { break-inside: avoid; margin: 5px 0; }
+    .toc a { color: var(--text); text-decoration: none; }
+    .toc a:hover, .toc a:focus { color: var(--brand); text-decoration: underline; }
+    .table-wrap { overflow-x: auto; margin: 16px 0 24px; border: 1px solid var(--line); border-radius: 12px; }
+    table { width: 100%; min-width: 720px; border-collapse: collapse; font-size: .94rem; }
+    th, td { padding: 12px 13px; border-bottom: 1px solid var(--line); border-right: 1px solid var(--line); text-align: left; vertical-align: top; }
+    th { background: var(--brand-soft); font-weight: 750; }
+    th:last-child, td:last-child { border-right: 0; }
+    tr:last-child td { border-bottom: 0; }
+    code { padding: 2px 5px; background: var(--brand-soft); border-radius: 5px; font-size: .92em; }
+    .back { display: inline-block; margin-top: 12px; font-size: .9rem; }
+    .lang-switch { display: flex; align-items: center; justify-content: flex-end; gap: 8px; margin: 0 0 12px; font-size: .875rem; }
+    .lang-switch label { flex-shrink: 0; color: var(--muted); font-weight: 500; }
+    .lang-select { flex: 0 1 auto; width: 7rem; max-width: 100%; min-width: 0; min-height: 44px; padding: 6px 10px; border: 1px solid var(--line); border-radius: 8px; background: var(--card); color: var(--text); font: inherit; cursor: pointer; }
+    html[lang="en"] .lang-select { width: 7.5rem; }
+    html[lang="pt-BR"] .lang-select { width: 11.5rem; }
+    .lang-select:hover { border-color: var(--brand); }
+    .lang-select:focus-visible { outline: 2px solid var(--brand); outline-offset: 3px; }
+    .lang-fallback { margin: 0 0 12px; font-size: .875rem; }
+    footer { margin-top: 60px; padding-top: 24px; border-top: 1px solid var(--line); color: var(--muted); font-size: .94rem; }
+    @media (max-width: 700px) {
+      main { width: min(100% - 16px, 980px); margin: 8px auto; border-radius: 14px; }
+      .toc ol { columns: 1; }
+      h2 { margin-top: 42px; }
+    }
+    @media print {
+      body { background: #fff; color: #000; }
+      main { width: 100%; margin: 0; padding: 0; border: 0; box-shadow: none; }
+      .toc { break-after: page; }
+      h2, h3 { break-after: avoid; }
+      .table-wrap { overflow: visible; }
+      table { min-width: 0; font-size: 9pt; }
+      a { color: inherit; }
+    }
+  
+    html[lang="hi"] .lang-select { width: 7.5rem; }
+    html[lang="id"] .lang-select { width: 11rem; }
+</style></head>
+<body><main id="top"><nav class="lang-switch" aria-label="Bahasa">
+    <label for="language-select">Bahasa</label>
+    <select id="language-select" class="lang-select" name="language" aria-label="Bahasa" onchange="window.location.assign(this.value)">
+      <option value="../" lang="ko">한국어</option>
+      <option value="../en/" lang="en">English</option>
+      <option value="../ja/" lang="ja">日本語</option>
+      <option value="../pt/" lang="pt-BR">Português (Brasil)</option>
+      <option value="../hi/" lang="hi">हिन्दी</option>
+      <option value="../id/" lang="id" selected>Bahasa Indonesia</option>
+    </select>
+  </nav>
+  <noscript><p class="lang-fallback"><a href="../" lang="ko">한국어</a> · <a href="../en/" lang="en">English</a> · <a href="../ja/" lang="ja">日本語</a> · <a href="../pt/" lang="pt-BR">Português (Brasil)</a> · <a href="../hi/" lang="hi">हिन्दी</a> · <a href="../id/" lang="id" aria-current="page">Bahasa Indonesia</a></p></noscript>
+<header><p class="meta">Y&amp;O STUDIO</p><h1>Kebijakan Privasi CashTory</h1><p class="meta">Versi dokumen: 1.5.0 · Berlaku dan diperbarui: 24 Oktober 2026</p></header>
+<p class="notice">Catatan keuangan dan perjalanan tetap di perangkat; pengembang tidak dapat membacanya dari jarak jauh. SDK Google dapat memproses data teknis. Email hanya diterima setelah Anda mengirimkannya. Tautan peta dapat diakses otomatis dan berkas/gambar yang Anda bagikan dapat diterima layanan atau orang pilihan Anda. Rincian tersedia di bawah.</p>
+<nav class="toc" aria-label="Daftar isi"><h2>Daftar isi</h2><ol><li><a href="#section-1">Informasi yang diproses</a></li>
+<li><a href="#section-2">Data teknis dan layanan Google</a></li>
+<li><a href="#section-3">Kamera, foto dan pengenalan struk</a></li>
+<li><a href="#section-4">Iklan dan pilihan privasi</a></li>
+<li><a href="#section-5">Cadangan, impor dan berbagi</a></li>
+<li><a href="#section-6">Tautan peta, layanan eksternal dan notifikasi</a></li>
+<li><a href="#section-7">Retensi dan penghapusan</a></li>
+<li><a href="#section-8">Hak pengguna dan dasar penggunaan email dukungan</a></li>
+<li><a href="#section-9">Anak dan keamanan</a></li>
+<li><a href="#section-10">Pemrosesan di luar negara dan pemberitahuan insiden</a></li>
+<li><a href="#section-11">Perubahan kebijakan</a></li>
+<li><a href="#section-12">Kontak</a></li>
+<li><a href="#section-13">Informasi tambahan untuk India</a></li>
+<li><a href="#section-14">Informasi tambahan untuk Indonesia</a></li></ol></nav>
+<section id="section-1"><h2>1. Informasi yang diproses</h2><p>Y&amp;O STUDIO adalah pengembang CashTory dan usaha perseorangan yang berbasis di Korea Selatan. CashTory tidak memiliki pendaftaran akun, login, server pengembang, atau sinkronisasi server. Data berikut diproses dalam basis data SQLite di perangkat:</p>
+<ul><li>Pemasukan, pengeluaran, transfer, aset, utang, kartu, cicilan, kategori, transaksi berulang, favorit, catatan harian dan hari peringatan.</li><li>Informasi kendaraan, catatan perjalanan dan perawatan, serta foto kendaraan pilihan pengguna. Foto kendaraan diperkecil, disimpan di basis data dan dapat tercakup dalam cadangan JSON.</li><li>Bahasa, mata uang, zona waktu pembukuan, tema, awal bulan dan pengaturan notifikasi.</li><li>Nama toko, tanggal, jumlah total dan transaksi dari struk yang dipilih pengguna untuk disimpan.</li><li>Nama perjalanan wisata, tujuan, tanggal, zona waktu, nama atau nama panggilan peserta, jadwal, tempat, alamat, tautan peta, daftar perlengkapan dan status centang, mata uang, kurs, pengeluaran, pembayar, pembagian biaya dan penyelesaian utang. UUID acak membedakan perjalanan, orang dan catatan dalam pertukaran berkas.</li></ul>
+<p>Pengembang tidak dapat membaca catatan tersebut dari jarak jauh. Aplikasi tidak membaca GPS, kontak, riwayat panggilan atau mikrofon. Tidak ada fungsi perbankan, pembayaran, pengiriman uang, pinjaman, investasi atau nasihat keuangan.</p><a class="back" href="#top">Kembali ke atas</a></section>
+
+<section id="section-2"><h2>2. Data teknis dan layanan Google</h2><p>Google Mobile Ads SDK dapat mengumpulkan atau membagikan alamat IP dan perkiraan lokasi darinya, interaksi aplikasi/iklan, diagnostik, Android advertising ID dan app set ID untuk penayangan, pengukuran iklan dan pencegahan penipuan.</p>
+<p>ML Kit dapat mengirim informasi perangkat/aplikasi, pengenal perangkat atau instalasi, metrik kinerja, konfigurasi API, ukuran masukan/keluaran, versi fitur, peristiwa penggunaan, unduhan model, pelepasan sumber daya dan kode kesalahan untuk penyediaan fitur, diagnostik dan analisis penggunaan. Ini bukan pengiriman gambar struk atau teks hasil pengenalannya.</p>
+<p>Google Play services menyediakan pemindai dan model pengenalan teks. Model dapat diunduh saat pemasangan atau penggunaan pertama, sehingga koneksi internet dan waktu tunggu mungkin diperlukan. Pemrosesan teknis mengikuti layanan, kontrak dan kebijakan Google yang berlaku. Lihat <a href="https://policies.google.com/privacy?hl=id">Privasi Google</a>, <a href="https://developers.google.com/admob/android/privacy/play-data-disclosure">pengungkapan data SDK iklan</a>, <a href="https://developers.google.com/ml-kit/terms">ketentuan ML Kit</a> dan <a href="https://policies.google.com/technologies/retention?hl=id">retensi Google</a>. Pengembang tidak menerima catatan keuangan lokal melalui layanan tersebut.</p><a class="back" href="#top">Kembali ke atas</a></section>
+
+<section id="section-3"><h2>3. Kamera, foto dan pengenalan struk</h2><p>Pemindai dokumen menggunakan kamera melalui Google Play services dan menyerahkan hanya hasil yang dipilih pengguna; CashTory tidak meminta izin kamera pada jalur ini. Jika pemindai tidak tersedia atau gagal, aplikasi beralih ke kamera sendiri dan meminta izin kamera. Pemilih foto sistem hanya memberikan foto yang Anda pilih, tanpa akses ke seluruh galeri.</p>
+<p>Pengenalan teks ML Kit dilakukan di perangkat, dengan dukungan aksara Latin, Korea, Jepang dan Devanagari. Gambar struk dan teks lengkap hasil pengenalan tidak dikirim ke server pengembang atau Google dan tidak disimpan dalam basis data aplikasi. Hanya hasil dan transaksi yang Anda simpan yang menjadi catatan. Berkas hasil pemindai dapat tertinggal di folder sementara; aplikasi tidak menjamin penghapusan segera. Foto asli di galeri tidak dihapus.</p>
+<p>Menolak kamera tidak menghalangi pencatatan manual. Izin kamera dapat dicabut melalui pengaturan Android.</p><a class="back" href="#top">Kembali ke atas</a></section>
+
+<section id="section-4"><h2>4. Iklan dan pilihan privasi</h2><p>Versi Android menampilkan iklan banner dan native dari Google AdMob. Google UMP menampilkan pilihan sesuai wilayah, jenis pesan yang didukung dan konfigurasi pengembang. Jika tersedia, pilihan dapat diubah melalui <strong>Lainnya → Pengaturan privasi iklan</strong>. Pesan tidak selalu muncul di semua negara; aplikasi tidak menyatakan bahwa UMP otomatis menyediakan formulir khusus India atau seluruh persetujuan yang diwajibkan Indonesia.</p>
+<p>Anda juga dapat mengatur iklan atau mereset/menghapus advertising ID di Android. Nama menu berbeda menurut perangkat dan versi OS. Penolakan personalisasi tidak menghentikan fitur inti; iklan kontekstual dan pemrosesan teknis terbatas dapat berlanjut. Penghapusan advertising ID tidak menghentikan semua pemrosesan data teknis. Membaca kebijakan ini atau sekadar menggunakan aplikasi tidak menggantikan persetujuan terpisah yang diwajibkan hukum.</p><a class="back" href="#top">Kembali ke atas</a></section>
+
+<section id="section-5"><h2>5. Cadangan, impor dan berbagi</h2><p>Aplikasi dapat membuat cadangan JSON manual, otomatis dan cadangan keselamatan sebelum pemulihan. Cadangan dapat memuat catatan keuangan, kendaraan dan fotonya, perjalanan dan pengaturan yang dipilih. Cadangan internal berada dalam penyimpanan aplikasi dan yang lama dihapus sesuai batas retensi. Cadangan/ekspor JSON atau CSV ke penyimpanan luar dikelola pengguna. Pemulihan dan impor JSON, CSV, Excel atau .cashtrip membaca berkas yang dipilih melalui pemilih sistem, tanpa izin akses seluruh penyimpanan. Salinan sementara dapat tertinggal.</p>
+<p>Fitur .cashtrip dapat membagikan perjalanan, peserta, jadwal dan informasi peta, mata uang/kurs, pengeluaran, pembagian, penyelesaian dan daftar perlengkapan kepada layanan dan penerima yang Anda pilih. Status centang perlengkapan tidak dikirim; keterkaitan akun/aset lokal dan penanda siapa diri Anda tidak disertakan sebagai keterkaitan lokal. Gambar ringkasan perjalanan dapat memuat informasi perjalanan dan biaya yang ditampilkan. Berkas/gambar berbagi dapat tertinggal di cache.</p>
+<p>Penerima dan layanan berbagi mengelola salinannya sendiri. Sebelum mengirim, periksa nama peserta, alamat dan informasi biaya serta pilihan penerima. Pengembang tidak menjalankan server pertukaran perjalanan.</p><a class="back" href="#top">Kembali ke atas</a></section>
+
+<p>Aplikasi menetapkan <code>allowBackup=false</code> untuk tidak memakai cadangan cloud otomatis Android. Pada sebagian perangkat Android 12 atau lebih baru, pengaturan ini mungkin tidak mencegah pemindahan data langsung antarperangkat oleh produsen. Widget layar utama juga dapat menampilkan nama atau jumlah keuangan; perhatikan siapa yang dapat melihat perangkat.</p>
+<section id="section-6"><h2>6. Tautan peta, layanan eksternal dan notifikasi</h2><p>Saat Anda menambahkan atau membuka tautan Google Maps tanpa alamat, aplikasi dapat mengakses tautan itu secara otomatis untuk memperoleh nama tempat/alamat dari alamat pengalihan. Tautan dan IP dapat dikirim ke Google; seluruh buku perjalanan, peserta dan pengeluaran tidak dikirim dalam permintaan ini. Pencarian, tampilan tempat atau petunjuk arah membuka layanan luar seperti Google Maps, Naver Map, KakaoMap atau situs pilihan, dan dapat mengirim kata pencarian, nama tempat, alamat atau tujuan dalam tautan. Lokasi saat ini yang digunakan aplikasi peta luar mengikuti izinnya sendiri. Kebijakan layanan luar berlaku.</p>
+<p>CashTory menjadwalkan notifikasi lokal di perangkat, tanpa push jarak jauh atau pendaftaran token push. Android dapat meminta izin notifikasi. Nama dan jumlah uang dapat terlihat di layar kunci. Anda dapat mematikan notifikasi atau menyembunyikan jumlah di pengaturan aplikasi, serta mengatur layar kunci melalui Android. Menolak notifikasi tidak menghalangi fitur inti.</p><a class="back" href="#top">Kembali ke atas</a></section>
+
+<section id="section-7"><h2>7. Retensi dan penghapusan</h2><ul><li>Catatan lokal, foto kendaraan, perjalanan dan pengaturan tetap ada sampai Anda menghapusnya atau menghapus data/aplikasi.</li><li>Cadangan internal dihapus sesuai jumlah retensi yang ditentukan, atau ketika data/aplikasi dihapus. Penghapusan catatan tidak otomatis menghapus salinannya dari cadangan lama.</li><li>Berkas dan gambar ekspor, berkas .cashtrip serta salinan penerima tetap ada sampai dihapus di tempat penyimpanan atau layanan terkait.</li><li>Gambar pemindai dan salinan sementara tidak memiliki jaminan waktu penghapusan segera. Pengelolaan cache oleh OS, penghapusan cache/data atau pencopotan aplikasi dapat membersihkannya.</li><li>Email dukungan dan informasi perangkat di dalamnya disimpan sampai permintaan dan tindak lanjut yang diperlukan selesai, kemudian dihapus dari akun email pengembang.</li><li>Google menyimpan, menghapus atau menganonimkan data teknis menurut jenis data, tujuan, pengaturan dan kebijakannya; tidak ada satu periode yang sama untuk semua data.</li></ul><a class="back" href="#top">Kembali ke atas</a></section>
+
+<section id="section-8"><h2>8. Hak pengguna dan dasar penggunaan email dukungan</h2><p>Anda dapat melihat, memperbaiki, menghapus atau mengekspor catatan lokal melalui aplikasi, serta menghapus penyimpanan aplikasi melalui Android. Pengembang tidak memegang catatan lokal sehingga tidak dapat menghapusnya untuk Anda. Izin kamera/notifikasi dan pilihan iklan dikelola melalui pengaturan terkait.</p>
+<p>Saat memilih Hubungi, aplikasi email perangkat terbuka. Isi dapat memuat versi aplikasi, nama/versi OS, model perangkat, bahasa dan mata uang. Anda dapat menghapus informasi itu sebelum mengirim. Hanya setelah Anda mengirim, alamat email, pesan dan informasi yang disertakan diterima pengembang melalui Gmail. Informasi digunakan untuk menjawab, memeriksa kesalahan dan meningkatkan layanan melalui penyelesaian masalah. Jangan sertakan informasi sensitif yang tidak diperlukan.</p>
+<p>Ajukan permintaan tentang email dukungan ke Bagian 12. Verifikasi identitas/kuasa dibatasi pada yang diperlukan. Pemrosesan untuk menjawab dukungan didasarkan pada kepentingan sah dalam membantu pengguna, dengan mempertimbangkan kebutuhan, hak dan harapan pengguna. Persetujuan dapat ditarik apabila menjadi dasar pemrosesan. Hak atas data yang diproses Google dapat dilakukan melalui kebijakan dan kanal Google. Hak tambahan Indonesia dijelaskan di Bagian 14.</p><a class="back" href="#top">Kembali ke atas</a></section>
+
+<section id="section-9"><h2>9. Anak dan keamanan</h2><p>Target pengguna di Google Play adalah usia 18 tahun ke atas; ini berbeda dari rating konten. Aplikasi tidak ditujukan kepada anak dan tidak memiliki verifikasi usia atau mekanisme persetujuan orang tua. Label usia bukan pengecualian dari kewajiban perlindungan anak. Bila pengembang mengetahui informasi anak masuk melalui email, tindakan perlindungan yang diwajibkan hukum akan dilakukan.</p>
+<p>Catatan inti disimpan di perangkat dan akses akun dukungan dibatasi. Komunikasi teknis Google SDK memakai TLS/HTTPS. Tidak ada metode penyimpanan yang menjamin keamanan mutlak. Gunakan kunci layar dan OS terbaru, serta simpan cadangan dengan aman. Berkas ekspor dapat berisi data pribadi tanpa perlindungan tambahan dari aplikasi; periksa akses layanan cloud atau penerima sebelum berbagi.</p><a class="back" href="#top">Kembali ke atas</a></section>
+
+<section id="section-10"><h2>10. Pemrosesan di luar negara dan pemberitahuan insiden</h2><p>Pengembang berada di Korea Selatan dan dapat mengakses email dukungan di sana. Gmail dan Google SDK dapat memakai infrastruktur di luar negara pengguna. Google tidak memublikasikan satu daftar lokasi pemrosesan dan satu periode retensi yang berlaku untuk semua jenis data produk. Peta dan layanan berbagi luar memproses data menurut operasional dan kebijakannya.</p>
+<p>Persyaratan transfer internasional bergantung pada aliran data, hubungan kontraktual dan hukum yang berlaku. Tautan kebijakan Google atau publikasi kebijakan ini tidak menggantikan persetujuan maupun perlindungan transfer yang diwajibkan hukum. Informasi tambahan Indonesia di Bagian 14 mencakup perlindungan transfer dan pemberitahuan kegagalan perlindungan data.</p><a class="back" href="#top">Kembali ke atas</a></section>
+
+<section id="section-11"><h2>11. Perubahan kebijakan</h2><p>Versi 1.5.0 berlaku dan terakhir diperbarui pada 24 Oktober 2026. Versi ini menambah informasi India dan Indonesia serta akses kebijakan dalam bahasa Hindi dan Indonesia. Kebijakan akan diperbarui ketika fitur, layanan pihak ketiga, wilayah distribusi atau praktik pemrosesan berubah. Perubahan penting dapat diberitahukan di halaman ini, aplikasi atau halaman Google Play. Uraian fitur berlaku pada versi aplikasi yang menyediakan fitur tersebut.</p>
+<p>Kebijakan Korea, Inggris, Jepang dan Portugis Brasil tersedia melalui pemilih bahasa. Hak menurut hukum yang berlaku tetap berlaku, apa pun bahasa aplikasi yang dipilih; pemberitahuan tambahan untuk Korea, Amerika Serikat, Jepang dan Brasil juga tersedia pada versi bahasa tersebut.</p><a class="back" href="#top">Kembali ke atas</a></section>
+
+<section id="section-12"><h2>12. Kontak</h2><ul><li><strong>Pengembang dan penanggung jawab privasi:</strong> pemilik Y&amp;O STUDIO, usaha perseorangan di Korea Selatan.</li><li><strong>Aplikasi:</strong> CashTory · <code>com.yandostudio.cashtory</code></li><li><strong>Privasi, hak dan keluhan:</strong> <a href="mailto:official.yo.studio@gmail.com">official.yo.studio@gmail.com</a></li></ul><p>Permintaan dalam bahasa Indonesia atau Inggris diterima melalui alamat ini. Keluhan dan hak ditangani sesuai tenggat dan pengecualian hukum yang berlaku.</p><a class="back" href="#top">Kembali ke atas</a></section>
+<section id="section-13">
+<h2>13. Informasi tambahan untuk India</h2>
+<p>Digital Personal Data Protection Act, 2023 dan peraturannya di India berlaku bertahap. Pada 24 Oktober 2026, kewajiban pemrosesan utama dan hak subjek data belum berlaku; pemberitahuan resmi November 2025 menjadwalkannya setelah masa transisi 18 bulan, pada Mei 2027. Hak hukum berikut berlaku ketika ketentuan terkait mulai berlaku dan dapat diterapkan.</p>
+<p>Untuk email yang dipegang pengembang, hubungi Bagian 12 guna meminta informasi pemrosesan, akses, koreksi, penghapusan, penarikan persetujuan untuk pemrosesan berbasis persetujuan atau penyelesaian keluhan. Jika undang-undang berlaku, ada pula hak menunjuk individu lain untuk menjalankan hak setelah kematian atau ketidakmampuan. Catatan lokal dikelola langsung dalam aplikasi. Kanal dukungan tersedia sekarang, tanpa menunggu berlakunya ketentuan tersebut.</p>
+<p>Pemilik Y&amp;O STUDIO menerima permintaan dalam Hindi atau Inggris dan melakukan verifikasi minimum sesuai kebutuhan, dengan mengikuti batas waktu dan pengecualian hukum yang berlaku. Jika diatur hukum, keluhan dapat diajukan ke Data Protection Board India setelah kanal pengaduan pengembang diberi kesempatan menyelesaikannya. DPDP Act mendefinisikan anak sebagai orang di bawah 18 tahun. Target usia 18+ tidak menghapus kewajiban perlindungan anak.</p>
+<p>Email dan data teknis Google dapat diproses di luar India. Pesan iklan mengikuti dukungan dan konfigurasi UMP, tanpa klaim adanya formulir khusus India otomatis. Kebijakan atau penggunaan aplikasi tidak menggantikan persetujuan terpisah yang diwajibkan. Gunakan pengaturan Android atau Bagian 12 bila menu privasi iklan tidak tersedia.</p>
+<p><a href="https://www.meity.gov.in/static/uploads/2024/02/Digital-Personal-Data-Protection-Act-2023-1.pdf">DPDP Act India</a> · <a href="https://www.meity.gov.in/static/uploads/2025/11/c56ceae6c383460ca69577428d36828b.pdf">Pemberitahuan pemberlakuan India</a></p>
+<a class="back" href="#top">Kembali ke atas</a>
+</section>
+
+<section id="section-14">
+<h2>14. Informasi tambahan untuk Indonesia</h2>
+<p>Jika UU Nomor 27 Tahun 2022 tentang Pelindungan Data Pribadi berlaku, Anda berhak mendapat informasi tentang identitas pengendali, tujuan dan dasar pemrosesan; akses dan salinan; koreksi; penghentian, penghapusan atau pemusnahan; penarikan persetujuan; pembatasan; serta portabilitas, keberatan dan pemulihan sesuai hukum.</p>
+<p>Y&amp;O STUDIO, usaha perseorangan di Korea Selatan, adalah kontak pengendali untuk email dukungan yang diterima langsung. Penggunaan dibatasi pada jawaban dan penyelesaian masalah, berdasarkan kepentingan sah dalam menyediakan dukungan yang diminta, dengan mempertimbangkan kebutuhan, hak dan harapan wajar pengguna. Persetujuan dapat ditarik ketika menjadi dasar pemrosesan. Informasi teknis Google, peta dan berbagi dijelaskan pada Bagian 2, 4, 5 dan 6.</p>
+<p>Permintaan dalam bahasa Indonesia atau Inggris diterima di Bagian 12. Tenggat dan pengecualian hukum berlaku. Permintaan tertentu untuk akses, koreksi, penghentian setelah penarikan persetujuan dan pembatasan tunduk pada tenggat 3×24 jam sejak diterima. Pengembang tidak memiliki catatan yang hanya berada di perangkat; gunakan aplikasi untuk mengelolanya. Email dihapus setelah permintaan dan tindak lanjut yang diperlukan selesai.</p>
+<p>Email dapat diakses di Korea Selatan dan diproses penyedia email; SDK Google dapat memproses data teknis di infrastruktur luar negeri. Keseluruhan catatan keuangan lokal tidak dikirim ke SDK iklan. Transfer ke luar Indonesia tunduk pada Pasal 56: pelindungan setara atau lebih tinggi, pelindungan memadai dan mengikat, atau persetujuan jika syarat sebelumnya tidak terpenuhi. Kebijakan ini tidak menyatakan sertifikasi pemenuhan syarat tersebut dan tidak menggantikan persetujuan terpisah yang diperlukan.</p>
+<p>UMP tidak dinyatakan otomatis mengumpulkan seluruh persetujuan yang diwajibkan Indonesia. Pilihan yang tersedia dan pengaturan Android dapat digunakan; data teknis terbatas masih dapat diproses setelah ID iklan dihapus. Jika kegagalan pelindungan data memicu Pasal 46, pemberitahuan tertulis yang diwajibkan disampaikan kepada subjek data terdampak dan lembaga berwenang dalam tenggat hukum 3×24 jam. Pemrosesan data anak memerlukan pelindungan khusus, termasuk persetujuan orang tua/wali sesuai hukum yang berlaku. Target pengguna aplikasi adalah 18 tahun ke atas.</p>
+<p><a href="https://jdih.komdigi.go.id/produk_hukum/view/id/832/t/undangundang%2Bnomor%2B27%2Btahun%2B2022">UU Pelindungan Data Pribadi Indonesia</a></p>
+<a class="back" href="#top">Kembali ke atas</a>
+</section>
+<footer><p>© 2026 Y&amp;O STUDIO · CashTory</p><p>Wilayah yang dijelaskan: Korea Selatan · Amerika Serikat · Jepang · Brasil · India (persiapan peluncuran) · Indonesia (persiapan peluncuran).</p></footer>
+</main></body></html>
