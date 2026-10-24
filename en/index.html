@@ -95,6 +95,7 @@
 </head>
 <body>
 <main id="top">
+      <p>Trip-file and image sharing and map-link features may pass information to the external services involved. Place details from a map link may be looked up automatically. See <a href="#section-1">Section 1.5</a> and <a href="#section-5">Section 5.5</a> for details.</p>
   <nav class="lang-switch" aria-label="Language selection">
     <a href="../" lang="ko">한국어</a>
     <span aria-hidden="true">·</span>
@@ -108,7 +109,7 @@
   <header>
     <p class="meta">Y&amp;O STUDIO</p>
     <h1>CashTory Privacy Policy</h1>
-    <p class="meta"><strong>Document version:</strong> 1.4.4<br><strong>Effective date:</strong> October 18, 2026<br><strong>Last updated:</strong> October 18, 2026</p>
+    <p class="meta"><strong>Document version:</strong> 1.4.5<br><strong>Effective date:</strong> October 24, 2026<br><strong>Last updated:</strong> October 24, 2026</p>
   </header>
 
   <p class="lead">Y&amp;O STUDIO (the “Developer”) respects the privacy and rights of CashTory users. This Privacy Policy explains what information CashTory processes, where it is stored, and how users can manage it.</p>
@@ -138,7 +139,7 @@
 
   <section id="section-1">
     <h2>1. Information processed and where it is stored</h2>
-    <h3>1.1 Information stored only on the user’s device</h3>
+    <h3>1.1 Information stored on the user’s device</h3>
     <p>CashTory processes information entered or saved by the user in a local SQLite database, including:</p>
     <ul>
       <li>income, expense, and transfer records;</li>
@@ -150,6 +151,7 @@
     </ul>
     <p>Selected vehicle photos are resized and stored in the app database and may be included in JSON backups. Unlike receipt images, saved vehicle photos remain in the app. The Developer does not operate a server for this information and cannot remotely access or view it.</p>
 
+    <p>The travel ledger also stores information entered by the user or imported from a trip file: trip name, destinations, dates and time zone; companion names or nicknames; itinerary dates, times, notes, places, addresses and links; packing lists and checked status; currencies and exchange rates; and expenses, payers, splits and settlements. Random identifiers (UUIDs) are generated and stored to distinguish trips, people and records when exchanging files. These records support planning, expense calculations, settlements, visited-region displays and file exchange. Destinations and addresses are entered or saved by the user; CashTory does not read the device’s GPS location for these features.</p>
     <h3>1.2 Technical information Google SDKs may process automatically</h3>
     <ul>
       <li><strong>Google Mobile Ads SDK:</strong> IP address and approximate location inferred from it, app and ad interactions, performance and diagnostic information, Android advertising ID, and app set ID.</li>
@@ -163,6 +165,9 @@
 
     <h3>1.4 Information the Developer does not ordinarily collect</h3>
     <p>CashTory has no account or login. During ordinary use, the Developer does not separately collect names, phone numbers, contacts, call logs, precise GPS location, government identification numbers, passport numbers, or legally protected sensitive information. Information voluntarily included in an email is handled as described above.</p>
+    <h3>1.5 Map links and external map services</h3>
+    <p>When a Google Maps link without a saved address is added to an itinerary, or a screen containing such a link is opened, CashTory may automatically connect to that link to fill in the place name and address. The link, IP address and other information needed for the connection may reach Google. CashTory reads place information from the link’s redirect destination; it does not send the entire travel ledger or companion, expense or settlement records in this lookup.</p>
+    <p>Choosing to view a place, search a map or get directions opens Google Maps, NAVER Map, KakaoMap or the external app or website identified by the saved link. Search text, a place name, address or destination may be included in the link and passed to that service. If an external map app uses the current location, its own permissions and settings apply. These services process information under their respective privacy policies.</p>
     <a class="back" href="#top">Back to top</a>
   </section>
 
@@ -176,7 +181,7 @@
           <tr><td>The document scanner is unavailable or fails</td><td>CashTory switches to its own camera capture.</td><td>CashTory requests camera permission only in this case.</td></tr>
           <tr><td>Selecting one stored photo</td><td>The Android system photo picker returns only the photo chosen by the user.</td><td>No broad photo or media permission is requested.</td></tr>
           <tr><td>Using device notifications</td><td>CashTory schedules and displays reminders about selected dates, balances, and vehicle maintenance on the device.</td><td>Android may request notification permission; notifications can be disabled in device settings.</td></tr>
-          <tr><td>Importing JSON or CSV files</td><td>The user selects a file through the system picker for restoration or import. A copy of the selected file may remain temporarily in app storage.</td><td>No broad storage permission is requested.</td></tr>
+          <tr><td>Importing JSON, CSV, Excel or .cashtrip files</td><td>The user selects a file through the system picker for restoration or import. A copy of the selected file may remain temporarily in app storage.</td><td>No broad storage permission is requested.</td></tr>
           <tr><td>Saving JSON or CSV</td><td>The user selects a destination through Android’s system file or folder picker.</td><td>Access is limited to the selected destination and is not full-device storage access.</td></tr>
         </tbody>
       </table>
@@ -223,15 +228,19 @@
     <p>Budget data is stored in CashTory’s app-specific SQLite database on the user’s device. It is not stored on a Developer-operated server or cloud service.</p>
 
     <h3>5.2 In-app automatic backups</h3>
-    <p>CashTory may create automatic backup files in app-specific storage so the user can restore an earlier state. Stored data, including vehicle photos, may be included in these backups. When the configured limit is exceeded, older backups are deleted first. These backups remain on the device.</p>
+    <p>CashTory may create automatic backup files in app-specific storage so the user can restore an earlier state. Stored data, including vehicle photos, trips, companions, itineraries, expenses, settlements and packing lists, may be included in these automatic JSON backups. When the configured limit is exceeded, older backups are deleted first. These backups remain on the device.</p>
 
     <h3>5.3 Manual backup and export</h3>
-    <p>CashTory exports JSON backups or CSV files only when the user initiates the action. JSON backups may contain saved vehicle photos and other stored data. Android may display its system file or folder picker so the user can choose the destination. CashTory does not gain broad access to device storage.</p>
+    <p>CashTory exports JSON backups or CSV files only when the user initiates the action. Manual JSON backups may also contain saved vehicle photos, trips, companions, itineraries, expenses, settlements, packing lists and other stored data. Android may display its system file or folder picker so the user can choose the destination. CashTory does not gain broad access to device storage.</p>
     <p>If a user sends an exported file through email, messaging, or cloud storage, that service’s privacy and retention terms apply. Exported files are not automatically deleted when CashTory is uninstalled.</p>
 
     <h3>5.4 Android backup and device transfer</h3>
     <p>CashTory sets <code>allowBackup=false</code> and does not use Android automatic cloud backup. On some devices running Android 12 or later, this setting may block cloud backup but may not prevent direct device-to-device transfer by the device manufacturer.</p>
     <p>Users should create a manual JSON backup before uninstalling CashTory or changing devices.</p>
+    <h3>5.5 Sharing trip files and images</h3>
+    <p>When the user chooses to send a trip, CashTory creates a <code>.cashtrip</code> file and opens the system share sheet. The file contains the selected trip’s name, destinations, dates and time zone; companion names or nicknames and identifiers; currencies and exchange rates; itinerary notes, times, places, addresses and links; expense amounts, categories, titles, memos, payers and split participants; settlements; and packing-list items. Packing-list checked status and payment methods or transaction links in the user’s personal ledger are not included. Recipients can view the file and import it into their own app or merge it with the same trip.</p>
+    <p>The user can also select itinerary, expense-detail or settlement tables to share as an image. The image may show the selected tables’ schedules, places, addresses, companion names and amounts. Review what is included and who will receive it, and obtain any necessary permission before entering or sharing another person’s information.</p>
+    <p>Files and images are shared through the external app or service chosen by the user, whose privacy and retention terms apply. Creating a shared file or image may leave a copy in temporary device storage; immediate deletion after sharing is not guaranteed. Deleting a trip in CashTory does not delete files or images already sent, or records imported by someone else. Transactions separately registered in the personal ledger and separately saved packing lists must also be managed in their respective features.</p>
     <a class="back" href="#top">Back to top</a>
   </section>
 
@@ -257,6 +266,7 @@
       <li><a href="https://developers.google.com/ml-kit/vision/doc-scanner">Google ML Kit Document Scanner</a></li>
       <li><a href="https://developers.google.com/ml-kit/tips/installation-paths">Google ML Kit model installation paths</a></li>
     </ul>
+    <p>Section 1.5 describes connections to map links and external map apps or websites. Section 5.5 describes sending trip files or images through email, messaging, cloud storage or another service selected by the user. These connections may occur separately from the advertising and receipt SDK processing above.</p>
     <a class="back" href="#top">Back to top</a>
   </section>
 
@@ -266,16 +276,18 @@
       <table>
         <thead><tr><th>Information</th><th>Retention</th><th>Deletion</th></tr></thead>
         <tbody>
-          <tr><td>Budget records, settings, saved receipt results, and vehicle details and photos</td><td>Until the user deletes them, clears app data, or uninstalls the app</td><td>Deleted by CashTory or Android from the local database and app files</td></tr>
+          <tr><td>Budget and trip records, packing lists, settings, saved receipt results, and vehicle details and photos</td><td>Until the user deletes them, clears app data, or uninstalls the app</td><td>Deleted by CashTory or Android from the local database and app files</td></tr>
           <tr><td>Receipt images and full recognized text</td><td>Used only during recognition and not stored in the database</td><td>Not retained as app records; temporary scanner files may be managed by the operating system or removed with app data</td></tr>
           <tr><td>In-app automatic backups</td><td>Until replaced under the retention limit, app data is cleared, or the app is uninstalled</td><td>Deleted by CashTory or Android from app-specific storage</td></tr>
-          <tr><td>Exported JSON or CSV files</td><td>Until the user deletes them from the selected location</td><td>Deleted by the user from the file app or external service</td></tr>
+          <tr><td>Exported JSON, CSV or .cashtrip files and shared trip images</td><td>Until the user deletes them from the selected location</td><td>Deleted by the user from the file app or external service</td></tr>
           <tr><td>Contact emails and included app/device information</td><td>Until the inquiry and any necessary follow-up are complete</td><td>Deleted from the Developer’s email account when that period ends</td></tr>
           <tr><td>Google SDK technical information</td><td>According to Google’s policies, the type of information, purpose, and user settings</td><td>Deleted or anonymized under Google’s policies</td></tr>
+                  <tr><td>Temporary trip-sharing files and images, and temporary copies of imported files</td><td>May remain in temporary device storage; there is no fixed immediate-deletion time</td><td>May be removed by operating-system cache management, clearing app cache or data, or uninstalling the app</td></tr>
         </tbody>
       </table>
     </div>
     <p>The Developer cannot access or delete local budget records on a user’s behalf. For more information about Google’s retention practices, see <a href="https://policies.google.com/technologies/retention?hl=en">How Google retains data</a>.</p>
+    <p>Trip records and packing lists follow the retention rules for local records. Deleting a record may leave it in an earlier internal backup until that backup is removed under the rules above. External map-service activity and copies held by recipients are managed by those services or recipients.</p>
     <a class="back" href="#top">Back to top</a>
   </section>
 
@@ -316,7 +328,8 @@
   <section id="section-11">
     <h2>11. Changes to this Policy</h2>
     <p>This Policy may be updated when app features, SDKs, distribution regions, or applicable law change. Material changes will be announced through the app, the Google Play listing, or this page, and the effective and last-updated dates will be revised.</p>
-    <p>This revised version is effective October 18, 2026. This Policy now includes regional notices for users in South Korea, the United States, Japan, and Brazil. This Policy will be updated if distribution expands further or actual data practices change.</p>
+    <p>This revised version is effective October 24, 2026. This Policy now includes regional notices for users in South Korea, the United States, Japan, and Brazil. This Policy will be updated if distribution expands further or actual data practices change.</p>
+    <p>This revision adds information about trip records and backups, trip-file and image sharing, automatic map-link lookups and external map services. Descriptions of these features apply to app versions that provide them.</p>
     <a class="back" href="#top">Back to top</a>
   </section>
 
@@ -341,10 +354,13 @@
         <thead><tr><th>Activity</th><th>Purpose and items</th><th>Location</th><th>Retention</th></tr></thead>
         <tbody>
           <tr><td>Budget features</td><td>Transactions, assets, liabilities, cards, installments, categories, recurring transactions, favorites, notes, and settings for budgeting and statistics</td><td>User’s device</td><td>Until deleted by the user, app data is cleared, or the app is uninstalled</td></tr>
+          <tr><td>Travel ledger</td><td>Trip, companion, itinerary, address, link, packing-list, expense and settlement information and random identifiers described in Section 1.1, for planning, calculations and file exchange</td><td>User’s device</td><td>Until deleted by the user, app data is cleared, or the app is uninstalled; backup and shared copies follow Sections 5 and 7</td></tr>
+          <tr><td>Map links and external maps</td><td>Links, search text, places, addresses, destinations and connection information such as IP address, for place details, search and directions</td><td>External map services or websites described in Section 1.5</td><td>Under those services’ policies</td></tr>
+          <tr><td>Trip-file and image sharing</td><td>The .cashtrip contents or selected images described in Section 5.5, for user-initiated sharing and import or merging</td><td>Temporary device storage and user-selected services or recipients</td><td>Temporary files and external copies follow Sections 5.5 and 7</td></tr>
           <tr><td>Saved receipt results</td><td>Merchant, date, total, and transactions chosen by the user</td><td>User’s device</td><td>Until deleted by the user, app data is cleared, or the app is uninstalled</td></tr>
           <tr><td>Document scanning and text recognition</td><td>On-device image and text processing; SDK device, app, identifier, performance, configuration, event, and error information</td><td>Image/text: device; technical information: Google</td><td>Image/text not retained in the database; technical information under Google’s policy</td></tr>
           <tr><td>Advertising and privacy choices</td><td>IP address, approximate location, ad interactions, diagnostics, Android advertising ID, app set ID, and choice status</td><td>Google</td><td>Under Google’s policies and user settings</td></tr>
-          <tr><td>Backups and exports</td><td>JSON or CSV containing local budget data</td><td>App storage or destination selected by the user</td><td>Until replaced, app data is removed, or the user deletes the exported file</td></tr>
+          <tr><td>Backups and exports</td><td>JSON containing local budget, trip and packing-list data and saved vehicle photos, or a budget CSV</td><td>App storage or destination selected by the user</td><td>Until replaced, app data is removed, or the user deletes the exported file</td></tr>
           <tr><td>Contact</td><td>Email address, message, app version, OS, device model, language, and currency for support</td><td>Developer’s email account</td><td>Until the inquiry and any necessary follow-up are complete, then deleted</td></tr>
         </tbody>
       </table>
@@ -357,10 +373,12 @@
     <p>Google SDKs may automatically process advertising and technical information on servers outside South Korea. Information is transferred through encrypted network connections when ads are requested, privacy choices are made, scanner resources are downloaded, or ML Kit functions run. Google operates servers worldwide and does not publish a single processing country or retention period for every data element.</p>
     <p>Users may manage advertising choices through CashTory’s ad privacy settings and Android or Google ad settings. Users can avoid ML Kit processing by entering transactions manually. See Google’s <a href="https://policies.google.com/privacy?hl=en">Privacy Policy</a> and <a href="https://policies.google.com/technologies/retention?hl=en">retention information</a> for current details.</p>
 
+    <p>Section 1.5 describes automatic map-link lookups and connections to external maps. Section 5.5 covers trip files and images sent to services or recipients chosen by the user. External services may process information abroad according to their operations and policies.</p>
+
     <h3>13.4 Matters that do not apply</h3>
     <ul>
       <li>CashTory has no membership, account, or login data.</li>
-      <li>It has no precise-location, contact-list, or call-log feature.</li>
+      <li>It does not read the device’s GPS location, contact list or call logs. User-saved destinations and addresses and external map features are described in Sections 1.1 and 1.5.</li>
       <li>The Developer does not use pseudonymized-data combination, consequential automated decision-making, or surveillance camera systems.</li>
       <li>The Developer cannot access, sell, or provide local financial records.</li>
       <li>CashTory does not provide lending, payment, money transfer, investment, insurance, or financial-advice services.</li>
@@ -383,6 +401,7 @@
           <tr><td>Internet or electronic activity</td><td>App and ad interactions, ad requests, feature and model-download events</td><td>Ad delivery and measurement, SDK operation, and diagnostics</td><td>Google and Google advertising partners</td></tr>
           <tr><td>Approximate location</td><td>Country or region inferred from IP address</td><td>Ad delivery, fraud prevention, and regional privacy controls</td><td>Google and Google advertising partners</td></tr>
           <tr><td>Diagnostics</td><td>Performance, API configuration, input/output size, feature version, event and error information</td><td>SDK feature delivery, measurement, and troubleshooting</td><td>Google</td></tr>
+          <tr><td>User-entered or shared trip information</td><td>Destinations, itineraries, addresses, map links, companion names, trip expenses, splits and settlements</td><td>User input or imported files, for map-link lookups, search and directions, or user-initiated file and image sharing</td><td>Map services or external websites, and sharing services and recipients chosen by the user; see Sections 1.5 and 5.5</td></tr>
           <tr><td>Contact information voluntarily provided</td><td>Email address, message, app version, OS, device model, language, and currency</td><td>Provided when a user sends an email for support</td><td>Y&amp;O STUDIO and the email service provider</td></tr>
         </tbody>
       </table>
